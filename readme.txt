@@ -43,7 +43,7 @@ Novelist helps authors easily organize and display their portfolio of books.
 
 **Documentation**
 
-Extensive documentation is available at [docs.novelistplugin.com](http://docs.novelistplugin.com/)
+Extensive documentation is available at [novelistplugin.com/docs](https://novelistplugin.com/docs/)
 
 == Installation ==
 
