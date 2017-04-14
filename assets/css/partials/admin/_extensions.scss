@@ -1,0 +1,29 @@
+#novelist-extensions-feed {
+    display: flex;
+    flex-flow: row wrap;
+    margin-top: 1.5em;
+}
+
+.novelist-extension {
+    background: white;
+    border: 1px solid #ccc;
+    float: none !important;
+    padding: 0 0 15px;
+
+    h3 {
+        padding: 0 15px;
+    }
+
+    p {
+        padding: 0 15px;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .button-secondary {
+        margin: 0 15px;
+    }
+}

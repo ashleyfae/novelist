@@ -1,0 +1,77 @@
+.novelist-book-list {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 0 -25px;
+
+    &, * {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    .novelist-book {
+        flex: 0 0 100%;
+        padding: 25px;
+    }
+
+    &:not(.novelist-book-columns-1) {
+        .novelist-book {
+            flex: 0 0 50%;
+        }
+    }
+
+    .novelist-covers-align-center {
+        .novelist-book-cover-image {
+            img {
+                display: block;
+                margin: 0 auto 1em;
+            }
+        }
+    }
+    .novelist-covers-align-left {
+        .novelist-book-cover-image {
+            img {
+                float: left;
+                margin: 0 1.5em 1em 0;
+            }
+        }
+    }
+    .novelist-covers-align-right {
+        .novelist-book-cover-image {
+            img {
+                float: right;
+                margin: 0 0 1em 1.5em;
+            }
+        }
+    }
+
+    @media (min-width: 768px) {
+        /* novelist-book-columns-2 is missing because it's
+         * covered pre-media query.
+         */
+
+        &.novelist-book-columns-3 {
+            .novelist-book {
+                flex: 0 0 33%;
+            }
+        }
+
+        &.novelist-book-columns-4 {
+            .novelist-book {
+                flex: 0 0 25%;
+            }
+        }
+
+        &.novelist-book-columns-5 {
+            .novelist-book {
+                flex: 0 0 20%;
+            }
+        }
+
+        &.novelist-book-columns-6 {
+            .novelist-book {
+                flex: 0 0 16.6%;
+            }
+        }
+    }
+}

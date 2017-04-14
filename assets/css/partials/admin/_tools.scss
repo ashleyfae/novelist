@@ -1,0 +1,11 @@
+#system-info-textarea {
+    display: block;
+    font: {
+        family: Menlo, Monaco, monospace;
+    }
+    height: 500px;
+    max-width: 800px;
+    width: 100%;
+    overflow: auto;
+    white-space: pre;
+}

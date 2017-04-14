@@ -1,0 +1,11 @@
+.novelist-btn {
+    background: #aaabab;
+    color: white;
+    display: block;
+    padding: 6px 12px;
+    text-align: center;
+
+    &:hover, &:focus, &:active {
+        color: white;
+    }
+}

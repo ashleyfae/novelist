@@ -1,0 +1,15 @@
+.novelist-button {
+    background: #333;
+    border: none;
+    color: white;
+    display: inline-block;
+    margin: 0 auto;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+
+    &:hover {
+        background: black;
+        text-decoration: none;
+    }
+}

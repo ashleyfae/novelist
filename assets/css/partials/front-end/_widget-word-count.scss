@@ -1,0 +1,23 @@
+.novelist-meter {
+    border: 1px solid #333333;
+    height: 25px;
+    overflow: hidden;
+    padding: 2px;
+
+    .novelist-progress {
+        background: #333333;
+        display: block;
+        float: left;
+        height: 100%;
+    }
+}
+
+.novelist-progress-label {
+    margin-top: 4px;
+    text-align: center;
+
+    .novelist-separator {
+        display: inline-block;
+        margin: 0 2px;
+    }
+}

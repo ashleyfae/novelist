@@ -1,0 +1,40 @@
+.novelist-progress {
+    background: #ddd;
+    margin-top: 25px;
+    height: 15px;
+    width: 100%;
+
+    div {
+        height: 100%;
+        background: #5dcf67;
+        width: 0;
+    }
+}
+
+.admin-color-fresh .novelist-progress div {
+    background: #0073aa;
+}
+
+.admin-color-light .novelist-progress div {
+    background: #888;
+}
+
+.admin-color-blue .novelist-progress div {
+    background: #096484;
+}
+
+.admin-color-coffee .novelist-progress div {
+    background: #c7a589;
+}
+
+.admin-color-ectoplasm .novelist-progress div {
+    background: #a3b745;
+}
+
+.admin-color-midnight .novelist-progress div {
+    background: #e14d43;
+}
+
+.admin-color-sunrise .novelist-progress div {
+    background: #dd823b;
+}

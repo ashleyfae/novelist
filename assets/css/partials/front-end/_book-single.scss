@@ -1,0 +1,24 @@
+/* Other books in the series */
+
+.novelist-series-books-grid {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 0 -5px 1.5em;
+
+    .novelist-series-book {
+        padding: 5px;
+        width: 50%;
+
+        @media (min-width: 500px) {
+            width: 33.3%;
+        }
+
+        @media (min-width: 768px) {
+            width: 25%;
+        }
+
+        @media (min-width: 992px) {
+            width: 20%;
+        }
+    }
+}

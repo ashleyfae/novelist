@@ -1,0 +1,1426 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Novelist\n"
+"POT-Creation-Date: 2016-08-30 10:09-0000\n"
+"PO-Revision-Date: 2016-08-30 10:09-0000\n"
+"Last-Translator: Nose Graze Ltd <support@nosegraze.com>\n"
+"Language-Team: Nose Graze Ltd <support@nosegraze.com>\n"
+"Language: en_GB\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.10\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: includes/admin/admin-pages.php:24
+msgid "Novelist Settings"
+msgstr ""
+
+#: includes/admin/admin-pages.php:24
+#: includes/admin/settings/register-settings.php:757
+msgid "Settings"
+msgstr ""
+
+#: includes/admin/admin-pages.php:25
+msgid "Novelist Tools"
+msgstr ""
+
+#: includes/admin/admin-pages.php:25
+msgid "Tools"
+msgstr ""
+
+#: includes/admin/admin-pages.php:26
+msgid "Novelist Extensions"
+msgstr ""
+
+#: includes/admin/admin-pages.php:26
+msgid "Extensions"
+msgstr ""
+
+#: includes/admin/admin-pages.php:100
+msgid "Upload or Select an Image"
+msgstr ""
+
+#: includes/admin/admin-pages.php:101
+msgid "Insert Image"
+msgstr ""
+
+#: includes/admin/admin-pages.php:119
+msgid "Move Up"
+msgstr ""
+
+#: includes/admin/admin-pages.php:120
+msgid "Move Down"
+msgstr ""
+
+#: includes/admin/admin-pages.php:121
+#: includes/admin/settings/register-settings.php:1135
+#: includes/admin/settings/register-settings.php:1155
+msgid "Remove"
+msgstr ""
+
+#: includes/admin/admin-pages.php:122
+msgid ""
+"Are you sure you wish to revert all the settings in this tab to their "
+"default values? This cannot be undone."
+msgstr ""
+
+#: includes/admin/books/dashboard-columns.php:31
+#: includes/admin/thickbox.php:320
+msgid "Title"
+msgstr ""
+
+#: includes/admin/books/dashboard-columns.php:34
+msgid "Book Cover"
+msgstr ""
+
+#: includes/admin/books/demo-book.php:14
+#, php-format
+msgid "You don't have permission to add %s"
+msgstr ""
+
+#: includes/admin/books/demo-book.php:21 includes/admin/books/demo-book.php:25
+msgid "Under a Forever Sky"
+msgstr ""
+
+#: includes/admin/books/demo-book.php:27
+msgid "Night Sky Publishing"
+msgstr ""
+
+#: includes/admin/books/demo-book.php:28
+msgid "February 18th 2016"
+msgstr ""
+
+#: includes/admin/books/demo-book.php:31
+msgid ""
+"Lorem ipsum dolor sit amet, consectetur adipiscing elit.\n"
+"\t\t\t\n"
+"\t\t\tAenean sagittis risus vel leo sodales, ut varius felis mattis. "
+"Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus "
+"convallis tortor diam, ac ultricies elit sodales id. Nunc vel vulputate "
+"neque. Cras sed semper nunc. Duis eleifend auctor feugiat. Suspendisse "
+"maximus et sem et semper. Fusce venenatis massa in ultricies maximus. Fusce "
+"pulvinar nisl quis tincidunt finibus. Nam euismod ipsum felis, ac vehicula "
+"ex condimentum sed. In tincidunt sapien at tellus sagittis, a convallis nibh "
+"vulputate. Donec vitae ex nec mauris porttitor imperdiet a in metus. Aliquam "
+"erat volutpat. Vestibulum libero risus, fringilla sed nisi eu, pellentesque "
+"ullamcorper ex. Mauris vel dapibus arcu.\n"
+"\n"
+"Proin nisl enim, cursus ac felis in, tempus sodales velit. Donec et dolor "
+"nibh. Donec mauris magna, tincidunt sit amet massa ut, accumsan pulvinar "
+"arcu."
+msgstr ""
+
+#: includes/admin/books/demo-book.php:37
+msgid ""
+"Phasellus a eros tempus, scelerisque mi a, consectetur velit. Donec arcu "
+"augue, finibus nec cursus eu, posuere eu nisl.\n"
+"\t\t\n"
+"\t\tVivamus non dui ac enim aliquet dapibus. Nulla interdum auctor egestas. "
+"Duis interdum sapien id ipsum malesuada, eu porttitor felis rutrum. "
+"Curabitur laoreet hendrerit tristique. Pellentesque pretium, nulla eu "
+"finibus condimentum, nibh elit faucibus diam, nec volutpat arcu nunc eget "
+"ligula. Pellentesque habitant morbi tristique senectus et netus et malesuada "
+"fames ac turpis egestas. Quisque dictum justo erat, convallis pulvinar ex "
+"scelerisque at. Sed sit amet euismod nisl."
+msgstr ""
+
+#: includes/admin/books/demo-book.php:50
+msgid "Error: There was a problem adding the demo book."
+msgstr ""
+
+#: includes/admin/books/demo-book.php:80
+msgid "Night Sky"
+msgstr ""
+
+#: includes/admin/books/demo-book.php:89
+msgid "Fantasy"
+msgstr ""
+
+#: includes/admin/books/demo-book.php:110
+msgid "Cover for Under a Forever Sky"
+msgstr ""
+
+#: includes/admin/books/demo-book.php:135
+msgid "View Book"
+msgstr ""
+
+#: includes/admin/books/demo-book.php:137
+msgid "Edit Book"
+msgstr ""
+
+#: includes/admin/books/meta-box.php:25
+#, php-format
+msgid "%s Information"
+msgstr ""
+
+#: includes/admin/books/meta-box.php:26
+msgid "Series Number"
+msgstr ""
+
+#: includes/admin/books/meta-box.php:168 includes/book-functions.php:25
+msgid "Cover Image"
+msgstr ""
+
+#: includes/admin/books/meta-box.php:186
+#: includes/admin/settings/register-settings.php:1269
+msgid "Upload Image"
+msgstr ""
+
+#: includes/admin/books/meta-box.php:187
+#: includes/admin/settings/register-settings.php:1270
+msgid "Remove Image"
+msgstr ""
+
+#: includes/admin/books/meta-box.php:199 includes/book-functions.php:31
+msgid "Book Title"
+msgstr ""
+
+#: includes/admin/books/meta-box.php:214 includes/book-functions.php:43
+msgid "Publisher"
+msgstr ""
+
+#: includes/admin/books/meta-box.php:225 includes/book-functions.php:49
+msgid "Publication Date"
+msgstr ""
+
+#: includes/admin/books/meta-box.php:239 includes/book-functions.php:55
+msgid "Contributors"
+msgstr ""
+
+#: includes/admin/books/meta-box.php:254
+msgid "Number of Pages"
+msgstr ""
+
+#: includes/admin/books/meta-box.php:265 includes/book-functions.php:73
+msgid "ISBN13"
+msgstr ""
+
+#: includes/admin/books/meta-box.php:276 includes/book-functions.php:79
+msgid "ASIN"
+msgstr ""
+
+#: includes/admin/books/meta-box.php:292 includes/book-functions.php:85
+msgid "Synopsis"
+msgstr ""
+
+#: includes/admin/books/meta-box.php:303
+msgid "Goodreads URL"
+msgstr ""
+
+#: includes/admin/books/meta-box.php:319
+#, php-format
+msgid "%s URL"
+msgstr ""
+
+#: includes/admin/books/meta-box.php:340 includes/book-functions.php:107
+msgid "Excerpt"
+msgstr ""
+
+#: includes/admin/books/meta-box.php:359 includes/book-functions.php:112
+#: includes/widgets/widget-book.php:187
+#: includes/widgets/widget-books-by-series.php:181
+msgid "Extra Text"
+msgstr ""
+
+#: includes/admin/books/meta-box.php:394
+msgid "Hide from Archives"
+msgstr ""
+
+#: includes/admin/books/meta-box.php:396 includes/admin/thickbox.php:271
+#: includes/admin/thickbox.php:282 includes/admin/thickbox.php:305
+#: includes/admin/thickbox.php:353
+msgid "Yes"
+msgstr ""
+
+#: includes/admin/books/meta-box.php:418
+msgid "Number in the Series"
+msgstr ""
+
+#: includes/admin/class-novelist-notices.php:52
+msgid "The settings have been successfully imported."
+msgstr ""
+
+#: includes/admin/class-welcome.php:50 includes/admin/class-welcome.php:51
+msgid "Welcome to Novelist"
+msgstr ""
+
+#: includes/admin/class-welcome.php:59 includes/admin/class-welcome.php:60
+msgid "Novelist Changelog"
+msgstr ""
+
+#: includes/admin/class-welcome.php:68 includes/admin/class-welcome.php:69
+msgid "Getting Started with Novelist"
+msgstr ""
+
+#: includes/admin/class-welcome.php:181
+#, php-format
+msgid "Welcome to Novelist %s"
+msgstr ""
+
+#: includes/admin/class-welcome.php:183
+msgid "Let's start building your awesome author website!"
+msgstr ""
+
+#: includes/admin/class-welcome.php:201
+msgid "What's New"
+msgstr ""
+
+#: includes/admin/class-welcome.php:204
+msgid "Getting Started"
+msgstr ""
+
+#: includes/admin/class-welcome.php:227
+msgid "1.1.0"
+msgstr ""
+
+#: includes/admin/class-welcome.php:232
+#, php-format
+msgid "New Default Cover Image setting. <a href=\"%s\">check it out!</a>."
+msgstr ""
+
+#: includes/admin/class-welcome.php:236
+#, php-format
+msgid ""
+"On the <a href=\"%s\">export page</a> you can now choose between exporting "
+"all settings or only the book layout. This makes it super easy to move book "
+"layouts between sites while not affecting the other settings."
+msgstr ""
+
+#: includes/admin/class-welcome.php:241
+msgid ""
+"New \"Add Book Grid\" button above the post/page editor to aid you in "
+"creating your grids."
+msgstr ""
+
+#: includes/admin/class-welcome.php:252 includes/admin/class-welcome.php:286
+msgid "Go to Novelist Settings"
+msgstr ""
+
+#: includes/admin/class-welcome.php:253
+msgid "View the Full Changelog"
+msgstr ""
+
+#: includes/admin/class-welcome.php:275
+msgid "Full Changelog"
+msgstr ""
+
+#: includes/admin/class-welcome.php:309
+msgid "Let's get you started with Novelist and creating your first book."
+msgstr ""
+
+#: includes/admin/class-welcome.php:314
+msgid "Want to See an Example?"
+msgstr ""
+
+#: includes/admin/class-welcome.php:318
+msgid "Import Demo Book"
+msgstr ""
+
+#: includes/admin/class-welcome.php:324
+msgid "Creating Your First Book"
+msgstr ""
+
+#: includes/admin/class-welcome.php:331
+msgid "Books &rarr; Add New"
+msgstr ""
+
+#: includes/admin/class-welcome.php:333
+msgid ""
+"To create your first book, find to the \"Books\" menu on the left and click "
+"\"Add New\". This brings you to the book details form. All you have to do is "
+"fill out each field. You can enter information about your book and upload a "
+"cover image."
+msgstr ""
+
+#: includes/admin/class-welcome.php:334
+msgid ""
+"When you're ready, click \"Publish\" on your book or click \"Preview\" to "
+"test it out first."
+msgstr ""
+
+#: includes/admin/class-welcome.php:338
+msgid "Customize the Book Template"
+msgstr ""
+
+#: includes/admin/class-welcome.php:344
+#, php-format
+msgid ""
+"Each book gets formatted according to a template. You can customize this "
+"template in the <a href=\"%s\">Book Layout settings page</a>."
+msgstr ""
+
+#: includes/admin/class-welcome.php:345
+msgid ""
+"Fields can be removed, rearranged, and the template associated with each "
+"piece of book information can be customized to your liking."
+msgstr ""
+
+#: includes/admin/class-welcome.php:349
+msgid "Display All Your Books"
+msgstr ""
+
+#: includes/admin/class-welcome.php:355
+msgid "All your books on one page"
+msgstr ""
+
+#: includes/admin/class-welcome.php:356
+#, php-format
+msgid ""
+"Novelist helps you easily display a grid of all your books on one page. "
+"Simply go to <a href=\"%s\">Pages &rarr; Add New</a> and create a new page. "
+"Then insert this shortcode to display all your books in one awesome grid:"
+msgstr ""
+
+#: includes/admin/class-welcome.php:359
+msgid "Customize the grid"
+msgstr ""
+
+#: includes/admin/class-welcome.php:360
+msgid ""
+"The grid shortcode is completely customizable. You can add extra parameters "
+"to change how it looks."
+msgstr ""
+
+#: includes/admin/class-welcome.php:361
+#, php-format
+msgid "Number of columns:<br>%s"
+msgstr ""
+
+#: includes/admin/class-welcome.php:362
+#, php-format
+msgid "Number of books per page:<br>%s"
+msgstr ""
+
+#: includes/admin/class-welcome.php:363
+#, php-format
+msgid "For more options, check out <a href=\"%s\">the documentation</a>."
+msgstr ""
+
+#: includes/admin/class-welcome.php:381
+msgid "No valid changelog was found."
+msgstr ""
+
+#: includes/admin/extensions.php:26
+msgid "Extensions for Novelist"
+msgstr ""
+
+#: includes/admin/extensions.php:56
+msgid ""
+"There was an error communicating with the novelistplugin.com server. Please "
+"try again later."
+msgstr ""
+
+#: includes/admin/settings/display-settings.php:118
+msgid "Reset Section"
+msgstr ""
+
+#: includes/admin/settings/register-settings.php:229
+#: includes/admin/settings/register-settings.php:704
+#: includes/admin/settings/register-settings.php:755
+msgid "Book Layout"
+msgstr ""
+
+#: includes/admin/settings/register-settings.php:230
+msgid "Layout for your book."
+msgstr ""
+
+#: includes/admin/settings/register-settings.php:238
+msgid "Retail Outlets"
+msgstr ""
+
+#: includes/admin/settings/register-settings.php:239
+msgid ""
+"Create a new entry for each site you want to display a purchase link for. "
+"Each entry also gets a template, which is used to configure the text and "
+"HTML that gets displayed on the front-end. <br>The purchase links themselves "
+"are then entered on the Edit Book page when you create a book."
+msgstr ""
+
+#: includes/admin/settings/register-settings.php:243
+msgid "Amazon"
+msgstr ""
+
+#: includes/admin/settings/register-settings.php:244
+msgid "<a href=\"[link]\" target=\"_blank\">Amazon</a>"
+msgstr ""
+
+#: includes/admin/settings/register-settings.php:247
+msgid "Barnes & Noble"
+msgstr ""
+
+#: includes/admin/settings/register-settings.php:248
+msgid "<a href=\"[link]\" target=\"_blank\">Barnes &amp; Noble</a>"
+msgstr ""
+
+#: includes/admin/settings/register-settings.php:254
+msgid "Separator"
+msgstr ""
+
+#: includes/admin/settings/register-settings.php:255
+msgid ""
+"Whatever you enter in this box will appear in between each purchase link. A "
+"space, comma, or line break is typically recommended."
+msgstr ""
+
+#: includes/admin/settings/register-settings.php:263
+msgid "Default Cover Image"
+msgstr ""
+
+#: includes/admin/settings/register-settings.php:264
+msgid ""
+"This book cover will be used if you don't upload one to the book. This is a "
+"good place to use a \"Cover Coming Soon\" placeholder."
+msgstr ""
+
+#: includes/admin/settings/register-settings.php:270
+msgid "Cover Image Size"
+msgstr ""
+
+#: includes/admin/settings/register-settings.php:271
+msgid ""
+"Choose a size for your book covers. The images will be resized to your "
+"select on single book pages."
+msgstr ""
+
+#: includes/admin/settings/register-settings.php:278
+msgid "Link Book Cover"
+msgstr ""
+
+#: includes/admin/settings/register-settings.php:279
+msgid ""
+"Choose where to link the book cover image on the single book page. Or set to "
+"\"none\" to not have a link at all."
+msgstr ""
+
+#: includes/admin/settings/register-settings.php:286
+msgid "Other Books in the Series Layout"
+msgstr ""
+
+#: includes/admin/settings/register-settings.php:287
+msgid ""
+"Choose how to display the list of other books in the series. The grid option "
+"will show book covers in a grid style. The link option will display a comma-"
+"separated list of text links to each book."
+msgstr ""
+
+#: includes/admin/settings/register-settings.php:291
+msgid "Grid"
+msgstr ""
+
+#: includes/admin/settings/register-settings.php:292
+msgid "Text Links"
+msgstr ""
+
+#: includes/admin/settings/register-settings.php:302
+msgid "Disable Styles"
+msgstr ""
+
+#: includes/admin/settings/register-settings.php:303
+msgid ""
+"Check this to disable the Novelist stylesheet from being added to your site."
+msgstr ""
+
+#: includes/admin/settings/register-settings.php:309
+msgid "Button Background Colour"
+msgstr ""
+
+#: includes/admin/settings/register-settings.php:310
+msgid "Choose a background colour for Novelist buttons."
+msgstr ""
+
+#: includes/admin/settings/register-settings.php:316
+msgid "Button Text Colour"
+msgstr ""
+
+#: includes/admin/settings/register-settings.php:317
+msgid "Choose a text colour for Novelist buttons."
+msgstr ""
+
+#: includes/admin/settings/register-settings.php:328
+msgid "Delete Data"
+msgstr ""
+
+#: includes/admin/settings/register-settings.php:329
+msgid ""
+"Check this to delete all Novelist data when deleting the plugin, including "
+"settings, books, series, and genres."
+msgstr ""
+
+#: includes/admin/settings/register-settings.php:403
+msgid "Settings updated."
+msgstr ""
+
+#: includes/admin/settings/register-settings.php:426
+msgid "Default settings restored."
+msgstr ""
+
+#: includes/admin/settings/register-settings.php:442
+msgid "Bugger off! You don't have permission to do this."
+msgstr ""
+
+#: includes/admin/settings/register-settings.php:452
+msgid "Error: Tab missing."
+msgstr ""
+
+#: includes/admin/settings/register-settings.php:456
+msgid "Error: Section missing."
+msgstr ""
+
+#: includes/admin/settings/register-settings.php:705
+#: includes/admin/settings/register-settings.php:760
+msgid "Styles"
+msgstr ""
+
+#: includes/admin/settings/register-settings.php:706
+#: includes/admin/settings/register-settings.php:763
+msgid "Misc"
+msgstr ""
+
+#: includes/admin/settings/register-settings.php:709
+msgid "Add-Ons"
+msgstr ""
+
+#: includes/admin/settings/register-settings.php:713
+msgid "Licenses"
+msgstr ""
+
+#: includes/admin/settings/register-settings.php:756
+#: includes/book-functions.php:96
+msgid "Purchase Links"
+msgstr ""
+
+#: includes/admin/settings/register-settings.php:809
+#, php-format
+msgid "The callback function used for the %s setting is missing."
+msgstr ""
+
+#: includes/admin/settings/register-settings.php:918
+msgid "Width, in pixels."
+msgstr ""
+
+#: includes/admin/settings/register-settings.php:923
+msgid "Height, in pixels."
+msgstr ""
+
+#: includes/admin/settings/register-settings.php:929
+msgid "Crop"
+msgstr ""
+
+#: includes/admin/settings/register-settings.php:930
+msgid "Do not crop"
+msgstr ""
+
+#: includes/admin/settings/register-settings.php:932
+msgid ""
+"If you crop to exact dimensions, some parts of the image may be cut off."
+msgstr ""
+
+#: includes/admin/settings/register-settings.php:1011
+msgid "Your Layout"
+msgstr ""
+
+#: includes/admin/settings/register-settings.php:1020
+msgid "Available"
+msgstr ""
+
+#: includes/admin/settings/register-settings.php:1034
+msgid "Preview Book"
+msgstr ""
+
+#: includes/admin/settings/register-settings.php:1073
+msgid "Edit"
+msgstr ""
+
+#: includes/admin/settings/register-settings.php:1077
+#, php-format
+msgid "Use <mark>%1$s</mark> as a placeholder for the %2$s"
+msgstr ""
+
+#: includes/admin/settings/register-settings.php:1084
+msgid "Add new line after this field"
+msgstr ""
+
+#: includes/admin/settings/register-settings.php:1090
+msgid "Cover Alignment"
+msgstr ""
+
+#: includes/admin/settings/register-settings.php:1132
+msgid "Retail Store Name"
+msgstr ""
+
+#: includes/admin/settings/register-settings.php:1133
+msgid "Template"
+msgstr ""
+
+#: includes/admin/settings/register-settings.php:1146
+msgid "Enter the name of the retail outlet"
+msgstr ""
+
+#: includes/admin/settings/register-settings.php:1150
+msgid "Template for this site"
+msgstr ""
+
+#: includes/admin/settings/register-settings.php:1168
+msgid "Add Link"
+msgstr ""
+
+#: includes/admin/settings/register-settings.php:1220
+msgid "Missing select options argument."
+msgstr ""
+
+#: includes/admin/settings/register-settings.php:1346
+#, php-format
+msgid ""
+"Your license key expired on %1$s. Please <a href=\"%2$s\" target=\"_blank\" "
+"title=\"Renew your license key\">renew your license key</a>."
+msgstr ""
+
+#: includes/admin/settings/register-settings.php:1359
+#, php-format
+msgid ""
+"Invalid license. Please <a href=\"%s\" target=\"_blank\" title=\"Visit "
+"account page\">visit your account page</a> and verify it."
+msgstr ""
+
+#: includes/admin/settings/register-settings.php:1372
+#, php-format
+msgid ""
+"Your %1$s is not active for this URL. Please <a href=\"%2$s\" target=\"_blank"
+"\" title=\"Visit account page\">visit your account page</a> to manage your "
+"license key URLs."
+msgstr ""
+
+#: includes/admin/settings/register-settings.php:1385
+#, php-format
+msgid "This is not a %s."
+msgstr ""
+
+#: includes/admin/settings/register-settings.php:1397
+#, php-format
+msgid ""
+"Your license key has reached its activation limit. <a href=\"%s\" target="
+"\"_blank\" title=\"View upgrades\">View possible upgrades.</a>"
+msgstr ""
+
+#: includes/admin/settings/register-settings.php:1415
+msgid "License key never expires."
+msgstr ""
+
+#: includes/admin/settings/register-settings.php:1421
+#, php-format
+msgid ""
+"Your license key is about to expire! It expires on %1$s. <a href=\"%2$s\" "
+"target=\"_blank\" title=\"Renew license key\">Renew your license key</a> to "
+"continue getting updates and support."
+msgstr ""
+
+#: includes/admin/settings/register-settings.php:1431
+#, php-format
+msgid "Your license key expires on %s."
+msgstr ""
+
+#: includes/admin/settings/register-settings.php:1456
+msgid "Deactivate License"
+msgstr ""
+
+#: includes/admin/settings/register-settings.php:1487
+msgid "- Select a Page -"
+msgstr ""
+
+#: includes/admin/thickbox.php:80
+#, php-format
+msgid "Add %s Grid"
+msgstr ""
+
+#: includes/admin/thickbox.php:230
+msgid "Add Book Grid"
+msgstr ""
+
+#: includes/admin/thickbox.php:234
+msgid "Number of Columns"
+msgstr ""
+
+#: includes/admin/thickbox.php:238
+#, php-format
+msgid "%s Column"
+msgid_plural "%s Columns"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/admin/thickbox.php:246
+msgid "Filter by Series"
+msgstr ""
+
+#: includes/admin/thickbox.php:257
+msgid "Filter by Genre"
+msgstr ""
+
+#: includes/admin/thickbox.php:268
+msgid "Show the Book Title"
+msgstr ""
+
+#: includes/admin/thickbox.php:272 includes/admin/thickbox.php:283
+#: includes/admin/thickbox.php:295 includes/admin/thickbox.php:306
+#: includes/admin/thickbox.php:354
+msgid "No"
+msgstr ""
+
+#: includes/admin/thickbox.php:279
+msgid "Show the Series Number"
+msgstr ""
+
+#: includes/admin/thickbox.php:290
+msgid "Show Synopsis"
+msgstr ""
+
+#: includes/admin/thickbox.php:293
+msgid "Yes - Excerpt"
+msgstr ""
+
+#: includes/admin/thickbox.php:294
+msgid "Yes - Full Synopsis"
+msgstr ""
+
+#: includes/admin/thickbox.php:302
+msgid "Show Full Content (includes cover, title, author, etc.)"
+msgstr ""
+
+#: includes/admin/thickbox.php:313
+msgid "Order By"
+msgstr ""
+
+#: includes/admin/thickbox.php:319
+msgid "Menu Order"
+msgstr ""
+
+#: includes/admin/thickbox.php:321
+msgid "Date"
+msgstr ""
+
+#: includes/admin/thickbox.php:322
+msgid "Book Publication Date"
+msgstr ""
+
+#: includes/admin/thickbox.php:323
+msgid "Random"
+msgstr ""
+
+#: includes/admin/thickbox.php:326
+msgid "\"Date\" refers to the date the book was added into WordPress."
+msgstr ""
+
+#: includes/admin/thickbox.php:332
+msgid "Order"
+msgstr ""
+
+#: includes/admin/thickbox.php:338
+msgid "Ascending"
+msgstr ""
+
+#: includes/admin/thickbox.php:339
+msgid "Descending"
+msgstr ""
+
+#: includes/admin/thickbox.php:347
+msgid "Split Results into Multiple Pages?"
+msgstr ""
+
+#: includes/admin/thickbox.php:362
+msgid "Number of Results"
+msgstr ""
+
+#: includes/admin/thickbox.php:373
+msgid "Insert Grid"
+msgstr ""
+
+#: includes/admin/thickbox.php:374
+msgid "Cancel"
+msgstr ""
+
+#: includes/admin/tools.php:58
+msgid "Import/Export"
+msgstr ""
+
+#: includes/admin/tools.php:59
+msgid "System Info"
+msgstr ""
+
+#: includes/admin/tools.php:82
+msgid "Export Settings"
+msgstr ""
+
+#: includes/admin/tools.php:84
+msgid ""
+"Export the Novelist settings to a .json file. This allows you to backup your "
+"settings or import them to a different WordPress installation."
+msgstr ""
+
+#: includes/admin/tools.php:87
+msgid "Choose what settings to export"
+msgstr ""
+
+#: includes/admin/tools.php:89
+msgid "All Settings"
+msgstr ""
+
+#: includes/admin/tools.php:90
+msgid "Book Layout Only"
+msgstr ""
+
+#: includes/admin/tools.php:96
+msgid "Export"
+msgstr ""
+
+#: includes/admin/tools.php:104
+msgid "Import Settings"
+msgstr ""
+
+#: includes/admin/tools.php:106
+msgid ""
+"Import the Novelist settings from a .json file. You can obtain a .json file "
+"by exporting using the above function."
+msgstr ""
+
+#: includes/admin/tools.php:112
+msgid "Import"
+msgstr ""
+
+#: includes/admin/tools.php:191
+msgid "Please upload a valid .json file"
+msgstr ""
+
+#: includes/admin/tools.php:191 includes/admin/tools.php:197
+msgid "Error"
+msgstr ""
+
+#: includes/admin/tools.php:197
+msgid "Please upload a file to import"
+msgstr ""
+
+#: includes/admin/tools.php:228
+msgid ""
+"To copy the system info, click below then press CTRL + C (PC) or CMD + C "
+"(Mac)."
+msgstr ""
+
+#: includes/admin/tools.php:231
+msgid "Download System Info File"
+msgstr ""
+
+#: includes/book-functions.php:33
+#, php-format
+msgid "<strong>Title:</strong> %s"
+msgstr ""
+
+#: includes/book-functions.php:37
+msgid "Series Name"
+msgstr ""
+
+#: includes/book-functions.php:39
+#, php-format
+msgid "<strong>Series:</strong> %s"
+msgstr ""
+
+#: includes/book-functions.php:45
+#, php-format
+msgid "<strong>Published by:</strong> %s"
+msgstr ""
+
+#: includes/book-functions.php:51
+#, php-format
+msgid "<strong>Release Date:</strong> %s"
+msgstr ""
+
+#: includes/book-functions.php:57
+#, php-format
+msgid "<strong>Contributors:</strong> %s"
+msgstr ""
+
+#: includes/book-functions.php:61
+msgid "Genre"
+msgstr ""
+
+#: includes/book-functions.php:63
+#, php-format
+msgid "<strong>Genre:</strong> %s"
+msgstr ""
+
+#: includes/book-functions.php:67
+msgid "Pages"
+msgstr ""
+
+#: includes/book-functions.php:69
+#, php-format
+msgid "<strong>Pages:</strong> %s"
+msgstr ""
+
+#: includes/book-functions.php:75
+#, php-format
+msgid "<strong>ISBN13:</strong> %s"
+msgstr ""
+
+#: includes/book-functions.php:81
+#, php-format
+msgid "<strong>ASIN:</strong> %s"
+msgstr ""
+
+#: includes/book-functions.php:90
+msgid "Goodreads Link"
+msgstr ""
+
+#: includes/book-functions.php:92
+#, php-format
+msgid "<a href=\"%s\">Add on Goodreads</a>"
+msgstr ""
+
+#: includes/book-functions.php:98
+#, php-format
+msgid "<strong>Buy the Book:</strong> %s"
+msgstr ""
+
+#: includes/book-functions.php:102
+msgid "Other Books in the Series"
+msgstr ""
+
+#: includes/book-functions.php:104
+#, php-format
+msgid "<br><strong>Also in this series:</strong> %s"
+msgstr ""
+
+#: includes/book-functions.php:131 includes/widgets/widget-book.php:284
+msgid "Left"
+msgstr ""
+
+#: includes/book-functions.php:132
+msgid "Centered"
+msgstr ""
+
+#: includes/book-functions.php:133 includes/widgets/widget-book.php:286
+msgid "Right"
+msgstr ""
+
+#: includes/book-functions.php:396
+msgid "None"
+msgstr ""
+
+#: includes/book-functions.php:397
+msgid "Goodreads"
+msgstr ""
+
+#: includes/book-functions.php:443
+msgctxt "image size"
+msgid "full"
+msgstr ""
+
+#: includes/book-functions.php:446
+msgctxt "image size"
+msgid "custom"
+msgstr ""
+
+#: includes/class-novelist-book.php:271
+#, php-format
+msgid "Can't get property %s"
+msgstr ""
+
+#: includes/class-novelist-html.php:44
+#: includes/class-novelist-shortcodes.php:493
+#: includes/widgets/widget-books-by-series.php:166
+msgid "Standalones"
+msgstr ""
+
+#: includes/class-novelist-html.php:45
+#: includes/widgets/widget-books-by-series.php:165
+msgid "All Series"
+msgstr ""
+
+#: includes/class-novelist-html.php:97
+msgid "All Genres"
+msgstr ""
+
+#: includes/class-novelist-roles.php:37
+msgid "Book Manager"
+msgstr ""
+
+#: includes/class-novelist-shortcodes.php:357
+#, php-format
+msgctxt "book post type name"
+msgid "No %s found"
+msgstr ""
+
+#: includes/class-novelist-shortcodes.php:535
+msgid "[show-book] Error: No book found with this title."
+msgstr ""
+
+#: includes/post-types.php:32
+#, php-format
+msgctxt "book post type name"
+msgid "%2$s"
+msgstr ""
+
+#: includes/post-types.php:33
+#, php-format
+msgctxt "singular book post type name"
+msgid "%1$s"
+msgstr ""
+
+#: includes/post-types.php:34
+msgid "Add New"
+msgstr ""
+
+#: includes/post-types.php:35
+#, php-format
+msgid "Add New %1$s"
+msgstr ""
+
+#: includes/post-types.php:36
+#, php-format
+msgid "Edit %1$s"
+msgstr ""
+
+#: includes/post-types.php:37
+#, php-format
+msgid "New %1$s"
+msgstr ""
+
+#: includes/post-types.php:38
+#, php-format
+msgid "All %2$s"
+msgstr ""
+
+#: includes/post-types.php:39
+#, php-format
+msgid "View %1$s"
+msgstr ""
+
+#: includes/post-types.php:40
+#, php-format
+msgid "Search %2$s"
+msgstr ""
+
+#: includes/post-types.php:41
+#, php-format
+msgid "No %2$s found"
+msgstr ""
+
+#: includes/post-types.php:42
+#, php-format
+msgid "No %2$s found in Trash"
+msgstr ""
+
+#: includes/post-types.php:44
+#, php-format
+msgctxt "book post type menu name"
+msgid "%2$s"
+msgstr ""
+
+#: includes/post-types.php:45
+#, php-format
+msgid "%1$s Cover Image"
+msgstr ""
+
+#: includes/post-types.php:46
+#, php-format
+msgid "Set %1$s Cover Image"
+msgstr ""
+
+#: includes/post-types.php:47
+#, php-format
+msgid "Remove %1$s Cover Image"
+msgstr ""
+
+#: includes/post-types.php:48
+#, php-format
+msgid "Use as %1$s Cover Image"
+msgstr ""
+
+#: includes/post-types.php:85
+msgid "Book"
+msgstr ""
+
+#: includes/post-types.php:86
+msgid "Books"
+msgstr ""
+
+#: includes/post-types.php:130
+#, php-format
+msgid "Enter %s title here"
+msgstr ""
+
+#: includes/post-types.php:150
+#, php-format
+msgctxt "taxonomy general name"
+msgid "%s Genres"
+msgstr ""
+
+#: includes/post-types.php:151
+#, php-format
+msgctxt "taxonomy singular name"
+msgid "%s Genre"
+msgstr ""
+
+#: includes/post-types.php:152
+#, php-format
+msgid "Search %s Genres"
+msgstr ""
+
+#: includes/post-types.php:153
+#, php-format
+msgid "All %s Genres"
+msgstr ""
+
+#: includes/post-types.php:154
+#, php-format
+msgid "Parent %s Genre"
+msgstr ""
+
+#: includes/post-types.php:155
+#, php-format
+msgid "Parent %s Genre:"
+msgstr ""
+
+#: includes/post-types.php:156
+#, php-format
+msgid "Edit %s Genre"
+msgstr ""
+
+#: includes/post-types.php:157
+#, php-format
+msgid "Update %s Genre"
+msgstr ""
+
+#: includes/post-types.php:158
+#, php-format
+msgid "Add New %s Genre"
+msgstr ""
+
+#: includes/post-types.php:159
+#, php-format
+msgid "New %s Genre Name"
+msgstr ""
+
+#: includes/post-types.php:160
+msgid "Genres"
+msgstr ""
+
+#: includes/post-types.php:182
+#, php-format
+msgctxt "taxonomy general name"
+msgid "%s Series"
+msgstr ""
+
+#: includes/post-types.php:183
+#, php-format
+msgctxt "taxonomy singular name"
+msgid "%s Series"
+msgstr ""
+
+#: includes/post-types.php:184
+#, php-format
+msgid "Search %s Series"
+msgstr ""
+
+#: includes/post-types.php:185
+#, php-format
+msgid "All %s Series"
+msgstr ""
+
+#: includes/post-types.php:186
+#, php-format
+msgid "Parent %s Series"
+msgstr ""
+
+#: includes/post-types.php:187
+#, php-format
+msgid "Parent %s Series:"
+msgstr ""
+
+#: includes/post-types.php:188
+#, php-format
+msgid "Edit %s Series"
+msgstr ""
+
+#: includes/post-types.php:189
+#, php-format
+msgid "Update %s Series"
+msgstr ""
+
+#: includes/post-types.php:190
+#, php-format
+msgid "Add New %s Series"
+msgstr ""
+
+#: includes/post-types.php:191
+#, php-format
+msgid "New %s Series Name"
+msgstr ""
+
+#: includes/post-types.php:192
+msgid "Series"
+msgstr ""
+
+#: includes/widgets/widget-book.php:25
+msgid "Novelist Book"
+msgstr ""
+
+#: includes/widgets/widget-book.php:26
+msgid "Showcase one of your books."
+msgstr ""
+
+#: includes/widgets/widget-book.php:104
+#: includes/widgets/widget-books-by-series.php:157
+#: includes/widgets/widget-word-count.php:108
+msgid "Title:"
+msgstr ""
+
+#: includes/widgets/widget-book.php:109
+msgid "Book:"
+msgstr ""
+
+#: includes/widgets/widget-book.php:112
+msgid "- Select a Book -"
+msgstr ""
+
+#: includes/widgets/widget-book.php:118
+#, php-format
+msgid ""
+"It looks like you don't have any %1$s yet! Why not <a href=\"%2$s\">add one?"
+"</a>"
+msgstr ""
+
+#: includes/widgets/widget-book.php:126
+msgid "Book Cover Settings"
+msgstr ""
+
+#: includes/widgets/widget-book.php:130
+msgid "Show book cover"
+msgstr ""
+
+#: includes/widgets/widget-book.php:137
+msgid "Size:"
+msgstr ""
+
+#: includes/widgets/widget-book.php:145
+msgid "Alignment:"
+msgstr ""
+
+#: includes/widgets/widget-book.php:155
+msgid "Width:"
+msgstr ""
+
+#: includes/widgets/widget-book.php:159
+msgid "Height:"
+msgstr ""
+
+#: includes/widgets/widget-book.php:170
+msgid "Show synopsis"
+msgstr ""
+
+#: includes/widgets/widget-book.php:175
+msgid "Show link to book page"
+msgstr ""
+
+#: includes/widgets/widget-book.php:180
+msgid "Link Text:"
+msgstr ""
+
+#: includes/widgets/widget-book.php:190
+msgid "Text before the book:"
+msgstr ""
+
+#: includes/widgets/widget-book.php:195
+msgid "Text after the book:"
+msgstr ""
+
+#: includes/widgets/widget-book.php:285
+msgid "Center"
+msgstr ""
+
+#: includes/widgets/widget-books-by-series.php:25
+msgid "Novelist Books by Series"
+msgstr ""
+
+#: includes/widgets/widget-books-by-series.php:26
+msgid "List all of the books in a series."
+msgstr ""
+
+#: includes/widgets/widget-books-by-series.php:162
+msgid "Select a Series:"
+msgstr ""
+
+#: includes/widgets/widget-books-by-series.php:184
+msgid "Text before the list:"
+msgstr ""
+
+#: includes/widgets/widget-books-by-series.php:189
+msgid "Text after the list:"
+msgstr ""
+
+#: includes/widgets/widget-word-count.php:25
+msgid "Novelist Word Count"
+msgstr ""
+
+#: includes/widgets/widget-word-count.php:26
+msgid "Keep track of your progress towards a word count goal."
+msgstr ""
+
+#: includes/widgets/widget-word-count.php:79
+msgid "Word Count"
+msgstr ""
+
+#: includes/widgets/widget-word-count.php:113
+msgid "Word Count Goal:"
+msgstr ""
+
+#: includes/widgets/widget-word-count.php:118
+msgid "Current Word Count:"
+msgstr ""
+
+#: includes/widgets/widget-word-count.php:123
+msgid "Bar Colour:"
+msgstr ""
+
+#: includes/widgets/widget-word-count.php:131
+msgid "Label:"
+msgstr ""
+
+#: includes/widgets/widget-word-count.php:132
+msgid ""
+"Use <mark>[current]</mark> as a placeholder for your current word count, and "
+"<mark>[goal]</mark> as a placeholder for your goal."
+msgstr ""
+
+#: includes/widgets/widget-word-count.php:138
+msgid "Add Text"
+msgstr ""
+
+#: includes/widgets/widget-word-count.php:141
+msgid "Text Before the Bar:"
+msgstr ""
+
+#: includes/widgets/widget-word-count.php:146
+msgid "Text After the Bar:"
+msgstr ""
+
+#: novelist.php:111 novelist.php:123
+msgid "Cheatin&#8217; huh?"
+msgstr ""
+
+#: templates/shortcode-book-content-button.php:13
+msgid "More Details &raquo;"
+msgstr ""
+
+#: templates/shortcode-book-content-series-number.php:17
+#, php-format
+msgid "Book %s"
+msgstr ""
+
+#: templates/widgets/widget-book.php:46
+msgid "More Information"
+msgstr ""

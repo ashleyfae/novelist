@@ -1,0 +1,158 @@
+.novelist-box-row {
+    margin: 1.5em 0;
+
+    @media (min-width: 900px) {
+        clear: both;
+        overflow: hidden;
+    }
+
+    label {
+        display: block;
+        font: {
+            weight: 600;
+        }
+        margin-bottom: 3px;
+
+        @media (min-width: 900px) {
+            float: left;
+            margin: 0;
+            width: 18%;
+        }
+    }
+
+    textarea,
+    input[type="text"]:not(.novelist-color-picker):not(.text-small),
+    input[type="url"] {
+        display: block;
+        width: 99%;
+    }
+
+    .text-small,
+    input[type="number"] {
+        display: inline-block;
+        width: auto;
+    }
+
+    .desc {
+        color: #666;
+        display: block;
+        font: {
+            size: 14px;
+            style: italic;
+        }
+        margin: 2px 0 5px;
+    }
+
+    @media (min-width: 900px) {
+        .novelist-input-wrapper {
+            float: right;
+            width: 80%;
+        }
+    }
+}
+
+.novelist-series-number-wrap {
+    label {
+        display: block;
+        font: {
+            weight: 600;
+        }
+        margin-bottom: 3px;
+    }
+
+    input[type="text"] {
+        max-width: 65px;
+    }
+}
+
+@media (min-width: 768px) {
+    .novelist-half {
+        float: left;
+        width: 48%;
+
+        &.last {
+            float: right;
+        }
+    }
+}
+
+/* Repeater Sections */
+.novelist-repeater-section {
+    border: 1px solid #e9e9e9;
+    margin-bottom: 1.5em;
+    padding: 15px 15px 0;
+
+    h3 {
+        font: {
+            size: 14px;
+        }
+        margin: 0;
+    }
+
+    .novelist-box-row {
+        display: none;
+    }
+
+    &.novelist-repeater-section-expanded {
+        .novelist-repeater-toggle {
+            &:before {
+                content: "\f142";
+            }
+        }
+
+        .novelist-box-row {
+            display: block;
+        }
+    }
+}
+
+.novelist-repeater-heading {
+    background: #e9e9e9;
+    margin: -15px -15px 0;
+    padding: 15px;
+
+    .dashicons {
+        color: #aaa;
+        cursor: pointer;
+        float: right;
+
+        &:hover {
+            color: #888;
+        }
+    }
+
+    .dashicons-trash {
+        &:hover {
+            color: #888;
+        }
+    }
+}
+
+.novelist-repeater-toggle {
+    &:before {
+        content: "\f140";
+    }
+}
+
+.novelist-repeater-actions {
+    margin-bottom: 0;
+    padding-bottom: 15px;
+    width: 99%;
+}
+
+.novelist-repeater-remove {
+    float: right;
+}
+
+.novelist-repeater-shift-rows {
+    margin-right: .5em !important;
+
+    span {
+        position: relative;
+        top: 3px;
+    }
+}
+
+.novelist-add-repeater-section {
+    margin-bottom: 2px;
+}
