@@ -414,10 +414,7 @@ class Novelist_Shortcodes {
 	 * @since 1.0.4
 	 * @return string
 	 */
-	public
-	function series_grid(
-		$atts, $content = null
-	) {
+	public function series_grid( $atts, $content = null ) {
 
 		$atts = shortcode_atts( array(
 			'series-name'   => 'true',
@@ -550,10 +547,7 @@ class Novelist_Shortcodes {
 	 * @since  1.0.0
 	 * @return string
 	 */
-	public
-	function show_book(
-		$atts, $content = null
-	) {
+	public function show_book( $atts, $content = null ) {
 
 		$atts = shortcode_atts( array(
 			'title' => null // Title of the book
