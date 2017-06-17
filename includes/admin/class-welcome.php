@@ -360,7 +360,7 @@ class Novelist_Welcome {
 						<p><?php _e( 'The grid shortcode is completely customizable. You can add extra parameters to change how it looks.', 'novelist' ); ?></p>
 						<p><?php printf( __( 'Number of columns:<br>%s', 'novelist' ), '<pre>[novelist-books columns="2"]</pre>' ); ?></p>
 						<p><?php printf( __( 'Number of books per page:<br>%s', 'novelist' ), '<pre>[novelist-books number="6"]</pre>' ); ?></p>
-						<p><?php printf( __( 'For more options, check out <a href="%s">the documentation</a>.', 'novelist' ), esc_url( 'http://docs.novelistplugin.com/article/221-novelist-books' ) ); ?></p>
+						<p><?php printf( __( 'For more options, check out <a href="%s">the documentation</a>.', 'novelist' ), esc_url( 'https://novelistplugin.com/docs/general/shortcodes/novelist-books/' ) ); ?></p>
 					</div>
 				</div>
 			</div>

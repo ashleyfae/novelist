@@ -55,37 +55,37 @@ Extensive documentation is available at [novelistplugin.com/docs](https://noveli
 
 = How can I customize the book template? =
 
-To change the text and order of book information, read this article on [customizing the book layout](http://docs.novelistplugin.com/article/238-customizing-book-layout).
+To change the text and order of book information, read this article on [customizing the book layout](https://novelistplugin.com/docs/general/plugin-settings/book-layout/).
 
 = How can I change the available purchase link websites? =
 
 The retail sites are configured in Books > Settings in the "Purchase Links" area.
 
-More instructions: [Setting Up Retail Sites](http://docs.novelistplugin.com/article/240-setting-up-retail-sites)
+More instructions: [Setting Up Retail Sites](https://novelistplugin.com/docs/general/plugin-settings/retail/)
 
 = How can I change the order of books in the automated archive? =
 
-http://docs.novelistplugin.com/article/84-order-of-books
+https://novelistplugin.com/docs/general/faqs/book-order/
 
 = How can I create my own custom grid of books? =
 
-This can be done using the `[novelist-books]` shortcode. For full instructions, read the [[novelist-books] shortcode documentation](http://docs.novelistplugin.com/article/221-novelist-books)
+This can be done using the `[novelist-books]` shortcode. For full instructions, read the [[novelist-books] shortcode documentation](https://novelistplugin.com/docs/general/shortcodes/novelist-books/)
 
 = How can I turn the Goodreads link into an image instead of text? =
 
-http://docs.novelistplugin.com/article/239-image-goodreads-link
+https://novelistplugin.com/docs/general/faqs/goodreads-image/
 
 = How can I use site logo images instead of plain text for the purchase links? =
 
-http://docs.novelistplugin.com/article/245-images-purchase-links
+https://novelistplugin.com/docs/general/faqs/images-purchase-links/
 
 = How can I create a new custom field for a piece of book information? =
 
-Tutorial: http://docs.novelistplugin.com/article/227-create-book-info-field
+Tutorial: https://novelistplugin.com/docs/developers/tutorials/book-info-field/
 
 = I want greater control over the single book display. How can I do that? =
 
-Create a new folder in your theme folder called `novelist_templates`. Inside that folder, create a new file called `book-content.php`. This file is responsible for displaying all the book information. You can now create more complex layouts with book information. You'll need to use the [Novelist_Book class](http://docs.novelistplugin.com/article/247-novelistbook) to assist you in displaying each piece of book info. For example:
+Create a new folder in your theme folder called `novelist_templates`. Inside that folder, create a new file called `book-content.php`. This file is responsible for displaying all the book information. You can now create more complex layouts with book information. You'll need to use the [Novelist_Book class](https://novelistplugin.com/docs/developers/classes/novelist-book/) to assist you in displaying each piece of book info. For example:
 
 `$book = new Novelist_Book( get_the_ID() );
 
@@ -188,7 +188,7 @@ Minor code tweaks.
 * You can now enter "none" in the series parameter in the `[novelist-books]` shortcode to only show books that don't have a series.
 * Added "offset" parameter to the `[novelist-books]` shortcode. You can use this to exclude the first x number of books from the results. Example: `[novelist-books offset="1"]` would skip the first result and display all the others.
 * Added a "series-number" parameter to the `[novelist-books]` shortcode. If set to "true" then the book's series number will be displayed.
-* New shortcode: `[novelist-series-grid]`. This shortcode displays the `[novelist-books]` shortcode for every single series. It's like manually using `[novelist-books series="Series Name"]` for every series you have, but this new shortcode does it automatically. More details: http://docs.novelistplugin.com/article/307-novelist-series-grid
+* New shortcode: `[novelist-series-grid]`. This shortcode displays the `[novelist-books]` shortcode for every single series. It's like manually using `[novelist-books series="Series Name"]` for every series you have, but this new shortcode does it automatically. More details: https://novelistplugin.com/docs/general/shortcodes/novelist-series-grid/
 
 = 1.0.3 =
 * Added CSS for textareas in meta boxes. Also added styles for a few generic wrapper CSS classes.

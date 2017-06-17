@@ -1136,7 +1136,7 @@ function novelist_purchase_links_callback( $args ) {
 		<tr>
 			<th id="novelist-retail-store-name"><?php _e( 'Retail Store Name', 'novelist' ); ?></th>
 			<th id="novelist-retail-store-id"><?php _e( 'Store ID', 'novelist' ); ?>
-				<a href="http://docs.novelistplugin.com/article/374-store-id-purchase-links-settings" target="_blank" title="<?php esc_attr_e( 'Learn about store IDs', 'novelist' ); ?>"><span class="dashicons dashicons-editor-help"></span></a>
+				<a href="https://novelistplugin.com/docs/general/plugin-settings/store-id/" target="_blank" title="<?php esc_attr_e( 'Learn about store IDs', 'novelist' ); ?>"><span class="dashicons dashicons-editor-help"></span></a>
 			</th>
 			<th id="novelist-link-template"><?php _e( 'Template', 'novelist' ); ?></th>
 			<?php do_action( 'novelist/settings/purchase-links-callback/before-remove-header', $args ); ?>
