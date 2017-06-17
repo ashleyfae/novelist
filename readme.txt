@@ -108,6 +108,9 @@ if ( $book->synopsis ) {
 
 == Upgrade Notice ==
 
+= 1.1.5 =
+Updated documentation URLs.
+
 = 1.1.4 =
 New ids attribute in [novelist-books] shortcode and small code fixes.
 
@@ -142,6 +145,7 @@ Minor code tweaks.
 
 = 1.1.5 =
 * Fix old style constructor in the Browser class.
+* Updated documentation URLs.
 
 = 1.1.4 =
 * Fix name of templates folder in FAQ.
