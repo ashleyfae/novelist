@@ -57,11 +57,12 @@
 					cursor: 'move',
 					axis: 'y',
 					update: function () {
+						/*
 						var order = $(this).sortable("serialize") + '&action=update-subscription-order';
-						console.log(order);
-						/*$.post(ajaxurl, order, function(response) {
-							// response here
-						});*/
+						$.post(ajaxurl, order, function(response) {
+							// @todo in case we want to auto save the new order
+						});
+						*/
 					}
 				});
 			}
