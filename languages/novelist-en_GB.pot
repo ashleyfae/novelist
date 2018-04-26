@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Novelist\n"
-"POT-Creation-Date: 2016-08-30 10:09-0000\n"
-"PO-Revision-Date: 2016-08-30 10:09-0000\n"
+"POT-Creation-Date: 2018-04-26 13:07-0000\n"
+"PO-Revision-Date: 2018-04-26 13:07-0000\n"
 "Last-Translator: Nose Graze Ltd <support@nosegraze.com>\n"
 "Language-Team: Nose Graze Ltd <support@nosegraze.com>\n"
 "Language: en_GB\n"
@@ -23,7 +23,7 @@ msgid "Novelist Settings"
 msgstr ""
 
 #: includes/admin/admin-pages.php:24
-#: includes/admin/settings/register-settings.php:757
+#: includes/admin/settings/register-settings.php:762
 msgid "Settings"
 msgstr ""
 
@@ -60,8 +60,8 @@ msgid "Move Down"
 msgstr ""
 
 #: includes/admin/admin-pages.php:121
-#: includes/admin/settings/register-settings.php:1135
-#: includes/admin/settings/register-settings.php:1155
+#: includes/admin/settings/register-settings.php:1143
+#: includes/admin/settings/register-settings.php:1169
 msgid "Remove"
 msgstr ""
 
@@ -169,12 +169,12 @@ msgid "Cover Image"
 msgstr ""
 
 #: includes/admin/books/meta-box.php:186
-#: includes/admin/settings/register-settings.php:1269
+#: includes/admin/settings/register-settings.php:1286
 msgid "Upload Image"
 msgstr ""
 
 #: includes/admin/books/meta-box.php:187
-#: includes/admin/settings/register-settings.php:1270
+#: includes/admin/settings/register-settings.php:1287
 msgid "Remove Image"
 msgstr ""
 
@@ -422,8 +422,8 @@ msgid "Reset Section"
 msgstr ""
 
 #: includes/admin/settings/register-settings.php:229
-#: includes/admin/settings/register-settings.php:704
-#: includes/admin/settings/register-settings.php:755
+#: includes/admin/settings/register-settings.php:709
+#: includes/admin/settings/register-settings.php:760
 msgid "Book Layout"
 msgstr ""
 
@@ -447,249 +447,266 @@ msgstr ""
 msgid "Amazon"
 msgstr ""
 
-#: includes/admin/settings/register-settings.php:244
+#: includes/admin/settings/register-settings.php:245
 msgid "<a href=\"[link]\" target=\"_blank\">Amazon</a>"
 msgstr ""
 
-#: includes/admin/settings/register-settings.php:247
+#: includes/admin/settings/register-settings.php:248
 msgid "Barnes & Noble"
 msgstr ""
 
-#: includes/admin/settings/register-settings.php:248
+#: includes/admin/settings/register-settings.php:250
 msgid "<a href=\"[link]\" target=\"_blank\">Barnes &amp; Noble</a>"
 msgstr ""
 
-#: includes/admin/settings/register-settings.php:254
+#: includes/admin/settings/register-settings.php:256
 msgid "Separator"
 msgstr ""
 
-#: includes/admin/settings/register-settings.php:255
+#: includes/admin/settings/register-settings.php:257
 msgid ""
 "Whatever you enter in this box will appear in between each purchase link. A "
 "space, comma, or line break is typically recommended."
 msgstr ""
 
-#: includes/admin/settings/register-settings.php:263
+#: includes/admin/settings/register-settings.php:265
 msgid "Default Cover Image"
 msgstr ""
 
-#: includes/admin/settings/register-settings.php:264
+#: includes/admin/settings/register-settings.php:266
 msgid ""
 "This book cover will be used if you don't upload one to the book. This is a "
 "good place to use a \"Cover Coming Soon\" placeholder."
 msgstr ""
 
-#: includes/admin/settings/register-settings.php:270
+#: includes/admin/settings/register-settings.php:272
 msgid "Cover Image Size"
 msgstr ""
 
-#: includes/admin/settings/register-settings.php:271
+#: includes/admin/settings/register-settings.php:273
 msgid ""
 "Choose a size for your book covers. The images will be resized to your "
 "select on single book pages."
 msgstr ""
 
-#: includes/admin/settings/register-settings.php:278
+#: includes/admin/settings/register-settings.php:280
 msgid "Link Book Cover"
 msgstr ""
 
-#: includes/admin/settings/register-settings.php:279
+#: includes/admin/settings/register-settings.php:281
 msgid ""
 "Choose where to link the book cover image on the single book page. Or set to "
 "\"none\" to not have a link at all."
 msgstr ""
 
-#: includes/admin/settings/register-settings.php:286
+#: includes/admin/settings/register-settings.php:288
 msgid "Other Books in the Series Layout"
 msgstr ""
 
-#: includes/admin/settings/register-settings.php:287
+#: includes/admin/settings/register-settings.php:289
 msgid ""
 "Choose how to display the list of other books in the series. The grid option "
 "will show book covers in a grid style. The link option will display a comma-"
 "separated list of text links to each book."
 msgstr ""
 
-#: includes/admin/settings/register-settings.php:291
+#: includes/admin/settings/register-settings.php:293
 msgid "Grid"
 msgstr ""
 
-#: includes/admin/settings/register-settings.php:292
+#: includes/admin/settings/register-settings.php:294
 msgid "Text Links"
 msgstr ""
 
-#: includes/admin/settings/register-settings.php:302
+#: includes/admin/settings/register-settings.php:304
 msgid "Disable Styles"
 msgstr ""
 
-#: includes/admin/settings/register-settings.php:303
+#: includes/admin/settings/register-settings.php:305
 msgid ""
 "Check this to disable the Novelist stylesheet from being added to your site."
 msgstr ""
 
-#: includes/admin/settings/register-settings.php:309
+#: includes/admin/settings/register-settings.php:311
 msgid "Button Background Colour"
 msgstr ""
 
-#: includes/admin/settings/register-settings.php:310
+#: includes/admin/settings/register-settings.php:312
 msgid "Choose a background colour for Novelist buttons."
 msgstr ""
 
-#: includes/admin/settings/register-settings.php:316
+#: includes/admin/settings/register-settings.php:318
 msgid "Button Text Colour"
 msgstr ""
 
-#: includes/admin/settings/register-settings.php:317
+#: includes/admin/settings/register-settings.php:319
 msgid "Choose a text colour for Novelist buttons."
 msgstr ""
 
-#: includes/admin/settings/register-settings.php:328
+#: includes/admin/settings/register-settings.php:330
 msgid "Delete Data"
 msgstr ""
 
-#: includes/admin/settings/register-settings.php:329
+#: includes/admin/settings/register-settings.php:331
 msgid ""
 "Check this to delete all Novelist data when deleting the plugin, including "
 "settings, books, series, and genres."
 msgstr ""
 
-#: includes/admin/settings/register-settings.php:403
+#: includes/admin/settings/register-settings.php:405
 msgid "Settings updated."
 msgstr ""
 
-#: includes/admin/settings/register-settings.php:426
+#: includes/admin/settings/register-settings.php:428
 msgid "Default settings restored."
 msgstr ""
 
-#: includes/admin/settings/register-settings.php:442
+#: includes/admin/settings/register-settings.php:444
 msgid "Bugger off! You don't have permission to do this."
 msgstr ""
 
-#: includes/admin/settings/register-settings.php:452
+#: includes/admin/settings/register-settings.php:454
 msgid "Error: Tab missing."
 msgstr ""
 
-#: includes/admin/settings/register-settings.php:456
+#: includes/admin/settings/register-settings.php:458
 msgid "Error: Section missing."
 msgstr ""
 
-#: includes/admin/settings/register-settings.php:705
-#: includes/admin/settings/register-settings.php:760
+#: includes/admin/settings/register-settings.php:710
+#: includes/admin/settings/register-settings.php:765
 msgid "Styles"
 msgstr ""
 
-#: includes/admin/settings/register-settings.php:706
-#: includes/admin/settings/register-settings.php:763
+#: includes/admin/settings/register-settings.php:711
+#: includes/admin/settings/register-settings.php:768
 msgid "Misc"
 msgstr ""
 
-#: includes/admin/settings/register-settings.php:709
+#: includes/admin/settings/register-settings.php:714
 msgid "Add-Ons"
 msgstr ""
 
-#: includes/admin/settings/register-settings.php:713
+#: includes/admin/settings/register-settings.php:718
 msgid "Licenses"
 msgstr ""
 
-#: includes/admin/settings/register-settings.php:756
+#: includes/admin/settings/register-settings.php:761
 #: includes/book-functions.php:96
 msgid "Purchase Links"
 msgstr ""
 
-#: includes/admin/settings/register-settings.php:809
+#: includes/admin/settings/register-settings.php:814
 #, php-format
 msgid "The callback function used for the %s setting is missing."
 msgstr ""
 
-#: includes/admin/settings/register-settings.php:918
+#: includes/admin/settings/register-settings.php:923
 msgid "Width, in pixels."
 msgstr ""
 
-#: includes/admin/settings/register-settings.php:923
+#: includes/admin/settings/register-settings.php:928
 msgid "Height, in pixels."
 msgstr ""
 
-#: includes/admin/settings/register-settings.php:929
+#: includes/admin/settings/register-settings.php:934
 msgid "Crop"
 msgstr ""
 
-#: includes/admin/settings/register-settings.php:930
+#: includes/admin/settings/register-settings.php:935
 msgid "Do not crop"
 msgstr ""
 
-#: includes/admin/settings/register-settings.php:932
+#: includes/admin/settings/register-settings.php:937
 msgid ""
 "If you crop to exact dimensions, some parts of the image may be cut off."
 msgstr ""
 
-#: includes/admin/settings/register-settings.php:1011
+#: includes/admin/settings/register-settings.php:1016
 msgid "Your Layout"
 msgstr ""
 
-#: includes/admin/settings/register-settings.php:1020
+#: includes/admin/settings/register-settings.php:1025
 msgid "Available"
 msgstr ""
 
-#: includes/admin/settings/register-settings.php:1034
+#: includes/admin/settings/register-settings.php:1039
 msgid "Preview Book"
 msgstr ""
 
-#: includes/admin/settings/register-settings.php:1073
+#: includes/admin/settings/register-settings.php:1078
 msgid "Edit"
 msgstr ""
 
-#: includes/admin/settings/register-settings.php:1077
+#: includes/admin/settings/register-settings.php:1082
 #, php-format
 msgid "Use <mark>%1$s</mark> as a placeholder for the %2$s"
 msgstr ""
 
-#: includes/admin/settings/register-settings.php:1084
+#: includes/admin/settings/register-settings.php:1089
 msgid "Add new line after this field"
 msgstr ""
 
-#: includes/admin/settings/register-settings.php:1090
+#: includes/admin/settings/register-settings.php:1095
 msgid "Cover Alignment"
 msgstr ""
 
-#: includes/admin/settings/register-settings.php:1132
+#: includes/admin/settings/register-settings.php:1137
 msgid "Retail Store Name"
 msgstr ""
 
-#: includes/admin/settings/register-settings.php:1133
+#: includes/admin/settings/register-settings.php:1138
+msgid "Store ID"
+msgstr ""
+
+#: includes/admin/settings/register-settings.php:1139
+msgid "Learn about store IDs"
+msgstr ""
+
+#: includes/admin/settings/register-settings.php:1141
 msgid "Template"
 msgstr ""
 
-#: includes/admin/settings/register-settings.php:1146
+#: includes/admin/settings/register-settings.php:1144
+#: includes/admin/thickbox.php:332
+msgid "Order"
+msgstr ""
+
+#: includes/admin/settings/register-settings.php:1156
 msgid "Enter the name of the retail outlet"
 msgstr ""
 
-#: includes/admin/settings/register-settings.php:1150
+#: includes/admin/settings/register-settings.php:1160
+msgid "Enter the ID"
+msgstr ""
+
+#: includes/admin/settings/register-settings.php:1164
 msgid "Template for this site"
 msgstr ""
 
-#: includes/admin/settings/register-settings.php:1168
+#: includes/admin/settings/register-settings.php:1185
 msgid "Add Link"
 msgstr ""
 
-#: includes/admin/settings/register-settings.php:1220
+#: includes/admin/settings/register-settings.php:1237
 msgid "Missing select options argument."
 msgstr ""
 
-#: includes/admin/settings/register-settings.php:1346
+#: includes/admin/settings/register-settings.php:1363
 #, php-format
 msgid ""
 "Your license key expired on %1$s. Please <a href=\"%2$s\" target=\"_blank\" "
 "title=\"Renew your license key\">renew your license key</a>."
 msgstr ""
 
-#: includes/admin/settings/register-settings.php:1359
+#: includes/admin/settings/register-settings.php:1376
 #, php-format
 msgid ""
 "Invalid license. Please <a href=\"%s\" target=\"_blank\" title=\"Visit "
 "account page\">visit your account page</a> and verify it."
 msgstr ""
 
-#: includes/admin/settings/register-settings.php:1372
+#: includes/admin/settings/register-settings.php:1389
 #, php-format
 msgid ""
 "Your %1$s is not active for this URL. Please <a href=\"%2$s\" target=\"_blank"
@@ -697,23 +714,23 @@ msgid ""
 "license key URLs."
 msgstr ""
 
-#: includes/admin/settings/register-settings.php:1385
+#: includes/admin/settings/register-settings.php:1402
 #, php-format
 msgid "This is not a %s."
 msgstr ""
 
-#: includes/admin/settings/register-settings.php:1397
+#: includes/admin/settings/register-settings.php:1414
 #, php-format
 msgid ""
 "Your license key has reached its activation limit. <a href=\"%s\" target="
 "\"_blank\" title=\"View upgrades\">View possible upgrades.</a>"
 msgstr ""
 
-#: includes/admin/settings/register-settings.php:1415
+#: includes/admin/settings/register-settings.php:1432
 msgid "License key never expires."
 msgstr ""
 
-#: includes/admin/settings/register-settings.php:1421
+#: includes/admin/settings/register-settings.php:1438
 #, php-format
 msgid ""
 "Your license key is about to expire! It expires on %1$s. <a href=\"%2$s\" "
@@ -721,16 +738,16 @@ msgid ""
 "continue getting updates and support."
 msgstr ""
 
-#: includes/admin/settings/register-settings.php:1431
+#: includes/admin/settings/register-settings.php:1448
 #, php-format
 msgid "Your license key expires on %s."
 msgstr ""
 
-#: includes/admin/settings/register-settings.php:1456
+#: includes/admin/settings/register-settings.php:1473
 msgid "Deactivate License"
 msgstr ""
 
-#: includes/admin/settings/register-settings.php:1487
+#: includes/admin/settings/register-settings.php:1504
 msgid "- Select a Page -"
 msgstr ""
 
@@ -814,10 +831,6 @@ msgstr ""
 
 #: includes/admin/thickbox.php:326
 msgid "\"Date\" refers to the date the book was added into WordPress."
-msgstr ""
-
-#: includes/admin/thickbox.php:332
-msgid "Order"
 msgstr ""
 
 #: includes/admin/thickbox.php:338
@@ -1030,7 +1043,7 @@ msgid "Can't get property %s"
 msgstr ""
 
 #: includes/class-novelist-html.php:44
-#: includes/class-novelist-shortcodes.php:493
+#: includes/class-novelist-shortcodes.php:524
 #: includes/widgets/widget-books-by-series.php:166
 msgid "Standalones"
 msgstr ""
@@ -1048,13 +1061,13 @@ msgstr ""
 msgid "Book Manager"
 msgstr ""
 
-#: includes/class-novelist-shortcodes.php:357
+#: includes/class-novelist-shortcodes.php:388
 #, php-format
 msgctxt "book post type name"
 msgid "No %s found"
 msgstr ""
 
-#: includes/class-novelist-shortcodes.php:535
+#: includes/class-novelist-shortcodes.php:566
 msgid "[show-book] Error: No book found with this title."
 msgstr ""
 
