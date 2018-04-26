@@ -1141,6 +1141,7 @@ function novelist_purchase_links_callback( $args ) {
 			<th id="novelist-link-template"><?php _e( 'Template', 'novelist' ); ?></th>
 			<?php do_action( 'novelist/settings/purchase-links-callback/before-remove-header', $args ); ?>
 			<th id="novelist-link-remove"><?php _e( 'Remove', 'novelist' ); ?></th>
+			<th id="novelist-link-order"><?php _e( 'Order', 'novelist' ); ?></th>
 			<?php do_action( 'novelist/settings/purchase-links-callback/after-remove-header', $args ); ?>
 		</tr>
 		</thead>
@@ -1150,7 +1151,7 @@ function novelist_purchase_links_callback( $args ) {
 			$id = isset( $link['id'] ) ? $link['id'] : esc_attr( sanitize_title( $name ) );
 			$template = isset( $link['template'] ) ? $link['template'] : '';
 			?>
-			<tr class="novelist-cloned">
+			<tr id="novelist_purchase_links_<?php echo esc_attr( $i ); ?>" class="novelist-cloned">
 				<td>
 					<label for="novelist_settings[<?php echo esc_attr( $args['id'] ); ?>]_name_<?php echo $i; ?>" class="screen-reader-text"><?php _e( 'Enter the name of the retail outlet', 'novelist' ); ?></label>
 					<input type="text" class="regular-text" id="novelist_settings[<?php echo esc_attr( $args['id'] ); ?>]_name_<?php echo $i; ?>" name="novelist_settings[<?php echo esc_attr( $args['id'] ); ?>][<?php echo $j; ?>][name]" value="<?php esc_attr_e( stripslashes( $name ) ); ?>">
@@ -1166,6 +1167,9 @@ function novelist_purchase_links_callback( $args ) {
 				<?php do_action( 'novelist/settings/purchase-links-callback/before-remove-row', $args, $link, $i, $j ); ?>
 				<td>
 					<button class="button-secondary novelist-remove-link" onclick="<?php echo ( $i > 1 ) ? 'jQuery(this).parent().parent().remove(); return false' : 'return false'; ?>"><?php _e( 'Remove', 'novelist' ); ?></button>
+				</td>
+				<td>
+					<a href="#" class="novelist-drag-handle"><span class="dashicons dashicons-move"></span></a>
 				</td>
 				<?php do_action( 'novelist/settings/purchase-links-callback/after-remove-row', $args, $link, $i, $j ); ?>
 			</tr>
