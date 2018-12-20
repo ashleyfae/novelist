@@ -995,7 +995,7 @@ class Novelist_Book {
 
 				// Bail if it's empty, not a WP_Query or there are no results.
 				if ( ! $series_books_query || ! is_a( $series_books_query, 'WP_Query' ) || ! $series_books_query->have_posts() ) {
-					continue;
+					break;
 				}
 
 				$format = novelist_get_option( 'series_books_layout', 'grid' );
