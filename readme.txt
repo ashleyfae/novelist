@@ -3,7 +3,7 @@ Contributors: NoseGraze
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=L2TL7ZBVUMG9C
 Tags: books, authors, goodreads, writing, publishing, writer
 Requires at least: 4.0
-Tested up to: 4.9.5
+Tested up to: 5.0.2
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -108,6 +108,9 @@ if ( $book->synopsis ) {
 
 == Upgrade Notice ==
 
+= 1.1.7 =
+Fixed compatibility with PHP version 7.3.
+
 = 1.1.6 =
 Added ability to reorder purchase links.
 
@@ -145,6 +148,9 @@ Fixed a minor bug with "other books in this series" and added an option for resi
 Minor code tweaks.
 
 == Changelog ==
+
+= 1.1.7 =
+* Fix: "continue targeting switch is equivalent to break" error with PHP 7.3.
 
 = 1.1.6 =
 * New: Added ability to reorder purchase links.
