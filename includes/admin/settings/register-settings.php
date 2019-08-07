@@ -371,6 +371,11 @@ function novelist_settings_sanitize( $input = array() ) {
 	$tab      = ( isset( $referrer['tab'] ) && $referrer['tab'] != 'import_export' ) ? $referrer['tab'] : 'book';
 	$section  = isset( $referrer['section'] ) ? $referrer['section'] : 'main';
 
+	// Use first add-on as the section instead of 'main'.
+	if ( 'addons' === $tab && 'main' === $section ) {
+		$section = array_key_first( $settings[ $tab ] );
+	}
+
 	$input = $input ? $input : array();
 	$input = apply_filters( 'novelist/settings/sanitize/' . $tab . '/' . $section, $input );
 
