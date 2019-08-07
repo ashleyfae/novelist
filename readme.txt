@@ -108,6 +108,9 @@ if ( $book->synopsis ) {
 
 == Upgrade Notice ==
 
+= 1.1.8 =
+Fix problem with first "Add-Ons" settings section not saving.
+
 = 1.1.7 =
 Fixed compatibility with PHP version 7.3.
 
@@ -148,6 +151,9 @@ Fixed a minor bug with "other books in this series" and added an option for resi
 Minor code tweaks.
 
 == Changelog ==
+
+= 1.1.8 - 7 August 2019 =
+* Fix: Fix problem with first "Add-Ons" settings section not saving.
 
 = 1.1.7 =
 * Fix: "continue targeting switch is equivalent to break" error with PHP 7.3.
