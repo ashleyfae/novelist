@@ -4,6 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: books, authors, goodreads, writing, publishing, writer
 Requires at least: 4.0
 Tested up to: 5.2.2
+Requires PHP: 5.4
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -108,6 +109,9 @@ if ( $book->synopsis ) {
 
 == Upgrade Notice ==
 
+= 1.1.9 =
+Fix compatibility with PHP versions lower than 7.3.
+
 = 1.1.8 =
 Fix problem with first "Add-Ons" settings section not saving.
 
@@ -151,6 +155,9 @@ Fixed a minor bug with "other books in this series" and added an option for resi
 Minor code tweaks.
 
 == Changelog ==
+
+= 1.1.9 - 11 August 2019 =
+* Fix: Add fallback if `array_key_first()` function doesn't exist (PHP versions lower than 7.3).
 
 = 1.1.8 - 7 August 2019 =
 * Fix: Fix problem with first "Add-Ons" settings section not saving.
