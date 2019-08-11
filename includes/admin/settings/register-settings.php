@@ -373,7 +373,14 @@ function novelist_settings_sanitize( $input = array() ) {
 
 	// Use first add-on as the section instead of 'main'.
 	if ( 'addons' === $tab && 'main' === $section ) {
-		$section = array_key_first( $settings[ $tab ] );
+		if ( function_exists( 'array_key_first' ) ) {
+			$section = array_key_first( $settings[ $tab ] );
+		} else {
+			foreach ( $settings[ $tab ] as $section_key => $section_settings ) {
+				$section = $section_key;
+				break;
+			}
+		}
 	}
 
 	$input = $input ? $input : array();
