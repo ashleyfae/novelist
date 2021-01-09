@@ -114,7 +114,7 @@ Ensure all books are available to be selected in Novelist Book widget dropdown.
 
 == Changelog ==
 
-= 1.1.0 - 9 January 2021 =
+= 1.1.10 - 9 January 2021 =
 * Fix: Ensure all books are available to be selected in Novelist Book widget dropdown. (If you had more than 200 books, some may not have appeared in the dropdown.)
 
 = 1.1.9 - 11 August 2019 =
