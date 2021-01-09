@@ -109,52 +109,13 @@ if ( $book->synopsis ) {
 
 == Upgrade Notice ==
 
-= 1.1.9 =
-Fix compatibility with PHP versions lower than 7.3.
-
-= 1.1.8 =
-Fix problem with first "Add-Ons" settings section not saving.
-
-= 1.1.7 =
-Fixed compatibility with PHP version 7.3.
-
-= 1.1.6 =
-Added ability to reorder purchase links.
-
-= 1.1.5 =
-Updated documentation URLs.
-
-= 1.1.4 =
-New ids attribute in [novelist-books] shortcode and small code fixes.
-
-= 1.1.3 =
-Small tweak with auto adding book information that may affect sites that have social share links, etc.
-
-= 1.1.2 =
-You can now change the retail store names without losing existing links.
-
-= 1.1.1 =
-Small code tweaks, mostly to make things easier for developers extending the [novelist-books] grid.
-
-= 1.1.0 =
-New "Default Cover Image" setting, new export options, new "Add Book Grid" button.
-
-= 1.0.5 =
-Minor code tweaks, plus more actions and filters.
-
-= 1.0.4 =
-Updates to [novelist-books] shortcode and new shortcode: [novelist-series-grid]
-
-= 1.0.3 =
-Minor code tweaks and added new Extensions page.
-
-= 1.0.2 =
-Fixed a minor bug with "other books in this series" and added an option for resizing the book cover in Book Layout > Settings.
-
-= 1.0.1 =
-Minor code tweaks.
+= 1.1.10 =
+Ensure all books are available to be selected in Novelist Book widget dropdown.
 
 == Changelog ==
+
+= 1.1.0 - 9 January 2021 =
+* Fix: Ensure all books are available to be selected in Novelist Book widget dropdown. (If you had more than 200 books, some may not have appeared in the dropdown.)
 
 = 1.1.9 - 11 August 2019 =
 * Fix: Add fallback if `array_key_first()` function doesn't exist (PHP versions lower than 7.3).
