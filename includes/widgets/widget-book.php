@@ -93,7 +93,7 @@ class Novelist_Book_Widget extends WP_Widget {
 			'order'                  => 'ASC',
 			'post_type'              => 'book',
 			'post_status'            => 'any',
-			'posts_per_page'         => 200,
+			'posts_per_page'         => 500,
 			'no_found_rows'          => true,
 			'update_post_meta_cache' => false,
 			'update_post_term_cache' => false
