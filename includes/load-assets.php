@@ -24,7 +24,8 @@ function novelist_register_styles() {
 	}
 
 	// Use minified libraries if SCRIPT_DEBUG is turned off
-	$suffix = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '.min';
+	//$suffix = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '.min';
+	$suffix = '';
 
 	$file          = 'novelist-front-end' . $suffix . '.css';
 	$templates_dir = novelist_get_theme_template_dir_name();

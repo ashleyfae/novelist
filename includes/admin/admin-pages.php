@@ -48,6 +48,10 @@ function novelist_is_admin_page() {
 		$is_novelist_page = true;
 	}
 
+	if ( $screen->base == 'edit' && $screen->post_type == 'book' ) {
+		$is_novelist_page = true;
+	}
+
 	if ( $screen->base == 'dashboard_page_novelist-getting-started' ) {
 		$is_novelist_page = true;
 	}
@@ -82,7 +86,8 @@ function novelist_load_admin_scripts( $hook ) {
 	$css_dir = NOVELIST_PLUGIN_URL . 'assets/css/';
 
 	// Use minified libraries if SCRIPT_DEBUG is turned off
-	$suffix = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '.min';
+	//$suffix = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '.min';
+	$suffix = '';
 
 	/*
 	 * JavaScript
