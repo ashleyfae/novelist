@@ -6,7 +6,7 @@ mix.options( {
 	.sass( 'assets/css/novelist-admin.scss', 'assets/css' )
 	.sass( 'templates/novelist-front-end.scss', 'templates' )
 	.minify( [
-		'assests/js/admin-scripts.js',
+		'assets/js/admin-scripts.js',
 		'assets/js/media-upload.js',
 		'assets/js/widget-settings.js'
 	] )
