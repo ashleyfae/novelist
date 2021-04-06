@@ -550,14 +550,20 @@ class Novelist_Shortcodes {
 	public function show_book( $atts, $content = null ) {
 
 		$atts = shortcode_atts( array(
-			'title' => null // Title of the book
+			'title' => null, // Title of the book
+			'id'    => null, // ID of the book
 		), $atts, 'show-book' );
 
 		$args = array(
 			'post_type'      => 'book',
 			'posts_per_page' => 1,
-			's'              => strip_tags( $atts['title'] )
 		);
+
+		if ( ! empty( $atts['id'] ) ) {
+			$args['p'] = intval( $atts['id'] );
+		} elseif ( ! empty( $atts['title'] ) ) {
+			$args['s'] = strip_tags( $atts['title'] );
+		}
 
 		$book_query = new WP_Query( apply_filters( 'novelist/shortcode/show-book/query-args', $args ) );
 
