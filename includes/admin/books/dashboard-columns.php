@@ -40,6 +40,26 @@ function novelist_book_columns( $book_columns ) {
 add_filter( 'manage_edit-book_columns', 'novelist_book_columns' );
 
 /**
+ * Adds a "Book ID" label on hover actions.
+ *
+ * @param array   $actions
+ * @param WP_Post $post
+ *
+ * @since 1.1.11
+ * @return mixed
+ */
+function novelist_book_list_table_actions( $actions, $post ) {
+	if ( 'book' !== $post->post_type ) {
+		return $actions;
+	}
+
+	$actions['novelist-book-id'] = sprintf( esc_html__( 'Book ID: %d', 'novelist' ), esc_html( $post->ID ) );
+
+	return $actions;
+}
+add_filter( 'page_row_actions', 'novelist_book_list_table_actions', 10, 2 );
+
+/**
  * Render Book Columns
  *
  * @param string $column_name Name of the current column

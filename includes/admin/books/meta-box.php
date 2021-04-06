@@ -156,6 +156,17 @@ function novelist_render_book_information_fields( $post ) {
 
 	$book = new Novelist_Book( $post->ID );
 
+	if ( ! empty( $post->ID ) ) {
+		?>
+		<div class="novelist-box-row">
+			<label for="novelist_book_id"><?php esc_html_e( 'Book ID', 'novelist' ); ?></label>
+			<div class="novelist-input-wrapper">
+				<?php echo esc_html( $post->ID ); ?>
+			</div>
+		</div>
+		<?php
+	}
+
 	// Loop through each field and display it.
 	foreach ( $enabled_fields as $key => $settings ) {
 
