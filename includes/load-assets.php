@@ -23,11 +23,7 @@ function novelist_register_styles() {
 		return;
 	}
 
-	// Use minified libraries if SCRIPT_DEBUG is turned off
-	//$suffix = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '.min';
-	$suffix = '';
-
-	$file          = 'novelist-front-end' . $suffix . '.css';
+	$file          = 'novelist-front-end.css';
 	$templates_dir = novelist_get_theme_template_dir_name();
 
 	$child_theme_style_sheet     = trailingslashit( get_stylesheet_directory() ) . $templates_dir . $file;
