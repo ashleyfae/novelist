@@ -85,20 +85,16 @@ function novelist_load_admin_scripts( $hook ) {
 	$js_dir  = NOVELIST_PLUGIN_URL . 'assets/js/';
 	$css_dir = NOVELIST_PLUGIN_URL . 'assets/css/';
 
-	// Use minified libraries if SCRIPT_DEBUG is turned off
-	//$suffix = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '.min';
-	$suffix = '';
-
 	/*
 	 * JavaScript
 	 */
 
-	wp_register_script( 'jquery-recopy', $js_dir . 'jquery.recopy' . $suffix . '.js', array( 'jquery' ), NOVELIST_VERSION, true );
+	wp_register_script( 'jquery-recopy', $js_dir . 'jquery.recopy.min.js', array( 'jquery' ), NOVELIST_VERSION, true );
 	wp_enqueue_script( 'jquery-recopy' );
 
 	// Media Upload
 	wp_enqueue_media();
-	wp_register_script( 'novelist-media-upload', $js_dir . 'media-upload' . $suffix . '.js', array( 'jquery' ), NOVELIST_VERSION, true );
+	wp_register_script( 'novelist-media-upload', $js_dir . 'media-upload.min.js', array( 'jquery' ), NOVELIST_VERSION, true );
 	wp_enqueue_script( 'novelist-media-upload' );
 
 	$settings = array(
@@ -117,7 +113,7 @@ function novelist_load_admin_scripts( $hook ) {
 		'wp-color-picker'
 	);
 
-	wp_register_script( 'novelist-admin-scripts', $js_dir . 'admin-scripts' . $suffix . '.js', $admin_deps, NOVELIST_VERSION, true );
+	wp_register_script( 'novelist-admin-scripts', $js_dir . 'admin-scripts.min.js', $admin_deps, NOVELIST_VERSION, true );
 	wp_enqueue_script( 'novelist-admin-scripts' );
 
 	$settings = array(
@@ -136,7 +132,7 @@ function novelist_load_admin_scripts( $hook ) {
 	// Color Picker
 	wp_enqueue_style( 'wp-color-picker' );
 
-	wp_register_style( 'novelist-admin', $css_dir . 'novelist-admin' . $suffix . '.css', array(), NOVELIST_VERSION );
+	wp_register_style( 'novelist-admin', $css_dir . 'novelist-admin.css', array(), NOVELIST_VERSION );
 	wp_enqueue_style( 'novelist-admin' );
 }
 
@@ -158,15 +154,11 @@ function novelist_load_widget_scripts( $hook ) {
 	}
 
 	$js_dir  = NOVELIST_PLUGIN_URL . 'assets/js/';
-	$css_dir = NOVELIST_PLUGIN_URL . 'assets/css/';
-
-	// Use minified libraries if SCRIPT_DEBUG is turned off
-	$suffix = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '.min';
 
 	wp_enqueue_script( 'wp-color-picker' );
 	wp_enqueue_style( 'wp-color-picker' );
 
-	wp_enqueue_script( 'novelist-widget-scripts', $js_dir . 'widget-settings' . $suffix . '.js', array( 'jquery' ), NOVELIST_VERSION, true );
+	wp_enqueue_script( 'novelist-widget-scripts', $js_dir . 'widget-settings.min.js', array( 'jquery' ), NOVELIST_VERSION, true );
 }
 
 add_action( 'admin_enqueue_scripts', 'novelist_load_widget_scripts', 100 );
