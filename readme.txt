@@ -3,7 +3,7 @@ Contributors: NoseGraze
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=L2TL7ZBVUMG9C
 Tags: books, authors, goodreads, writing, publishing, writer
 Requires at least: 4.0
-Tested up to: 5.6
+Tested up to: 5.7
 Requires PHP: 5.4
 Stable tag: trunk
 License: GPLv2 or later
@@ -109,10 +109,14 @@ if ( $book->synopsis ) {
 
 == Upgrade Notice ==
 
-= 1.1.10 =
-Ensure all books are available to be selected in Novelist Book widget dropdown.
+= 1.1.11 =
+Allow `[show-book]` shortcode to accept an ID & show book IDs clearly in admin area.
 
 == Changelog ==
+
+= 1.1.11 - 6 April 2021 =
+* New: Each book's ID number is now displayed on the admin page.
+* New: The `[show-book]` shortcode can now accept a book ID instead of the title. Example: `[show-book id="10"]`
 
 = 1.1.10 - 9 January 2021 =
 * Fix: Ensure all books are available to be selected in Novelist Book widget dropdown. (If you had more than 200 books, some may not have appeared in the dropdown.)

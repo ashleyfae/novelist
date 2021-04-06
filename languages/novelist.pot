@@ -2,14 +2,14 @@
 # This file is distributed under the same license as the Novelist plugin.
 msgid ""
 msgstr ""
-"Project-Id-Version: Novelist 1.1.10\n"
+"Project-Id-Version: Novelist 1.1.11\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/novelist\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2021-04-06T12:37:13+01:00\n"
+"POT-Creation-Date: 2021-04-06T12:48:44+01:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.4.0\n"
 "X-Domain: novelist\n"
@@ -59,29 +59,29 @@ msgstr ""
 msgid "Extensions"
 msgstr ""
 
-#: includes/admin/admin-pages.php:100
+#: includes/admin/admin-pages.php:105
 msgid "Upload or Select an Image"
 msgstr ""
 
-#: includes/admin/admin-pages.php:101
+#: includes/admin/admin-pages.php:106
 msgid "Insert Image"
 msgstr ""
 
-#: includes/admin/admin-pages.php:119
+#: includes/admin/admin-pages.php:124
 msgid "Move Up"
 msgstr ""
 
-#: includes/admin/admin-pages.php:120
+#: includes/admin/admin-pages.php:125
 msgid "Move Down"
 msgstr ""
 
-#: includes/admin/admin-pages.php:121
+#: includes/admin/admin-pages.php:126
 #: includes/admin/settings/register-settings.php:1155
 #: includes/admin/settings/register-settings.php:1181
 msgid "Remove"
 msgstr ""
 
-#: includes/admin/admin-pages.php:122
+#: includes/admin/admin-pages.php:127
 msgid "Are you sure you wish to revert all the settings in this tab to their default values? This cannot be undone."
 msgstr ""
 
@@ -92,6 +92,10 @@ msgstr ""
 
 #: includes/admin/books/dashboard-columns.php:34
 msgid "Book Cover"
+msgstr ""
+
+#: includes/admin/books/dashboard-columns.php:56
+msgid "Book ID: %d"
 msgstr ""
 
 #: includes/admin/books/demo-book.php:14
@@ -159,85 +163,89 @@ msgstr ""
 msgid "Series Number"
 msgstr ""
 
-#: includes/admin/books/meta-box.php:168
+#: includes/admin/books/meta-box.php:162
+msgid "Book ID"
+msgstr ""
+
+#: includes/admin/books/meta-box.php:179
 #: includes/book-functions.php:25
 msgid "Cover Image"
 msgstr ""
 
-#: includes/admin/books/meta-box.php:186
+#: includes/admin/books/meta-box.php:197
 #: includes/admin/settings/register-settings.php:1298
 msgid "Upload Image"
 msgstr ""
 
-#: includes/admin/books/meta-box.php:187
+#: includes/admin/books/meta-box.php:198
 #: includes/admin/settings/register-settings.php:1299
 msgid "Remove Image"
 msgstr ""
 
-#: includes/admin/books/meta-box.php:199
+#: includes/admin/books/meta-box.php:210
 #: includes/book-functions.php:31
 msgid "Book Title"
 msgstr ""
 
-#: includes/admin/books/meta-box.php:214
+#: includes/admin/books/meta-box.php:225
 #: includes/book-functions.php:43
 msgid "Publisher"
 msgstr ""
 
-#: includes/admin/books/meta-box.php:225
+#: includes/admin/books/meta-box.php:236
 #: includes/book-functions.php:49
 msgid "Publication Date"
 msgstr ""
 
-#: includes/admin/books/meta-box.php:239
+#: includes/admin/books/meta-box.php:250
 #: includes/book-functions.php:55
 msgid "Contributors"
 msgstr ""
 
-#: includes/admin/books/meta-box.php:254
+#: includes/admin/books/meta-box.php:265
 msgid "Number of Pages"
 msgstr ""
 
-#: includes/admin/books/meta-box.php:265
+#: includes/admin/books/meta-box.php:276
 #: includes/book-functions.php:73
 msgid "ISBN13"
 msgstr ""
 
-#: includes/admin/books/meta-box.php:276
+#: includes/admin/books/meta-box.php:287
 #: includes/book-functions.php:79
 msgid "ASIN"
 msgstr ""
 
-#: includes/admin/books/meta-box.php:292
+#: includes/admin/books/meta-box.php:303
 #: includes/book-functions.php:85
 msgid "Synopsis"
 msgstr ""
 
-#: includes/admin/books/meta-box.php:303
+#: includes/admin/books/meta-box.php:314
 msgid "Goodreads URL"
 msgstr ""
 
-#: includes/admin/books/meta-box.php:319
+#: includes/admin/books/meta-box.php:330
 msgid "%s URL"
 msgstr ""
 
-#: includes/admin/books/meta-box.php:340
+#: includes/admin/books/meta-box.php:351
 #: includes/book-functions.php:107
 msgid "Excerpt"
 msgstr ""
 
-#: includes/admin/books/meta-box.php:359
+#: includes/admin/books/meta-box.php:370
 #: includes/book-functions.php:112
 #: includes/widgets/widget-book.php:187
 #: includes/widgets/widget-books-by-series.php:181
 msgid "Extra Text"
 msgstr ""
 
-#: includes/admin/books/meta-box.php:394
+#: includes/admin/books/meta-box.php:405
 msgid "Hide from Archives"
 msgstr ""
 
-#: includes/admin/books/meta-box.php:396
+#: includes/admin/books/meta-box.php:407
 #: includes/admin/thickbox.php:271
 #: includes/admin/thickbox.php:282
 #: includes/admin/thickbox.php:305
@@ -245,7 +253,7 @@ msgstr ""
 msgid "Yes"
 msgstr ""
 
-#: includes/admin/books/meta-box.php:418
+#: includes/admin/books/meta-box.php:429
 msgid "Number in the Series"
 msgstr ""
 
