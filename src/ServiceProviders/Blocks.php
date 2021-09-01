@@ -22,6 +22,7 @@ class Blocks implements ServiceProvider
 
     public function boot()
     {
-        Hooks::addAction('init', Registration::class);
+        Hooks::addAction('init', Registration::class, 'registerBlocks');
+        Hooks::addFilter('block_categories', Registration::class, 'registerCategory', 10, 2);
     }
 }

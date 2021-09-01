@@ -18,7 +18,6 @@ class Book implements Block
             'novelist/book',
             [
                 'editor_script' => 'novelist-blocks',
-                'editor_style'  => 'novelist-blocks',
             ]
         );
     }

@@ -6,8 +6,12 @@
   "license": "GPL-2.0-or-later",
   "homepage": "https://novelistplugin.com",
   "devDependencies": {
+    "@wordpress/components": "^8.1.0",
+    "@wordpress/i18n": "^3.17.0",
     "@wordpress/scripts": "^16.0.0",
-    "ignore-emit-webpack-plugin": "^2.0.6"
+    "ignore-emit-webpack-plugin": "^2.0.6",
+    "webpack": "^4.46.0",
+    "webpack-cli": "^3.3.12"
   },
   "scripts": {
     "build": "wp-scripts build --webpack-no-externals && npm run i18n",

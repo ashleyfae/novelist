@@ -57,7 +57,9 @@ if (! class_exists('Novelist')) :
          *
          * @var string[]
          */
-        private $serviceProviders = [];
+        private $serviceProviders = [
+            \Novelist\ServiceProviders\Blocks::class,
+        ];
 
         /** @var bool */
         private $serviceProvidersLoaded = false;

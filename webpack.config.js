@@ -14,8 +14,7 @@ const cwd = process.cwd();
 module.exports = {
 	...defaultConfig,
 	externals: {
-		'react': 'React',
-		'react-dom': 'ReactDOM',
+		'lodash': 'lodash'
 	},
 	entry: {
 		// Scripts.
@@ -23,6 +22,7 @@ module.exports = {
 		'jquery.recopy': path.resolve( cwd, 'assets/js', 'jquery.recopy.js' ),
 		'media-upload': path.resolve( cwd, 'assets/js', 'media-upload.js' ),
 		'widget-settings': path.resolve( cwd, 'assets/js', 'widget-settings.js' ),
+		blocks: path.resolve( cwd, 'assets/js/blocks', 'index.js'),
 
 		// Styles.
 		// Prefix all entry points with `style-` to ensure style-only entry points
