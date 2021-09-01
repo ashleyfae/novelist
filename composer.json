@@ -1,0 +1,16 @@
+{
+  "name": "ashleyfae/novelist",
+  "type": "wordpress-plugin",
+  "description": "Easily organize and display your portfolio of books.",
+  "homepage": "https://novelistplugin.com/",
+  "license": "GPL-2.0-or-later",
+  "require": {
+    "php": ">=7.1",
+    "composer/installers": "~1.2"
+  },
+  "autoload": {
+    "psr-4": {
+      "Novelist\\": "src"
+    }
+  }
+}
