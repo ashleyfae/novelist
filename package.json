@@ -6,14 +6,16 @@
   "license": "GPL-2.0-or-later",
   "homepage": "https://novelistplugin.com",
   "devDependencies": {
-    "laravel-mix": "^6.0.16",
-    "resolve-url-loader": "^3.1.2",
-    "sass": "^1.32.8",
-    "sass-loader": "^11.0.1"
+    "@wordpress/scripts": "^16.0.0",
+    "ignore-emit-webpack-plugin": "^2.0.6"
   },
   "scripts": {
-    "build": "npx mix --production && npm run i18n",
-    "dev": "npx mix watch",
-    "i18n": "wp i18n make-pot . languages/novelist.pot --domain=novelist"
+    "build": "wp-scripts build --webpack-no-externals && npm run i18n",
+    "format": "wp-scripts format",
+    "i18n": "wp i18n make-pot . languages/novelist.pot --domain=novelist",
+    "lint:css": "wp-scripts lint-style",
+    "lint:js": "wp-scripts lint-js",
+    "lint:pkg-json": "wp-scripts lint-pkg-json",
+    "dev": "wp-scripts start --webpack-no-externals"
   }
 }
