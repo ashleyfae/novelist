@@ -40,22 +40,24 @@ class ContextualBindingBuilder
     /**
      * ContextualBindingBuilder constructor.
      *
-     * @param Container    $container
-     * @param array|string $concrete
+     * @param  Container  $container
+     * @param  array|string  $concrete
      */
-    public function __construct( Container $container, $concrete ) {
+    public function __construct(Container $container, $concrete)
+    {
         $this->container = $container;
-        $this->concrete  = is_array( $concrete ) ? $concrete : [ $concrete ];
+        $this->concrete  = is_array($concrete) ? $concrete : [$concrete];
     }
 
     /**
      * Define the abstract target that depends on the context.
      *
-     * @param string $abstract
+     * @param  string  $abstract
      *
      * @return $this
      */
-    public function needs( $abstract ) {
+    public function needs($abstract)
+    {
         $this->needs = $abstract;
 
         return $this;
@@ -64,13 +66,14 @@ class ContextualBindingBuilder
     /**
      * Define the implementation for the contextual binding.
      *
-     * @param \Closure|string|array $implementation
+     * @param  \Closure|string|array  $implementation
      *
      * @return void
      */
-    public function give( $implementation ) {
-        foreach ( $this->concrete as $concrete ) {
-            $this->container->addContextualBinding( $concrete, $this->needs, $implementation );
+    public function give($implementation)
+    {
+        foreach ($this->concrete as $concrete) {
+            $this->container->addContextualBinding($concrete, $this->needs, $implementation);
         }
     }
 

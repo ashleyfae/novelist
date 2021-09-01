@@ -17,25 +17,26 @@ class Util
     /**
      * Get the class name of the given parameter's type, if possible.
      *
-     * @param \ReflectionParameter $parameter
+     * @param  \ReflectionParameter  $parameter
      *
      * @return string|null
      */
-    public static function getParameterClassName( $parameter ) {
+    public static function getParameterClassName($parameter)
+    {
         $type = $parameter->getType();
 
-        if ( ! $type instanceof ReflectionNamedType || $type->isBuiltin() ) {
+        if (! $type instanceof ReflectionNamedType || $type->isBuiltin()) {
             return;
         }
 
         $name = $type->getName();
 
-        if ( ! is_null( $class = $parameter->getDeclaringClass() ) ) {
-            if ( $name === 'self' ) {
+        if (! is_null($class = $parameter->getDeclaringClass())) {
+            if ($name === 'self') {
                 return $class->getName();
             }
 
-            if ( $name === 'parent' && $parent = $class->getParentClass() ) {
+            if ($name === 'parent' && $parent = $class->getParentClass()) {
                 return $parent->getName();
             }
         }
