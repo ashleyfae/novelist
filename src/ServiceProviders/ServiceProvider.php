@@ -18,7 +18,7 @@ interface ServiceProvider
      *
      * @return void
      */
-    public function register();
+    public function register(): void;
 
     /**
      * Bootstraps the service after all of the services have been registered.
@@ -28,5 +28,5 @@ interface ServiceProvider
      *
      * @return void
      */
-    public function boot();
+    public function boot(): void;
 }
