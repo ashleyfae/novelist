@@ -32,6 +32,7 @@ class Plugin
     private $serviceProviders = [
         ServiceProviders\LegacyServiceProvider::class,
         ServiceProviders\ShortcodeServiceProvider::class,
+        ServiceProviders\WidgetServiceProvider::class,
     ];
 
     /** @var bool */

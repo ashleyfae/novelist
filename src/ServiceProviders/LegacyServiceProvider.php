@@ -11,6 +11,9 @@ namespace Novelist\ServiceProviders;
 
 use Novelist\Helpers\Html;
 use Novelist\Plugin;
+use Novelist\Widgets\BooksBySeriesWidget;
+use Novelist\Widgets\BookWidget;
+use Novelist\Widgets\WordCountWidget;
 
 class LegacyServiceProvider implements ServiceProvider
 {
@@ -46,9 +49,6 @@ class LegacyServiceProvider implements ServiceProvider
         require_once NOVELIST_PLUGIN_DIR.'includes/load-assets.php';
         require_once NOVELIST_PLUGIN_DIR.'includes/misc-functions.php';
         require_once NOVELIST_PLUGIN_DIR.'includes/template-functions.php';
-        require_once NOVELIST_PLUGIN_DIR.'includes/widgets/widget-book.php';
-        require_once NOVELIST_PLUGIN_DIR.'includes/widgets/widget-books-by-series.php';
-        require_once NOVELIST_PLUGIN_DIR.'includes/widgets/widget-word-count.php';
 
         if (is_admin()) {
             require_once NOVELIST_PLUGIN_DIR.'includes/admin/admin-actions.php';
@@ -73,6 +73,10 @@ class LegacyServiceProvider implements ServiceProvider
     {
         class_alias(Plugin::class, 'Novelist');
         class_alias(Html::class, 'Novelist_HTML');
+
+        class_alias(BookWidget::class, 'Novelist_Book_Widget');
+        class_alias(BooksBySeriesWidget::class, 'Novelist_Books_By_Series');
+        class_alias(WordCountWidget::class, 'Novelist_Word_Count_Widget');
     }
 
     /**
