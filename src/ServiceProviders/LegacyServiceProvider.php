@@ -9,6 +9,7 @@
 
 namespace Novelist\ServiceProviders;
 
+use Novelist\Helpers\Html;
 use Novelist\Plugin;
 
 class LegacyServiceProvider implements ServiceProvider
@@ -36,7 +37,6 @@ class LegacyServiceProvider implements ServiceProvider
             $novelist_options = novelist_get_settings();
         }
 
-        require_once NOVELIST_PLUGIN_DIR.'includes/class-novelist-html.php';
         require_once NOVELIST_PLUGIN_DIR.'includes/class-novelist-roles.php';
         require_once NOVELIST_PLUGIN_DIR.'includes/post-types.php';
         require_once NOVELIST_PLUGIN_DIR.'includes/class-novelist-book.php';
@@ -72,6 +72,7 @@ class LegacyServiceProvider implements ServiceProvider
     private function registerClassAliases(): void
     {
         class_alias(Plugin::class, 'Novelist');
+        class_alias(Html::class, 'Novelist_HTML');
     }
 
     /**
@@ -82,7 +83,7 @@ class LegacyServiceProvider implements ServiceProvider
         novelist()->bind(\Novelist_Roles::class);
         novelist()->alias(\Novelist_Roles::class, 'roles');
 
-        novelist()->bind(\Novelist_HTML::class);
-        novelist()->alias(\Novelist_HTML::class, 'html');
+        novelist()->bind(Html::class);
+        novelist()->alias(Html::class, 'html');
     }
 }

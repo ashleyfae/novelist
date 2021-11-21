@@ -10,7 +10,7 @@
 
 namespace Novelist;
 
-use Novelist\ServiceProviders\LegacyServiceProvider;
+use Novelist\ServiceProviders;
 
 /**
  * @since 2.0 Class renamed.
@@ -30,7 +30,8 @@ class Plugin
      * @var string[]
      */
     private $serviceProviders = [
-        LegacyServiceProvider::class,
+        ServiceProviders\LegacyServiceProvider::class,
+        ServiceProviders\ShortcodeServiceProvider::class,
     ];
 
     /** @var bool */
