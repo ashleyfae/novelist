@@ -1,4 +1,5 @@
-const {Component, Fragment} = wp.element;
+import { Component, Fragment } from "@wordpress/element";
+
 import {
     Button,
     Placeholder

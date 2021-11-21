@@ -1,4 +1,4 @@
-const {Component} = wp.element;
+import { Component} from "@wordpress/element";
 
 class BookPreview extends Component {
     constructor( props ) {

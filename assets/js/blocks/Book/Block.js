@@ -1,7 +1,6 @@
+import { Component} from "@wordpress/element";
 import BookPreview from "../Components/BookPreview";
 import BookSearchControl from "../Components/BookSearchControl";
-
-const { Component } = wp.element;
 
 class Block extends Component {
     constructor(props) {
