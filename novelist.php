@@ -3,12 +3,14 @@
  * Plugin Name: Novelist
  * Plugin URI: https://novelistplugin.com
  * Description: Easily organize and display your portfolio of books
- * Version: 1.1.11
+ * Version: 1.2.0
  * Author: Nose Graze
  * Author URI: https://www.nosegraze.com
  * License: GPL2
  * Text Domain: novelist
  * Domain Path: languages
+ * Requires at least: 4.0
+ * Requires PHP: 5.4
  *
  * Novelist is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -29,7 +31,7 @@
  * under GPL2+.
  *
  * @package   novelist
- * @copyright Copyright (c) 2021 Nose Graze Ltd
+ * @copyright Copyright (c) 2023 Nose Graze Ltd
  * @license   GPL2+
  */
 
@@ -134,7 +136,7 @@ if ( ! class_exists( 'Novelist' ) ) :
 
 			// Plugin version.
 			if ( ! defined( 'NOVELIST_VERSION' ) ) {
-				define( 'NOVELIST_VERSION', '1.1.11' );
+				define( 'NOVELIST_VERSION', '1.2.0' );
 			}
 
 			// Plugin Folder Path.
