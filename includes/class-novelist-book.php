@@ -512,7 +512,7 @@ class Novelist_Book {
 	public function get_genre() {
 
 		if ( ! isset( $this->genre ) ) {
-			$this->genre = get_the_term_list( $this->ID, 'novelist-genre', '', ', ', '' );
+			$this->genre = novelist_get_taxonomy_term_list($this->ID, 'novelist-genre');
 		}
 
 		return apply_filters( 'novelist/book/get/genre', $this->genre, $this->ID );
