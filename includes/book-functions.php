@@ -228,7 +228,7 @@ function novelist_get_formatted_series( $book_id = 0, $linked = true, $series_nu
 
 	// If we don't have a series number, just return the list of taxonomy terms.
 	if ( empty( $series_number ) ) {
-		return get_the_term_list( $book_id, 'novelist-series', '', ', ', '' );
+		return novelist_get_taxonomy_term_list($book_id, 'novelist-series');
 	}
 
 	$series_terms = wp_get_post_terms( $book_id, 'novelist-series' );
@@ -240,14 +240,44 @@ function novelist_get_formatted_series( $book_id = 0, $linked = true, $series_nu
 	$series_number_array = explode( ', ', $series_number );
 	$final_list          = array();
 
+    $taxonomy = get_taxonomy('novelist-series');
+    if ($taxonomy instanceof WP_Taxonomy && ! $taxonomy->public) {
+        $linked = false;
+    }
+
 	foreach ( $series_terms as $key => $term ) {
 		$this_series_number = array_key_exists( $key, $series_number_array ) ? $series_number_array[ $key ] : $series_number_array[0];
 		$series_name        = sprintf( '%1$s #%2$s', esc_html( $term->name ), '<span itemprop="position">' . $this_series_number . '</span>' );
 		$term_link          = get_term_link( $term );
-		$final_list[]       = ( $linked == true ) ? '<a href="' . esc_url( apply_filters( 'novelist/book/series-link', $term_link, $term, $book_id ) ) . '">' . $series_name . '</a>' : $series_name;
+		$final_list[]       = $linked ? '<a href="' . esc_url( apply_filters( 'novelist/book/series-link', $term_link, $term, $book_id ) ) . '">' . $series_name . '</a>' : $series_name;
 	}
 
 	return implode( apply_filters( 'novelist/book/series-separator', ', ' ), $final_list );
+}
+
+/**
+ * Gets a comma-separated list of taxonomy terms for the given book.
+ * This factors in whether or not the taxonomy is public. If it's not public, the terms will not be linked to archive
+ * pages. If it is public, then they will be.
+ *
+ * @param int $book_id
+ * @param string $taxonomy_slug
+ *
+ * @return string|false
+ */
+function novelist_get_taxonomy_term_list($book_id, $taxonomy_slug) {
+    $taxonomy = get_taxonomy($taxonomy_slug);
+
+    if ($taxonomy instanceof WP_Taxonomy && ! $taxonomy->public) {
+        $terms = get_the_terms($book_id, $taxonomy_slug);
+        if (empty($terms) || is_wp_error($terms)) {
+            return false;
+        }
+
+        return implode(', ', wp_list_pluck($terms, 'name'));
+    } else {
+        return get_the_term_list($book_id, $taxonomy_slug, '', ', ', '');
+    }
 }
 
 /**
