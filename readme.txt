@@ -98,6 +98,24 @@ if ( $book->synopsis ) {
     echo '<blockquote class="novelist-synopsis">' . wpautop( $book->synopsis ) . '</blockquote>';
 }`
 
+= How can I disable the taxonomy archive links? =
+
+The Novelist plugin creates two custom taxonomies:
+
+- `novelist-genre` for genres
+- `novelist-series` for series
+
+By default, when showing book information, each taxonomy term (genre name or series name) will link to an automatically generated archive page. To disable these links, add this code snippet to a custom plugin:
+
+`add_filter('novelist/taxonomy/series-args', 'agNovelistDisableArchives');
+add_filter('novelist/taxonomy/genre-args', 'agNovelistDisableArchives');
+
+function agNovelistDisableArchives($args) {
+	$args['public'] = false;
+
+	return $args;
+}`
+
 == Screenshots ==
 
 1. Book layout builder.
