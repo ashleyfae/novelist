@@ -132,6 +132,9 @@ Allow `[show-book]` shortcode to accept an ID & show book IDs clearly in admin a
 
 == Changelog ==
 
+= 1.2.0 - 21 April 2023 =
+* New: Made it possible (via custom code) to disable the automatic series and genre archives. See FAQ for instructions.
+
 = 1.1.11 - 6 April 2021 =
 * New: Each book's ID number is now displayed on the admin page.
 * New: The `[show-book]` shortcode can now accept a book ID instead of the title. Example: `[show-book id="10"]`
