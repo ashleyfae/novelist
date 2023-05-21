@@ -645,29 +645,36 @@ add_filter( 'novelist/settings/sanitize/image', 'novelist_settings_sanitize_imag
  * @since 1.0.0
  * @return array
  */
-function novelist_settings_sanitize_novelist_book_layout( $input ) {
+function novelist_settings_sanitize_novelist_book_layout($input)
+{
+    // Check permissions.
+    if (! current_user_can('manage_novelist_settings')) {
+        return $input;
+    }
 
-	// Check permissions.
-	if ( ! current_user_can( 'manage_novelist_settings' ) ) {
-		return $input;
-	}
+    $new_input = array();
 
-	$new_input = array();
+    foreach ($input as $key => $value) {
+        if (! is_array($value) || (array_key_exists('disabled', $value) && $value['disabled'] == 'true')) {
+            continue;
+        }
 
-	foreach ( $input as $key => $value ) {
-		if ( array_key_exists( 'disabled', $value ) && $value['disabled'] == 'true' ) {
-			continue;
-		}
+        if (array_key_exists('disabled', $value)) {
+            unset($value['disabled']);
+        }
 
-		if ( array_key_exists( 'disabled', $value ) ) {
-			unset( $value['disabled'] );
-		}
+        foreach($value as $valueKey => $valueLabel) {
+            if ($valueKey === 'label') {
+                $value[$valueKey] = wp_kses_post($valueLabel);
+            } else {
+                $value[$valueKey] = wp_strip_all_tags($valueLabel);
+            }
+        }
 
-		$new_input[ $key ] = $value;
-	}
+        $new_input[$key] = $value;
+    }
 
-	return $new_input;
-
+    return $new_input;
 }
 
 add_filter( 'novelist/settings/sanitize/book_layout', 'novelist_settings_sanitize_novelist_book_layout' );
