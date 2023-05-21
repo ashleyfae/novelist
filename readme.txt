@@ -3,7 +3,7 @@ Contributors: NoseGraze
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=L2TL7ZBVUMG9C
 Tags: books, authors, goodreads, writing, publishing, writer
 Requires at least: 4.0
-Tested up to: 6.2
+Tested up to: 6.2.2
 Requires PHP: 5.4
 Stable tag: trunk
 License: GPLv2 or later
@@ -127,10 +127,13 @@ function agNovelistDisableArchives($args) {
 
 == Upgrade Notice ==
 
-= 1.1.11 =
-Allow `[show-book]` shortcode to accept an ID & show book IDs clearly in admin area.
+= 1.2.1 =
+Add sanitization to the book info fields to disallow some HTML.
 
 == Changelog ==
+
+= 1.2.1 - 21 May 2023 =
+* Security Fix: Add sanitization to the book info fields to disallow some HTML.
 
 = 1.2.0 - 21 April 2023 =
 * New: Made it possible (via custom code) to disable the automatic series and genre archives. See FAQ for instructions.
