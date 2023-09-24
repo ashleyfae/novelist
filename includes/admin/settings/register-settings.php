@@ -745,7 +745,7 @@ function novelist_get_settings_tabs() {
  * Retrieve settings tabs
  *
  * @since 1.0.0
- * @return array $section
+ * @return array|false
  */
 function novelist_get_settings_tab_sections( $tab = false ) {
 	$tabs     = false;
