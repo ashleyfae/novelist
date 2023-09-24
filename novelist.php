@@ -10,7 +10,7 @@
  * Text Domain: novelist
  * Domain Path: languages
  * Requires at least: 4.0
- * Requires PHP: 5.4
+ * Requires PHP: 7.1
  *
  * Novelist is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
