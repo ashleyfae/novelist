@@ -72,7 +72,8 @@ add_action( 'wp_enqueue_scripts', 'novelist_register_styles' );
  * @since 1.0.0
  * @return string
  */
-function novelist_generate_css() {
+function novelist_generate_css(): string
+{
 	$css = '';
 
 	// Button BG
@@ -105,13 +106,14 @@ function novelist_generate_css() {
  * means lighter. This will return a new hex value that has been darkened
  * or brightened based on that value.
  *
- * @param string $hex
- * @param int    $steps
+ * @param  string  $hex
+ * @param  int  $steps
  *
  * @since 1.0.0
  * @return string
  */
-function novelist_adjust_brightness( $hex, $steps ) {
+function novelist_adjust_brightness( string $hex, int $steps ): string
+{
 	// Steps should be between -255 and 255. Negative = darker, positive = lighter
 	$steps = max( - 255, min( 255, $steps ) );
 
