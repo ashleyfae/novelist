@@ -424,7 +424,8 @@
 		var data = {
 			'action': 'novelist_restore_default_settings',
 			'tab': $(this).data('current-tab'),
-			'section': $(this).data('current-section')
+			'section': $(this).data('current-section'),
+			'_ajax_nonce': $(this).data('nonce')
 		};
 
 		$.post(ajaxurl, data, function (response) {
