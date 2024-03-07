@@ -451,14 +451,22 @@ add_action( 'admin_init', 'novelist_defaults_restored_message' );
  * @return void
  */
 function novelist_restore_default_settings() {
+	$tab     = isset($_POST['tab']) ? strip_tags( $_POST['tab'] ) : '';
+	$section = isset($_POST['section']) ? strip_tags( $_POST['section'] ) : '';
+
+	if (empty($tab) || empty($section)) {
+		return;
+	}
+
+	// Nonce check.
+	check_ajax_referer('novelist_reset_section_'.$tab.'_'.$section);
+
 	// Permission check.
 	if ( ! current_user_can( 'manage_novelist_settings' ) ) {
 		wp_die( __( 'Bugger off! You don\'t have permission to do this.', 'novelist' ) );
 	}
 
 	global $novelist_options;
-	$tab              = strip_tags( $_POST['tab'] );
-	$section          = strip_tags( $_POST['section'] );
 	$default_settings = novelist_get_registered_settings();
 
 	// Tab is missing.

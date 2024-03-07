@@ -113,7 +113,15 @@ function novelist_options_page() {
 					<?php submit_button(); ?>
 
 					<p id="novelist-reset-tab">
-						<button type="button" id="novelist-reset-tab-button" name="novelist-reset-defaults" class="button-secondary" data-current-tab="<?php echo esc_attr( $active_tab ); ?>" data-current-section="<?php echo esc_attr( $section ); ?>"><?php esc_attr_e( 'Reset Section', 'novelist' ); ?></button>
+						<button
+								type="button"
+								id="novelist-reset-tab-button"
+								name="novelist-reset-defaults"
+								class="button-secondary"
+								data-current-tab="<?php echo esc_attr( $active_tab ); ?>"
+								data-current-section="<?php echo esc_attr( $section ); ?>"
+								data-nonce="<?php echo esc_attr(wp_create_nonce('novelist_reset_section_'.$active_tab.'_'.$section)); ?>"
+						><?php esc_attr_e( 'Reset Section', 'novelist' ); ?></button>
 					</p>
 				</div>
 			</form>
