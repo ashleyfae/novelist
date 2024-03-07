@@ -127,10 +127,13 @@ function agNovelistDisableArchives($args) {
 
 == Upgrade Notice ==
 
-= 1.2.2 =
-Fix potential fatal error on certain settings pages.
+= 1.2.3 =
+Security fix
 
 == Changelog ==
+
+= 1.2.3 - 7 March 2024 =
+* Security Fix (CSRF)
 
 = 1.2.2 - 24 September 2023 =
 * Fix: Potential fatal error on certain settings pages.
