@@ -3,7 +3,7 @@ Contributors: NoseGraze
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=L2TL7ZBVUMG9C
 Tags: books, authors, goodreads, writing, publishing, writer
 Requires at least: 4.0
-Tested up to: 6.3.1
+Tested up to: 6.7.1
 Requires PHP: 7.1
 Stable tag: trunk
 License: GPLv2 or later
@@ -127,7 +127,7 @@ function agNovelistDisableArchives($args) {
 
 == Upgrade Notice ==
 
-= 1.2.3 =
+= 1.2.4 =
 Security fix
 
 == Changelog ==
