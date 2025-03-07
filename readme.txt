@@ -134,6 +134,7 @@ Security fix
 
 = 1.2.4 - 7 March 2025 =
 * Security Fix (XSS)
+* Fix: Deprecation warning: Creation of dynamic property Novelist_Book::$post_type
 
 = 1.2.3 - 7 March 2024 =
 * Security Fix (CSRF)
