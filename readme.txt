@@ -132,6 +132,9 @@ Security fix
 
 == Changelog ==
 
+= 1.2.4 - 7 March 2025 =
+* Security Fix (XSS)
+
 = 1.2.3 - 7 March 2024 =
 * Security Fix (CSRF)
 
