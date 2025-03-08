@@ -1,0 +1,13 @@
+/.git
+/.github
+/node_modules
+/tests
+
+.distignore
+.gitignore
+
+README.md
+mix-manifest.json
+package-lock.json
+package.json
+webpack.mix.js
