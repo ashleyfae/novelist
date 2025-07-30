@@ -18,6 +18,10 @@ jobs:
     - name: Setup WP-CLI
       uses: godaddy-wordpress/setup-wp-cli@1
 
+    - name: Install dependencies
+      run: |
+        composer install --no-dev --optimize-autoloader --no-progress --no-interaction
+
     - name: Build plugin
       run: |
         npm install
