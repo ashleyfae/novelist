@@ -10,7 +10,7 @@
  * Text Domain: novelist
  * Domain Path: languages
  * Requires at least: 5.0
- * Requires PHP: 7.1
+ * Requires PHP: 7.4
  *
  * Novelist is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -38,6 +38,10 @@
 // Exit if accessed directly
 if (! defined('ABSPATH')) {
     exit;
+}
+
+if (version_compare(PHP_VERSION, '7.4', '<')) {
+    return;
 }
 
 require __DIR__.'/vendor/autoload.php';
