@@ -132,6 +132,9 @@ Security fix
 
 == Changelog ==
 
+= 2.0 =
+* Requires PHP 7.4+
+
 = 1.2.4 - 7 March 2025 =
 * Security Fix (XSS)
 * Fix: Deprecation warning: Creation of dynamic property Novelist_Book::$post_type
