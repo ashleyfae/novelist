@@ -7,7 +7,7 @@
  * @link      https://github.com/laravel/framework/blob/8.x/src/Illuminate/Container/Container.php
  *
  * @package   novelist
- * @copyright Copyright (c) 2021, Ashley Gibson
+ * @copyright Copyright (c) 2025, Ashley Gibson
  * @license   GPL2+
  */
 
@@ -1253,7 +1253,7 @@ class Container implements ArrayAccess
      *
      * @return bool
      */
-    public function offsetExists($key)
+    public function offsetExists($key): bool
     {
         return $this->bound($key);
     }
@@ -1261,27 +1261,29 @@ class Container implements ArrayAccess
     /**
      * Get the value at a given offset.
      *
-     * @param  string  $key
+     * @param  string  $offset
      *
      * @return mixed
      */
-    public function offsetGet($key)
+    #[\ReturnTypeWillChange]
+    public function offsetGet($offset)
     {
-        return $this->make($key);
+        return $this->make($offset);
     }
 
     /**
      * Set the value at a given offset.
      *
-     * @param  string  $key
+     * @param  string  $offset
      * @param  mixed  $value
      *
      * @return void
      */
-    public function offsetSet($key, $value)
+    #[\ReturnTypeWillChange]
+    public function offsetSet($offset, $value) : void
     {
         $this->bind(
-            $key,
+            $offset,
             $value instanceof Closure ? $value : function () use ($value) {
                 return $value;
             }
@@ -1291,13 +1293,13 @@ class Container implements ArrayAccess
     /**
      * Unset the value at a given offset.
      *
-     * @param  string  $key
+     * @param  string  $offset
      *
      * @return void
      */
-    public function offsetUnset($key)
+    public function offsetUnset($offset) : void
     {
-        unset($this->bindings[$key], $this->instances[$key], $this->resolved[$key]);
+        unset($this->bindings[$offset], $this->instances[$offset], $this->resolved[$offset]);
     }
 
     /**
