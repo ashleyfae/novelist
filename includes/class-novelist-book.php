@@ -206,52 +206,46 @@ class Novelist_Book {
 	 * @since  1.0.0
 	 * @return bool Whether or not the book was successfully set up
 	 */
-	public function __construct( $_id = false ) {
+    public function __construct($_id = false)
+    {
+        $book = WP_Post::get_instance($_id);
 
-		$book = WP_Post::get_instance( $_id );
+        if ($book instanceof WP_Post) {
+            return $this->setup_book($book);
+        }
+    }
 
-		return $this->setup_book( $book );
+    /**
+     * Set the variables
+     *
+     * @param  WP_Post  $book  The post object
+     *
+     * @access private
+     * @since  1.0.0
+     * @return bool If the setup was successful or not
+     */
+    private function setup_book($book)
+    {
+        if (! is_object($book)) {
+            return false;
+        }
 
-	}
+        if (! is_a($book, 'WP_Post')) {
+            return false;
+        }
 
-	/**
-	 * Set the variables
-	 *
-	 * @param  WP_Post $book The post object
-	 *
-	 * @access private
-	 * @since  1.0.0
-	 * @return bool If the setup was successful or not
-	 */
-	private function setup_book( $book ) {
+        if ('book' !== $book->post_type) {
+            return false;
+        }
 
-		if ( ! is_object( $book ) ) {
-			return false;
-		}
+        foreach ($book as $key => $value) {
+            if (property_exists($this, $key)) {
+                $this->$key = $value;
+            }
+        }
 
-		if ( ! is_a( $book, 'WP_Post' ) ) {
-			return false;
-		}
-
-		if ( 'book' !== $book->post_type ) {
-			return false;
-		}
-
-		foreach ( $book as $key => $value ) {
-
-			switch ( $key ) {
-
-				default:
-					$this->$key = $value;
-					break;
-
-			}
-
-		}
-
-		return true;
-
-	}
+        return true;
+    }
 
 	/**
 	 * Magic __get function to dispatch a call to retrieve a private property
@@ -512,7 +506,7 @@ class Novelist_Book {
 	public function get_genre() {
 
 		if ( ! isset( $this->genre ) ) {
-			$this->genre = get_the_term_list( $this->ID, 'novelist-genre', '', ', ', '' );
+			$this->genre = novelist_get_taxonomy_term_list($this->ID, 'novelist-genre');
 		}
 
 		return apply_filters( 'novelist/book/get/genre', $this->genre, $this->ID );

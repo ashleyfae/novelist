@@ -21,20 +21,18 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @return void
  */
 function novelist_options_page() {
+    $settings_tabs = novelist_get_settings_tabs();
+    $settings_tabs = empty($settings_tabs) ? array() : $settings_tabs;
+    $active_tab    = isset($_GET['tab']) && array_key_exists($_GET['tab'], $settings_tabs) ? $_GET['tab'] : 'book';
+    $sections      = novelist_get_settings_tab_sections($active_tab);
+    $key           = 'main';
 
-	$settings_tabs = novelist_get_settings_tabs();
-	$settings_tabs = empty( $settings_tabs ) ? array() : $settings_tabs;
-	$active_tab    = isset( $_GET['tab'] ) && array_key_exists( $_GET['tab'], $settings_tabs ) ? $_GET['tab'] : 'book';
-	$sections      = novelist_get_settings_tab_sections( $active_tab );
-	$key           = 'main';
+    if (is_array($sections)) {
+        $key = key($sections);
+    }
 
-	if ( is_array( $sections ) ) {
-		$key = key( $sections );
-	}
-
-	$registered_sections = novelist_get_settings_tab_sections( $active_tab );
-	$section             = isset( $_GET['section'] ) && ! empty( $registered_sections ) && array_key_exists( $_GET['section'], $registered_sections ) ? $_GET['section'] : $key;
-	ob_start();
+    $section = isset($_GET['section']) && ! empty($sections) && array_key_exists($_GET['section'], $sections) ? $_GET['section'] : $key;
+    ob_start();
 	?>
 	<div class="wrap">
 		<h1 class="nav-tab-wrapper">
@@ -69,7 +67,7 @@ function novelist_options_page() {
 		</h1>
 
 		<?php
-		$number_of_sections = count( $sections );
+		$number_of_sections = is_array($sections) ? count( $sections ) : 0;
 		$number             = 0;
 
 		if ( $number_of_sections > 1 ) {
@@ -115,7 +113,15 @@ function novelist_options_page() {
 					<?php submit_button(); ?>
 
 					<p id="novelist-reset-tab">
-						<button type="button" id="novelist-reset-tab-button" name="novelist-reset-defaults" class="button-secondary" data-current-tab="<?php echo esc_attr( $active_tab ); ?>" data-current-section="<?php echo esc_attr( $section ); ?>"><?php esc_attr_e( 'Reset Section', 'novelist' ); ?></button>
+						<button
+								type="button"
+								id="novelist-reset-tab-button"
+								name="novelist-reset-defaults"
+								class="button-secondary"
+								data-current-tab="<?php echo esc_attr( $active_tab ); ?>"
+								data-current-section="<?php echo esc_attr( $section ); ?>"
+								data-nonce="<?php echo esc_attr(wp_create_nonce('novelist_reset_section_'.$active_tab.'_'.$section)); ?>"
+						><?php esc_attr_e( 'Reset Section', 'novelist' ); ?></button>
 					</p>
 				</div>
 			</form>

@@ -7,6 +7,17 @@
  * @license   GPL2+
  */
 
+function novelist_escape_field_on_render($value)
+{
+    return esc_html($value);
+}
+
+add_filter('novelist/book/pre-render/title', 'novelist_escape_field_on_render', -1);
+add_filter('novelist/book/pre-render/pages', 'novelist_escape_field_on_render', -1);
+add_filter('novelist/book/pre-render/publisher', 'novelist_escape_field_on_render', -1);
+add_filter('novelist/book/pre-render/isbn13', 'novelist_escape_field_on_render', -1);
+add_filter('novelist/book/pre-render/asin', 'novelist_escape_field_on_render', -1);
+
 /**
  * Title: Add Schema
  *

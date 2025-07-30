@@ -3,7 +3,7 @@ Contributors: NoseGraze
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=L2TL7ZBVUMG9C
 Tags: books, authors, goodreads, writing, publishing, writer
 Requires at least: 5.0
-Tested up to: 5.8
+Tested up to: 6.7.1
 Requires PHP: 7.1
 Stable tag: trunk
 License: GPLv2 or later
@@ -98,6 +98,24 @@ if ( $book->synopsis ) {
     echo '<blockquote class="novelist-synopsis">' . wpautop( $book->synopsis ) . '</blockquote>';
 }`
 
+= How can I disable the taxonomy archive links? =
+
+The Novelist plugin creates two custom taxonomies:
+
+- `novelist-genre` for genres
+- `novelist-series` for series
+
+By default, when showing book information, each taxonomy term (genre name or series name) will link to an automatically generated archive page. To disable these links, add this code snippet to a custom plugin:
+
+`add_filter('novelist/taxonomy/series-args', 'agNovelistDisableArchives');
+add_filter('novelist/taxonomy/genre-args', 'agNovelistDisableArchives');
+
+function agNovelistDisableArchives($args) {
+	$args['public'] = false;
+
+	return $args;
+}`
+
 == Screenshots ==
 
 1. Book layout builder.
@@ -109,10 +127,26 @@ if ( $book->synopsis ) {
 
 == Upgrade Notice ==
 
-= 1.1.11 =
-Allow `[show-book]` shortcode to accept an ID & show book IDs clearly in admin area.
+= 1.2.4 =
+Security fix
 
 == Changelog ==
+
+= 1.2.4 - 7 March 2025 =
+* Security Fix (XSS)
+* Fix: Deprecation warning: Creation of dynamic property Novelist_Book::$post_type
+
+= 1.2.3 - 7 March 2024 =
+* Security Fix (CSRF)
+
+= 1.2.2 - 24 September 2023 =
+* Fix: Potential fatal error on certain settings pages.
+
+= 1.2.1 - 21 May 2023 =
+* Security Fix: Add sanitization to the book info fields to disallow some HTML.
+
+= 1.2.0 - 21 April 2023 =
+* New: Made it possible (via custom code) to disable the automatic series and genre archives. See FAQ for instructions.
 
 = 1.1.11 - 6 April 2021 =
 * New: Each book's ID number is now displayed on the admin page.
