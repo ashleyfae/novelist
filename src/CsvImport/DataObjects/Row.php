@@ -22,6 +22,10 @@ class Row
     public ?string $asin;
     public array $genreNames = [];
     public ?string $goodreadsUrl;
+    /** @var RetailUrl[] */
+    public array $retailUrls = [];
+    public ?string $excerpt;
+    public ?string $extraText;
 
     public function __construct(
         string $bookTitle,
@@ -34,7 +38,10 @@ class Row
         ?string $isbn13,
         ?string $asin,
         array $genreNames,
-        ?string $goodreadsUrl
+        ?string $goodreadsUrl,
+        array $retailUrls,
+        ?string $excerpt,
+        ?string $extraText
     ) {
         $this->bookTitle = $bookTitle;
         $this->seriesName = $seriesName;
@@ -47,5 +54,8 @@ class Row
         $this->asin = $asin;
         $this->genreNames = $genreNames;
         $this->goodreadsUrl = $goodreadsUrl;
+        $this->retailUrls = $retailUrls;
+        $this->excerpt = $excerpt;
+        $this->extraText = $extraText;
     }
 }
