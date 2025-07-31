@@ -34,7 +34,7 @@ class RowAdapter
             $this->getStringOrNull($data, 'publish_date'),
             $this->getStringOrNull($data, 'publisher'),
             $this->getStringOrNull($data, 'synopsis'),
-            $this->getStringOrNull($data, 'page_count'),
+            (int) $this->getStringOrNull($data, 'page_count'),
             $this->getStringOrNull($data, 'isbn13'),
             $this->getStringOrNull($data, 'asin'),
             $this->parseCommaSeparatedStringsIntoArray($data, 'genres'),

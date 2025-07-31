@@ -68,7 +68,7 @@ class ImportHandler
     public function parseCsv(string $filepath): array
     {
         if (! file_exists($filepath)) {
-            return [];
+            throw new \Exception(__('CSV file not found.', 'novelist'));
         }
 
         $handle = fopen($filepath, 'r');
