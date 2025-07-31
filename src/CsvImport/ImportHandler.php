@@ -15,11 +15,14 @@ use Novelist\CsvImport\Adapters\RowAdapter;
 class ImportHandler
 {
     protected RowAdapter $rowAdapter;
+    protected BookCreator $bookCreator;
 
     public function __construct(
-        RowAdapter $rowAdapter
+        RowAdapter $rowAdapter,
+        BookCreator $bookCreator
     ) {
         $this->rowAdapter = $rowAdapter;
+        $this->bookCreator = $bookCreator;
     }
 
     public function handle(): void
@@ -100,8 +103,13 @@ class ImportHandler
     protected function processCsv(array $rows): void
     {
         foreach($rows as $rowData) {
-            $row = $this->rowAdapter->convertToRow($rowData);
-            var_dump($row);wp_die();
+            try {
+                $this->bookCreator->insertFromRow(
+                    $this->rowAdapter->convertToRow($rowData)
+                );
+            } catch(\Exception $e) {
+                
+            }
         }
     }
 }
