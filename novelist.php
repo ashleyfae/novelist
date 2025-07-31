@@ -60,7 +60,9 @@ if (! class_exists('Novelist')) :
          *
          * @var string[]
          */
-        private array $serviceProviders = [];
+        private array $serviceProviders = [
+            \Novelist\ServiceProviders\CsvImportServiceProvider::class,
+        ];
 
         private bool $serviceProvidersLoaded = false;
 

@@ -9,7 +9,9 @@
 
 namespace Novelist\ServiceProviders;
 
-class CsvImportServiceProvider implements ServiceProvider
+use Novelist\CsvImport\ImportHandler;
+
+class CsvImportServiceProvider extends AbstractServiceProvider
 {
 
     public function register()
@@ -20,7 +22,11 @@ class CsvImportServiceProvider implements ServiceProvider
     public function boot()
     {
         add_action('admin_init', function() {
-            
+            try {
+                $this->container->get(ImportHandler::class)->handle();
+            } catch(\Exception $e) {
+
+            }
         });
     }
 }
