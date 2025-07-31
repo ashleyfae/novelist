@@ -218,7 +218,7 @@ if (! class_exists('Novelist')) :
                 }
 
                 /** @var \Novelist\ServiceProviders\ServiceProvider $serviceProvider */
-                $serviceProvider = new $serviceProvider();
+                $serviceProvider = new $serviceProvider($this->container);
                 $serviceProvider->register();
                 $providers[] = $serviceProvider;
             }
