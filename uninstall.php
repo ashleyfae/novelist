@@ -78,7 +78,7 @@ delete_option( 'novelist_imported_demo_book' );
 /*
  * Delete capabilities and roles.
  */
-novelist()->roles->remove_caps();
+Novelist()->roles->remove_caps();
 $novelist_roles = array( 'book_manager' );
 foreach ( $novelist_roles as $role ) {
 	remove_role( $role );

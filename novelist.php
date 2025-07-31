@@ -50,8 +50,7 @@ if (! class_exists('Novelist')) :
 
     class Novelist
     {
-        /** @var \Novelist\Container\Container */
-        private $container;
+        private \Novelist\Container\Container $container;
 
         /**
          * Service providers to boot.
@@ -61,10 +60,9 @@ if (! class_exists('Novelist')) :
          *
          * @var string[]
          */
-        private $serviceProviders = [];
+        private array $serviceProviders = [];
 
-        /** @var bool */
-        private $serviceProvidersLoaded = false;
+        private bool $serviceProvidersLoaded = false;
 
         /**
          * Novelist_Roles object
@@ -72,7 +70,7 @@ if (! class_exists('Novelist')) :
          * @var Novelist_Roles
          * @since 1.0.0
          */
-        public $roles;
+        public Novelist_Roles $roles;
 
         /**
          * HTML elements helper class.
@@ -80,7 +78,7 @@ if (! class_exists('Novelist')) :
          * @var Novelist_HTML
          * @since 1.1.0
          */
-        public $html;
+        public Novelist_HTML $html;
 
         public function __construct()
         {
@@ -125,35 +123,19 @@ if (! class_exists('Novelist')) :
          */
         public static function instance()
         {
-            return novelist();
+            return Novelist();
         }
 
         /**
-         * Properties are loaded from the service container.
+         * Gets the container
          *
          * @since 2.0
          *
-         * @param  string  $property
-         *
-         * @return mixed|object
-         * @throws Exception
+         * @return \Novelist\Container\Container
          */
-        public function __get($property)
+        public function container() : \Novelist\Container\Container
         {
-            return $this->container->get($property);
-        }
-
-        /**
-         * Magic methods are passed to the service container.
-         *
-         * @param $name
-         * @param $arguments
-         *
-         * @return mixed
-         */
-        public function __call($name, $arguments)
-        {
-            return call_user_func_array([$this->container, $name], $arguments);
+            return $this->container;
         }
 
         /**
@@ -324,9 +306,9 @@ endif; // End class exists check.
  * This function returns an instance of the Novelist class.
  *
  * @since 1.0.0
- * @return Novelist|object
+ * @return Novelist
  */
-function novelist($abstract = null)
+function Novelist()
 {
     static $instance = null;
 
@@ -334,11 +316,7 @@ function novelist($abstract = null)
         $instance = new Novelist();
     }
 
-    if ($abstract !== null) {
-        return $instance->make($abstract);
-    }
-
     return $instance;
 }
 
-novelist()->boot();
+Novelist()->boot();
