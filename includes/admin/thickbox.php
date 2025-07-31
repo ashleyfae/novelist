@@ -245,7 +245,7 @@ function novelist_admin_footer_for_thickbox() {
 			<div class="novelist-box-row">
 				<label for="novelist_series_filter"><?php _e( 'Filter by Series', 'novelist' ); ?></label>
 				<div>
-					<?php novelist()->html->series_dropdown( array(
+					<?php Novelist()->html->series_dropdown( array(
 						'id'   => 'novelist_series_filter',
 						'name' => 'novelist_series_filter'
 					) ); ?>
@@ -256,7 +256,7 @@ function novelist_admin_footer_for_thickbox() {
 			<div class="novelist-box-row">
 				<label for="novelist_genre_filter"><?php _e( 'Filter by Genre', 'novelist' ); ?></label>
 				<div>
-					<?php novelist()->html->genre_dropdown( array(
+					<?php Novelist()->html->genre_dropdown( array(
 						'id'   => 'novelist_genre_filter',
 						'name' => 'novelist_genre_filter'
 					) ); ?>
@@ -312,7 +312,7 @@ function novelist_admin_footer_for_thickbox() {
 			<div class="novelist-box-row">
 				<label for="novelist_orderby"><?php _e( 'Order By', 'novelist' ); ?></label>
 				<div>
-					<?php novelist()->html->select( array(
+					<?php Novelist()->html->select( array(
 						'id'       => 'novelist_orderby',
 						'selected' => 'menu_order',
 						'options'  => array(
@@ -331,7 +331,7 @@ function novelist_admin_footer_for_thickbox() {
 			<div class="novelist-box-row">
 				<label for="novelist_order"><?php _e( 'Order', 'novelist' ); ?></label>
 				<div>
-					<?php novelist()->html->select( array(
+					<?php Novelist()->html->select( array(
 						'id'       => 'novelist_order',
 						'selected' => 'ASC',
 						'options'  => array(
@@ -346,7 +346,7 @@ function novelist_admin_footer_for_thickbox() {
 			<div class="novelist-box-row">
 				<label for="novelist_pagination"><?php _e( 'Split Results into Multiple Pages?', 'novelist' ); ?></label>
 				<div>
-					<?php novelist()->html->select( array(
+					<?php Novelist()->html->select( array(
 						'id'       => 'novelist_pagination',
 						'selected' => 'true',
 						'options'  => array(
@@ -361,7 +361,7 @@ function novelist_admin_footer_for_thickbox() {
 			<div class="novelist-box-row">
 				<label for="novelist_number_results"><?php _e( 'Number of Results', 'novelist' ); ?></label>
 				<div>
-					<?php novelist()->html->text( array(
+					<?php Novelist()->html->text( array(
 						'id'    => 'novelist_number_results',
 						'value' => '12',
 						'type'  => 'number'
