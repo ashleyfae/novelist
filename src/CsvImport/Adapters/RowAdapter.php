@@ -30,6 +30,7 @@ class RowAdapter
         return new Row(
             $title,
             $this->getStringOrNull($data, 'series'),
+            $this->getStringOrNull($data, 'series_position'),
             $this->getStringOrNull($data, 'cover'),
             $this->getStringOrNull($data, 'publish_date'),
             $this->getStringOrNull($data, 'publisher'),

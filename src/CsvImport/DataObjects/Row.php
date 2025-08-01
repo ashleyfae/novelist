@@ -13,6 +13,7 @@ class Row
 {
     public string $bookTitle;
     public ?string $seriesName;
+    public ?string $seriesPosition;
     public ?string $coverUrl;
     public ?string $publishDate;
     public ?string $publisher;
@@ -30,6 +31,7 @@ class Row
     public function __construct(
         string $bookTitle,
         ?string $seriesName,
+        ?string $seriesPosition,
         ?string $coverUrl,
         ?string $publishDate,
         ?string $publisher,
@@ -45,6 +47,7 @@ class Row
     ) {
         $this->bookTitle = $bookTitle;
         $this->seriesName = $seriesName;
+        $this->seriesPosition = $seriesPosition;
         $this->coverUrl = $coverUrl;
         $this->publishDate = $publishDate;
         $this->publisher = $publisher;

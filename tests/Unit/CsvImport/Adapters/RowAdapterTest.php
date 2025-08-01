@@ -9,6 +9,7 @@
 
 namespace Novelist\Tests\Unit\CsvImport\Adapters;
 
+use Exception;
 use Novelist\CsvImport\Adapters\RowAdapter;
 use Novelist\CsvImport\DataObjects\RetailUrl;
 use Novelist\Tests\TestCase;
@@ -20,13 +21,14 @@ final class RowAdapterTest extends TestCase
 {
     /**
      * @see RowAdapter::convertToRow()
-     * @throws \Exception
+     * @throws Exception
      */
     public function testCanConvertToRow() : void
     {
         $data = [
             'title' => 'The Dragon\'s Path',
             'series' => 'The Fantasy Series',
+            'series_position' => '1',
             'cover' => 'https://example.com/cover.jpg',
             'publish_date' => '2025-01-15',
             'publisher' => 'Fantasy Press',
@@ -47,6 +49,7 @@ final class RowAdapterTest extends TestCase
 
         $this->assertSame('The Dragon\'s Path', $row->bookTitle);
         $this->assertSame('The Fantasy Series', $row->seriesName);
+        $this->assertSame('1', $row->seriesPosition);
         $this->assertSame('https://example.com/cover.jpg', $row->coverUrl);
         $this->assertSame('2025-01-15', $row->publishDate);
         $this->assertSame('Fantasy Press', $row->publisher);
