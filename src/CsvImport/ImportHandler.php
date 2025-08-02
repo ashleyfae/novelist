@@ -56,6 +56,7 @@ class ImportHandler
                     admin_url('edit.php?post_type=book&page=novelist-tools&tab=import_export')
                 )
             );
+            exit;
         } catch (Exception $e) {
             wp_die($e->getMessage());
         }
