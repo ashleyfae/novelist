@@ -9,6 +9,7 @@
 .gitignore export-ignore
 .distignore export-ignore
 .phpstorm.meta.php export-ignore
+phpunit.xml export-ignore
 
 README.md export-ignore
 mix-manifest.json export-ignore
