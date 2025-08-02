@@ -132,7 +132,7 @@ Import books from CSV files
 
 == Changelog ==
 
-= 1.3.0 =
+= 1.3.0 - 2 August 2025 =
 * Requires PHP 7.4+
 * New: CSV book importer in Books > Tools
 
