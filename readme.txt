@@ -132,7 +132,7 @@ Security fix
 
 == Changelog ==
 
-= 2.0 =
+= 1.3.0 =
 * Requires PHP 7.4+
 
 = 1.2.4 - 7 March 2025 =

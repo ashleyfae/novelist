@@ -3,7 +3,7 @@
  * Plugin Name: Novelist
  * Plugin URI: https://novelistplugin.com
  * Description: Easily organize and display your portfolio of books
- * Version: 1.2.4
+ * Version: 1.3.0
  * Author: Nose Graze
  * Author URI: https://www.nosegraze.com
  * License: GPL2
@@ -52,6 +52,8 @@ if (! class_exists('Novelist')) :
     {
         private \Novelist\Container\Container $container;
 
+        private static Novelist $instance;
+
         /**
          * Service providers to boot.
          *
@@ -94,10 +96,6 @@ if (! class_exists('Novelist')) :
          */
         public function boot()
         {
-            if (version_compare(phpversion(), '7.1', '<')) {
-                return;
-            }
-
             $this->setup_constants();
             $this->loadServiceProviders();
 
@@ -113,8 +111,6 @@ if (! class_exists('Novelist')) :
          *
          * Insures that only one instance of Novelist exists at any one time.
          *
-         * @deprecated 2.0
-         *
          * @uses   Novelist::setup_constants() Set up the plugin constants.
          * @uses   Novelist::includes() Include any required files.
          * @uses   Novelist::load_textdomain() Load the language files.
@@ -123,9 +119,13 @@ if (! class_exists('Novelist')) :
          * @since  1.0.0
          * @return Novelist Instance of Novelist class
          */
-        public static function instance()
+        public static function instance() : Novelist
         {
-            return Novelist();
+            if (! isset(static::$instance) || ! static::$instance instanceof Novelist) {
+                static::$instance = new static();
+            }
+
+            return static::$instance;
         }
 
         /**
@@ -180,7 +180,7 @@ if (! class_exists('Novelist')) :
         {
             // Plugin version.
             if (! defined('NOVELIST_VERSION')) {
-                define('NOVELIST_VERSION', '1.2.4');
+                define('NOVELIST_VERSION', '1.3.0');
             }
 
             // Plugin Folder Path.
@@ -312,13 +312,7 @@ endif; // End class exists check.
  */
 function Novelist()
 {
-    static $instance = null;
-
-    if ($instance === null) {
-        $instance = new Novelist();
-    }
-
-    return $instance;
+    return Novelist::instance();
 }
 
 Novelist()->boot();
