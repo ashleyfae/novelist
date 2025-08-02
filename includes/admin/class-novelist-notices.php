@@ -51,6 +51,19 @@ class Novelist_Notices {
 					case 'settings-imported' :
 						$notices['updated']['novelist-settings-imported'] = __( 'The settings have been successfully imported.', 'novelist' );
 						break;
+                    case 'books-imported' :
+                        $numberBooks = absint($_GET['novelist-books-imported'] ?? 0);
+
+                        $notices['updated']['novelist-books-imported'] = sprintf(
+                            _n(
+                                'Successfully imported 1 book.',
+                                'Successfully imported %d books.',
+                                $numberBooks,
+                                'novelist'
+                            ),
+                            $numberBooks
+                        );
+                        break;
 				}
 			}
 		}

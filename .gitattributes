@@ -1,5 +1,5 @@
 # Directories
-/.github export-ignore
+/.github/ export-ignore
 /.git export-ignore
 /node_modules export-ignore
 /tests export-ignore
@@ -9,6 +9,7 @@
 .gitignore export-ignore
 .distignore export-ignore
 .phpstorm.meta.php export-ignore
+phpunit.xml export-ignore
 
 README.md export-ignore
 mix-manifest.json export-ignore

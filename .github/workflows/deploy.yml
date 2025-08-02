@@ -13,10 +13,21 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v4
 
+      # The `wp` command fails when xdebug is enabled
+    - name: Disable Xdebug
+      run: sudo phpdismod xdebug
+
+    - name: Setup WP-CLI
+      uses: godaddy-wordpress/setup-wp-cli@1
+
     - name: Build
       run: |
         npm install
         npm run build
+        
+    - name: Install dependencies
+      run: |
+        composer install --no-dev --optimize-autoloader --no-progress --no-interaction
 
     - name: WordPress Plugin Deploy
       id: deploy

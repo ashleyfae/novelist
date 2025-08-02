@@ -1,0 +1,31 @@
+{
+  "name": "ashleyfae/novelist",
+  "type": "wordpress-plugin",
+  "description": "Easily organize and display your portfolio of books.",
+  "homepage": "https://novelistplugin.com/",
+  "license": "GPL-2.0-or-later",
+  "require": {
+    "php": ">=7.4",
+    "composer/installers": "~1.2"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^9.6.22",
+    "mockery/mockery": "^1.6",
+    "10up/wp_mock": "^1.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "Novelist\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Novelist\\Tests\\": "tests/"
+    }
+  },
+  "config": {
+    "allow-plugins": {
+      "composer/installers": true
+    }
+  }
+}
