@@ -9,6 +9,8 @@
 
 namespace Novelist\Helpers;
 
+use InvalidArgumentException;
+
 class Hooks
 {
     public static function addAction(
@@ -19,7 +21,7 @@ class Hooks
         int $acceptedArgs = 1
     ) {
         if (! method_exists($class, $method)) {
-            throw new \InvalidArgumentException(sprintf('Method %s does not exist on class %s', $method, $class));
+            throw new InvalidArgumentException(sprintf('Method %s does not exist on class %s', $method, $class));
         }
 
         add_action(
@@ -42,7 +44,7 @@ class Hooks
         int $acceptedArgs = 1
     ) {
         if (! method_exists($class, $method)) {
-            throw new \InvalidArgumentException(sprintf('Method %s does not exist on class %s', $method, $class));
+            throw new InvalidArgumentException(sprintf('Method %s does not exist on class %s', $method, $class));
         }
 
         add_filter(
