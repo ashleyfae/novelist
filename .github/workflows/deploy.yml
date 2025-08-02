@@ -44,4 +44,4 @@ jobs:
         GITHUB_TOKEN: ${{ github.token }}
 
       with:
-        files: ${{ github.workspace }}/${{ github.event.repository.name }}-${{ github.event.release.name }}.zip
+        files: ${{ steps.deploy.outputs.zip-path }}
