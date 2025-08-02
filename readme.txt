@@ -134,6 +134,7 @@ Security fix
 
 = 1.3.0 =
 * Requires PHP 7.4+
+* New: CSV book importer in Books > Tools
 
 = 1.2.4 - 7 March 2025 =
 * Security Fix (XSS)

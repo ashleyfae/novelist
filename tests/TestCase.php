@@ -9,7 +9,16 @@
 
 namespace Novelist\Tests;
 
+use Novelist\Container\Container;
+
 abstract class TestCase extends \WP_Mock\Tools\TestCase
 {
+    protected Container $container;
 
+    public function setUp(): void
+    {
+        parent::setUp();
+
+        $this->container = new Container();
+    }
 }
