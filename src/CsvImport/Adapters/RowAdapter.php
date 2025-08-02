@@ -28,8 +28,9 @@ class RowAdapter
         }
 
         return new Row(
+            $this->getVisibility($data['visibility'] ?? null),
             $title,
-            $this->getStringOrNull($data, 'series'),
+            $this->getStringOrNull($data, 'series_name'),
             $this->getStringOrNull($data, 'series_position'),
             $this->getStringOrNull($data, 'cover'),
             $this->getStringOrNull($data, 'publish_date'),
@@ -44,6 +45,11 @@ class RowAdapter
             $this->getStringOrNull($data, 'excerpt'),
             $this->getStringOrNull($data, 'extra_text'),
         );
+    }
+
+    protected function getVisibility(?string $visibility) : string
+    {
+        return in_array($visibility, ['publish', 'draft', 'private'], true) ? $visibility : 'publish';
     }
 
     protected function getStringOrNull(array $data, string $key) : ?string

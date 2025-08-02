@@ -10,16 +10,17 @@
 namespace Novelist\CsvImport;
 
 use Exception;
+use Novelist\Actions\CreateBook;
 use Novelist\CsvImport\Adapters\RowAdapter;
 
 class ImportHandler
 {
     protected RowAdapter $rowAdapter;
-    protected BookCreator $bookCreator;
+    protected CreateBook $bookCreator;
 
     public function __construct(
         RowAdapter $rowAdapter,
-        BookCreator $bookCreator
+        CreateBook $bookCreator
     ) {
         $this->rowAdapter = $rowAdapter;
         $this->bookCreator = $bookCreator;
@@ -41,7 +42,15 @@ class ImportHandler
                 throw new Exception(__('No CSV data found.', 'novelist'));
             }
 
-            $this->processCsv($csv);
+            $booksImported = $this->processCsv($csv);
+
+            wp_safe_redirect(
+                add_query_arg(
+                    'novelist-books-imported',
+                    count($booksImported),
+                    admin_url('edit.php?post_type=book&page=novelist-tools&tab=import_export')
+                )
+            );
         } catch (Exception $e) {
             wp_die($e->getMessage());
         }
@@ -49,29 +58,35 @@ class ImportHandler
 
     protected function isUploadRequest(): bool
     {
-        return false; // @ TODO
+        return ! empty($_POST[AdminPage::NONCE_NAME]) && ! empty($_FILES['import_file']);
     }
 
     protected function isUserAuthorised(): bool
     {
-        // @TODO nonce check
-        return current_user_can('manage_options');
+        return wp_verify_nonce($_POST[AdminPage::NONCE_NAME], AdminPage::NONCE_ACTION) &&
+            current_user_can(AdminPage::REQUIRED_CAPABILITY);
     }
 
+    /**
+     * @throws Exception
+     */
     protected function getCsvAsArray(): array
     {
-        $filePath = $_FILES['csv_file']['tmp_name'] ?? null;
+        $filePath = $_FILES['import_file']['tmp_name'] ?? null;
         if (! $filePath) {
-            throw new \Exception(__('CSV file not found.', 'novelist'));
+            throw new Exception(__('CSV file not found.', 'novelist'));
         }
 
         return $this->parseCsv($filePath);
     }
 
+    /**
+     * @throws Exception
+     */
     public function parseCsv(string $filepath): array
     {
         if (! file_exists($filepath)) {
-            throw new \Exception(__('CSV file not found.', 'novelist'));
+            throw new Exception(__('CSV file not found.', 'novelist'));
         }
 
         $handle = fopen($filepath, 'r');
@@ -79,7 +94,6 @@ class ImportHandler
             return [];
         }
 
-        $headers = [];
         $data    = [];
 
         // Get headers from first row
@@ -100,16 +114,24 @@ class ImportHandler
         return $data;
     }
 
-    protected function processCsv(array $rows): void
+    protected function processCsv(array $rows): array
     {
+        $insertedBookIds = [];
+        $errors = [];
+
         foreach($rows as $rowData) {
             try {
-                $this->bookCreator->insertFromRow(
+                $insertedBookIds[] = $this->bookCreator->execute(
                     $this->rowAdapter->convertToRow($rowData)
                 );
-            } catch(\Exception $e) {
-                
+            } catch(Exception $e) {
+                $errors[] = $e->getMessage();
             }
         }
+
+        update_option('novelist_csv_imported_books', $insertedBookIds);
+        update_option('novelist_csv_import_errors', $errors);
+
+        return $insertedBookIds;
     }
 }

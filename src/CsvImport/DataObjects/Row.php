@@ -11,6 +11,7 @@ namespace Novelist\CsvImport\DataObjects;
 
 class Row
 {
+    public string $visibility = 'publish';
     public string $bookTitle;
     public ?string $seriesName;
     public ?string $seriesPosition;
@@ -29,6 +30,7 @@ class Row
     public ?string $extraText;
 
     public function __construct(
+        string $visibility,
         string $bookTitle,
         ?string $seriesName,
         ?string $seriesPosition,
@@ -45,6 +47,7 @@ class Row
         ?string $excerpt,
         ?string $extraText
     ) {
+        $this->visibility = $visibility;
         $this->bookTitle = $bookTitle;
         $this->seriesName = $seriesName;
         $this->seriesPosition = $seriesPosition;

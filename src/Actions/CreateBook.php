@@ -7,27 +7,47 @@
  * @license   MIT
  */
 
-namespace Novelist\CsvImport;
+namespace Novelist\Actions;
 
 use Exception;
 use Novelist\CsvImport\DataObjects\Row;
 use WP_Term;
 
-class BookCreator
+class CreateBook
 {
-    public function insertFromRow(Row $row) : void
+    protected DownloadImageFromUrl $downloadImageFromUrl;
+
+    public function __construct(DownloadImageFromUrl $downloadImageFromUrl)
+    {
+        $this->downloadImageFromUrl = $downloadImageFromUrl;
+    }
+
+    /**
+     * Inserts a new book with corresponding data.
+     *
+     * @throws Exception
+     */
+    public function execute(Row $book) : int
     {
         $bookData = [
-            'post_title' => $row->bookTitle,
-            'post_status' => 'publish', // @TODO
+            'post_title' => $book->bookTitle,
+            'post_status' => $book->visibility,
             'post_type' => 'book',
-            'meta_input' => $this->getBookMeta($row),
+            'meta_input' => $this->getBookMeta($book),
         ];
 
         $bookId = wp_insert_post($bookData);
-        if ($bookId && ! is_wp_error($bookId)) {
-            $this->handleBookTerms((int) $bookId, $row);
+        if (! $bookId) {
+            throw new Exception('Failed to insert book.');
         }
+
+        if (is_wp_error($bookId)) {
+            throw new Exception('Failed to insert book: ' . $bookId->get_error_message());
+        }
+
+        $this->handleBookTerms((int) $bookId, $book);
+
+        return (int) $bookId;
     }
 
     protected function getBookMeta(Row $row) : array
@@ -63,8 +83,11 @@ class BookCreator
             return $attachmentId;
         }
 
-        // @TODO handle uploads
-        return null;
+        try {
+            return $this->downloadImageFromUrl->execute($coverUrl);
+        } catch(Exception $e) {
+            return null;
+        }
     }
 
     protected function getPurchaseLinksMeta(array $retailUrls) : ?array

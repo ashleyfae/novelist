@@ -1,4 +1,4 @@
-title,series,cover,publish_date,publisher,synopsis,page_count,isbn13,asin,genres,goodreads_url,retailer_amazon,retailer_barnes,retailer_kobo,excerpt,extra_text
+title,series_name,cover,publish_date,publisher,synopsis,page_count,isbn13,asin,genres,goodreads_url,retailer_amazon,retailer_barnes,retailer_kobo,excerpt,extra_text
 "The Dragon's Path","The Fantasy Series","https://example.com/cover.jpg","2025-01-15","Fantasy Press","A long synopsis with, commas, and ""quotes"" inside",350,9781234567890,B00EXAMPLE,"Fantasy, Adventure, Magic","https://goodreads.com/book1","https://amazon.com/book1","https://barnesandnoble.com/book1","https://kobo.com/book1","First chapter excerpt here...","Additional notes here"
 "The Magic Stone",,"https://example.com/cover2.jpg","2025-02-20","Fantasy Press","Another synopsis",280,9780987654321,B01EXAMPLE,"Fantasy, Young Adult",,"https://amazon.com/book2",,"https://kobo.com/book2",,
 "Title with ""quotes""","Series, with comma",,"2025-03-01",,"Synopsis with
