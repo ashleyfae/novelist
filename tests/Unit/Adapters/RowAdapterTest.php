@@ -1,17 +1,15 @@
 <?php
 /**
- * RowAdapterTest.php
- *
  * @package   novelist
  * @copyright Copyright (c) 2025, Ashley Gibson
  * @license   MIT
  */
 
-namespace Novelist\Tests\Unit\CsvImport\Adapters;
+namespace Novelist\Tests\Unit\Adapters;
 
 use Exception;
 use Novelist\CsvImport\Adapters\RowAdapter;
-use Novelist\CsvImport\DataObjects\RetailUrl;
+use Novelist\DataObjects\RetailUrl;
 use Novelist\Tests\TestCase;
 
 /**
@@ -20,14 +18,14 @@ use Novelist\Tests\TestCase;
 final class RowAdapterTest extends TestCase
 {
     /**
-     * @see RowAdapter::convertToRow()
+     * @see RowAdapter::convertToBook()
      * @throws Exception
      */
     public function testCanConvertToRow() : void
     {
         $data = [
             'title' => 'The Dragon\'s Path',
-            'series' => 'The Fantasy Series',
+            'series_name' => 'The Fantasy Series',
             'series_position' => '1',
             'cover' => 'https://example.com/cover.jpg',
             'publish_date' => '2025-01-15',
@@ -45,33 +43,34 @@ final class RowAdapterTest extends TestCase
             'extra_text' => 'Additional notes here'
         ];
 
-        $row = (new RowAdapter())->convertToRow($data);
+        $book = (new RowAdapter())->convertToBook($data);
 
-        $this->assertSame('The Dragon\'s Path', $row->bookTitle);
-        $this->assertSame('The Fantasy Series', $row->seriesName);
-        $this->assertSame('1', $row->seriesPosition);
-        $this->assertSame('https://example.com/cover.jpg', $row->coverUrl);
-        $this->assertSame('2025-01-15', $row->publishDate);
-        $this->assertSame('Fantasy Press', $row->publisher);
-        $this->assertSame('A long synopsis with, commas, and "quotes" inside', $row->synopsis);
-        $this->assertSame(350, $row->numberPages);
-        $this->assertSame('9781234567890', $row->isbn13);
-        $this->assertSame('B00EXAMPLE', $row->asin);
+        $this->assertSame('publish', $book->visibility);
+        $this->assertSame('The Dragon\'s Path', $book->bookTitle);
+        $this->assertSame('The Fantasy Series', $book->seriesName);
+        $this->assertSame('1', $book->seriesPosition);
+        $this->assertSame('https://example.com/cover.jpg', $book->coverUrl);
+        $this->assertSame('2025-01-15', $book->publishDate);
+        $this->assertSame('Fantasy Press', $book->publisher);
+        $this->assertSame('A long synopsis with, commas, and "quotes" inside', $book->synopsis);
+        $this->assertSame(350, $book->numberPages);
+        $this->assertSame('9781234567890', $book->isbn13);
+        $this->assertSame('B00EXAMPLE', $book->asin);
         $this->assertSame([
             'Fantasy',
             'Adventure',
             'Magic',
-        ], $row->genreNames);
-        $this->assertSame('https://goodreads.com/book1', $row->goodreadsUrl);
-        $this->assertCount(3, $row->retailUrls);
-        $this->assertSame('First chapter excerpt here...', $row->excerpt);
-        $this->assertSame('Additional notes here', $row->extraText);
+        ], $book->genreNames);
+        $this->assertSame('https://goodreads.com/book1', $book->goodreadsUrl);
+        $this->assertCount(3, $book->retailUrls);
+        $this->assertSame('First chapter excerpt here...', $book->excerpt);
+        $this->assertSame('Additional notes here', $book->extraText);
 
         // retailers
         $this->assertEquals([
             new RetailUrl('amazon', 'https://amazon.com/book1'),
             new RetailUrl('barnes', 'https://barnesandnoble.com/book1'),
             new RetailUrl('kobo', 'https://kobo.com/book1'),
-        ], $row->retailUrls);
+        ], $book->retailUrls);
     }
 }

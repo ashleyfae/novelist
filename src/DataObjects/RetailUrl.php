@@ -7,7 +7,7 @@
  * @license   MIT
  */
 
-namespace Novelist\CsvImport\DataObjects;
+namespace Novelist\DataObjects;
 
 class RetailUrl
 {

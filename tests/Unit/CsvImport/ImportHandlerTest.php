@@ -9,6 +9,7 @@
 
 namespace Novelist\Tests\Unit\CsvImport;
 
+use Exception;
 use Novelist\CsvImport\ImportHandler;
 use Novelist\Tests\TestCase;
 
@@ -28,7 +29,7 @@ final class ImportHandlerTest extends TestCase
 
     /**
      * @see ImportHandler::parseCsv()
-     * @throws \Exception
+     * @throws Exception
      */
     public function testCanParseCsv() : void
     {
@@ -37,7 +38,8 @@ final class ImportHandlerTest extends TestCase
         $this->assertCount(3, $data);
 
         $this->assertSame('The Dragon\'s Path', $data[0]['title']);
-        $this->assertSame('The Fantasy Series', $data[0]['series']);
+        $this->assertSame('The Fantasy Series', $data[0]['series_name']);
+        $this->assertSame('1', $data[0]['series_position']);
         $this->assertSame('https://example.com/cover.jpg', $data[0]['cover']);
         $this->assertSame('2025-01-15', $data[0]['publish_date']);
         $this->assertSame('Fantasy Press', $data[0]['publisher']);

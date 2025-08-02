@@ -58,6 +58,7 @@ class Novelist_Notices {
                             _n(
                                 'Successfully imported 1 book.',
                                 'Successfully imported %d books.',
+                                $numberBooks,
                                 'novelist'
                             ),
                             $numberBooks

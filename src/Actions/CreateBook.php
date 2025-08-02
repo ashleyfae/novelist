@@ -10,7 +10,7 @@
 namespace Novelist\Actions;
 
 use Exception;
-use Novelist\CsvImport\DataObjects\Row;
+use Novelist\DataObjects\Book;
 use WP_Term;
 
 class CreateBook
@@ -27,7 +27,7 @@ class CreateBook
      *
      * @throws Exception
      */
-    public function execute(Row $book) : int
+    public function execute(Book $book) : int
     {
         $bookData = [
             'post_title' => $book->bookTitle,
@@ -38,11 +38,11 @@ class CreateBook
 
         $bookId = wp_insert_post($bookData);
         if (! $bookId) {
-            throw new Exception('Failed to insert book.');
+            throw new Exception('Failed to insert book into the database.');
         }
 
         if (is_wp_error($bookId)) {
-            throw new Exception('Failed to insert book: ' . $bookId->get_error_message());
+            throw new Exception('Failed to insert book into the database: ' . $bookId->get_error_message());
         }
 
         $this->handleBookTerms((int) $bookId, $book);
@@ -50,7 +50,7 @@ class CreateBook
         return (int) $bookId;
     }
 
-    protected function getBookMeta(Row $row) : array
+    protected function getBookMeta(Book $row) : array
     {
         return array_filter(
             [
@@ -104,7 +104,7 @@ class CreateBook
         return $meta;
     }
 
-    protected function handleBookTerms(int $bookId, Row $row) : void
+    protected function handleBookTerms(int $bookId, Book $row) : void
     {
         if ($row->seriesName) {
             $this->setSeries($bookId, $row->seriesName);

@@ -1,15 +1,15 @@
 <?php
 /**
- * Row.php
+ * Book.php
  *
  * @package   novelist
  * @copyright Copyright (c) 2025, Ashley Gibson
  * @license   MIT
  */
 
-namespace Novelist\CsvImport\DataObjects;
+namespace Novelist\DataObjects;
 
-class Row
+class Book
 {
     public string $visibility = 'publish';
     public string $bookTitle;

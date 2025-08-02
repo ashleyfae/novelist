@@ -10,24 +10,24 @@
 namespace Novelist\CsvImport\Adapters;
 
 use Exception;
-use Novelist\CsvImport\DataObjects\RetailUrl;
-use Novelist\CsvImport\DataObjects\Row;
+use Novelist\DataObjects\Book;
+use Novelist\DataObjects\RetailUrl;
 
 class RowAdapter
 {
     /**
-     * Converts an array of CSV row data into a Row DTO.
+     * Converts an array of CSV row data into a Book DTO.
      *
      * @throws Exception
      */
-    public function convertToRow(array $data) : Row
+    public function convertToBook(array $data) : Book
     {
         $title = $data['title'] ?? null;
         if (empty($title)) {
             throw new Exception(__('Missing required title field.'));
         }
 
-        return new Row(
+        return new Book(
             $this->getVisibility($data['visibility'] ?? null),
             $title,
             $this->getStringOrNull($data, 'series_name'),

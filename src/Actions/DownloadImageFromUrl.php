@@ -47,7 +47,9 @@ class DownloadImageFromUrl
             'tmp_name' => $tempFileName,
         ], $this->attachedPostId, $imageDescription);
 
-        unlink($tempFileName);
+        if (file_exists($tempFileName)) {
+            unlink($tempFileName);
+        }
 
         if (is_wp_error($attachmentId)) {
             throw new Exception('Failed to upload file: '.$attachmentId->get_error_message());

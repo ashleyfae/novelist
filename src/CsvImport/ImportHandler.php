@@ -22,7 +22,7 @@ class ImportHandler
         RowAdapter $rowAdapter,
         CreateBook $bookCreator
     ) {
-        $this->rowAdapter = $rowAdapter;
+        $this->rowAdapter  = $rowAdapter;
         $this->bookCreator = $bookCreator;
     }
 
@@ -36,6 +36,9 @@ class ImportHandler
             wp_die(__('You do not have permission to perform this action.', 'novelist'));
         }
 
+        delete_transient('novelist_csv_imported_books');
+        delete_transient('novelist_csv_import_errors');
+
         try {
             $csv = $this->getCsvAsArray();
             if (empty($csv)) {
@@ -46,8 +49,10 @@ class ImportHandler
 
             wp_safe_redirect(
                 add_query_arg(
-                    'novelist-books-imported',
-                    count($booksImported),
+                    [
+                        'novelist-message'        => 'books-imported',
+                        'novelist-books-imported' => count($booksImported),
+                    ],
                     admin_url('edit.php?post_type=book&page=novelist-tools&tab=import_export')
                 )
             );
@@ -94,7 +99,7 @@ class ImportHandler
             return [];
         }
 
-        $data    = [];
+        $data = [];
 
         // Get headers from first row
         if (($headers = fgetcsv($handle)) !== false) {
@@ -117,20 +122,25 @@ class ImportHandler
     protected function processCsv(array $rows): array
     {
         $insertedBookIds = [];
-        $errors = [];
+        $errors          = [];
 
-        foreach($rows as $rowData) {
+        foreach ($rows as $rowData) {
             try {
                 $insertedBookIds[] = $this->bookCreator->execute(
-                    $this->rowAdapter->convertToRow($rowData)
+                    $this->rowAdapter->convertToBook($rowData)
                 );
-            } catch(Exception $e) {
+            } catch (Exception $e) {
                 $errors[] = $e->getMessage();
             }
         }
 
-        update_option('novelist_csv_imported_books', $insertedBookIds);
-        update_option('novelist_csv_import_errors', $errors);
+        if (! empty($insertedBookIds)) {
+            set_transient('novelist_csv_imported_books', $insertedBookIds, 10 * MINUTE_IN_SECONDS);
+        }
+
+        if (! empty($errors)) {
+            set_transient('novelist_csv_import_errors', $errors, 10 * MINUTE_IN_SECONDS);
+        }
 
         return $insertedBookIds;
     }
