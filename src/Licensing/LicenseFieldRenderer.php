@@ -118,12 +118,12 @@ class LicenseFieldRenderer
     {
         $expiresAtTimestamp = $licenseStatusResponse->expiresAt?->getTimestamp();
 
-        if (! $licenseStatusResponse->expiresAt) {
+        if (! $expiresAtTimestamp) {
             $message = __('License key never expires.', 'novelist');
         } elseif($this->licenseExpiresSoon($expiresAtTimestamp)) {
             $message = sprintf(
                 __('Your license key expires on %1$s. <a href="%2$s" target="_blank" title="Renew license key">Renew your license key</a> to continue getting updates and support.', 'novelist'),
-                date_i18n(get_option('date_format'), $licenseStatusResponse->expiresAt->getTimestamp()),
+                date_i18n(get_option('date_format'), $expiresAtTimestamp),
                 'https://novelistplugin.com/checkout/?edd_license_key='.urlencode($licenseKey).'&utm_campaign=admin&utm_source=licenses&utm_medium=renew'
             );
         } else {
