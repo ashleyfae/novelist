@@ -108,7 +108,7 @@ class LicenseFieldRenderer
             message: sprintf(
                 __('Your license key expired on %1$s. Please <a href="%2$s" target="_blank" title="Renew your license key">renew your license key</a>.', 'novelist'),
                 esc_html(date_i18n(get_option('date_format'), $licenseStatusResponse->expiresAt->getTimestamp())),
-                esc_url('https://novelistplugin.com/checkout/?edd_license_key='.urlencode($licenseKey).'&utm_campaign=admin&utm_source=licenses&utm_medium=expired')
+                esc_url('https://software.nosegraze.com/licenses/renew?license_key='.urlencode($licenseKey).'&utm_campaign=admin&utm_source=licenses&utm_medium=expired')
             ),
             class: 'error'
         );
@@ -124,7 +124,7 @@ class LicenseFieldRenderer
             $message = sprintf(
                 __('Your license key expires on %1$s. <a href="%2$s" target="_blank" title="Renew license key">Renew your license key</a> to continue getting updates and support.', 'novelist'),
                 date_i18n(get_option('date_format'), $expiresAtTimestamp),
-                'https://novelistplugin.com/checkout/?edd_license_key='.urlencode($licenseKey).'&utm_campaign=admin&utm_source=licenses&utm_medium=renew'
+                'https://software.nosegraze.com/licenses/renew?license_key='.urlencode($licenseKey).'&utm_campaign=admin&utm_source=licenses&utm_medium=renew'
             );
         } else {
             $message = sprintf(
