@@ -10,6 +10,8 @@
  */
 
 // Exit if accessed directly
+use Novelist\Licensing\LicenseFieldRenderer;
+
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
@@ -1365,17 +1367,29 @@ function novelist_raw_callback( $args ) {
  * @return void
  */
 function novelist_license_key_callback( $args ) {
-	global $novelist_options;
+    global $novelist_options;
+
+    if ( isset( $novelist_options[ $args['id'] ] ) ) {
+        $value = $novelist_options[ $args['id'] ];
+    } else {
+        $value = $args['std'] ?? '';
+    }
+
+    if (
+        ($args['options']['version'] ?? null) === 2.0
+    ) {
+        Novelist::instance()->container()->get(LicenseFieldRenderer::class)->render(
+            fieldId: $args['id'] ?? '',
+            licenseKey: $value,
+            fieldArguments: $args
+        );
+
+        return;
+    }
 
 	$messages = array();
 	$class    = '';
 	$license  = get_option( $args['options']['is_valid_license_option'] );
-
-	if ( isset( $novelist_options[ $args['id'] ] ) ) {
-		$value = $novelist_options[ $args['id'] ];
-	} else {
-		$value = isset( $args['std'] ) ? $args['std'] : '';
-	}
 
 	if ( ! empty( $license ) && is_object( $license ) ) {
 
@@ -1486,7 +1500,7 @@ function novelist_license_key_callback( $args ) {
 		$license_status = null;
 	}
 
-	$size = ( isset( $args['size'] ) && ! is_null( $args['size'] ) ) ? $args['size'] : 'regular';
+	$size = (isset($args['size'] )) ? $args['size'] : 'regular';
 
 	$wrapper_class = isset( $license_status ) ? $license_status : 'license-null';
 	?>
