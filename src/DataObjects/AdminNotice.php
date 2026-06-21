@@ -2,9 +2,9 @@
 /**
  * AdminNotice.php
  *
- * @package   wp
+ * @package   novelist
  * @copyright Copyright (c) 2026, Ashley Gibson
- * @license   MIT
+ * @license   GPL2+
  */
 
 namespace Novelist\DataObjects;

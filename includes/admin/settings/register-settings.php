@@ -5,13 +5,13 @@
  * Based on register-settings.php in Easy Digital Downloads.
  *
  * @package   novelist
- * @copyright Copyright (c) 2016, Nose Graze Ltd.
+ * @copyright Copyright (c) 2026, Nose Graze Ltd.
  * @license   GPL2+
  */
 
-// Exit if accessed directly
 use Novelist\Licensing\LicenseFieldRenderer;
 
+// Exit if accessed directly
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
