@@ -92,13 +92,29 @@ class Novelist_Notices {
 	 * @since  1.0.0
 	 * @return void
 	 */
-	public function dismiss_notices() {
-		if ( isset( $_GET['novelist_notice'] ) ) {
-			update_user_meta( get_current_user_id(), '_novelist_' . $_GET['novelist_notice'] . '_dismissed', 1 );
-			wp_redirect( remove_query_arg( array( 'novelist_action', 'novelist_notice' ) ) );
-			exit;
-		}
-	}
+    public function dismiss_notices()
+    {
+        if (! isset($_GET['novelist_notice'])) {
+            return;
+        }
+
+        if (
+            empty($_GET['novelist_dismiss_notice_nonce']) ||
+            ! wp_verify_nonce($_GET['novelist_dismiss_notice_nonce'], 'novelist_dismiss_notice')
+        ) {
+            return;
+        }
+
+        if (! is_user_logged_in()) {
+            return;
+        }
+
+        $notice = sanitize_key($_GET['novelist_notice']);
+
+        update_user_meta(get_current_user_id(), '_novelist_'.$notice.'_dismissed', 1);
+        wp_safe_redirect(remove_query_arg(['novelist_action', 'novelist_notice', 'novelist_dismiss_notice_nonce']));
+        exit;
+    }
 
 }
 
