@@ -3,7 +3,7 @@ Contributors: NoseGraze
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=L2TL7ZBVUMG9C
 Tags: books, authors, goodreads, writing, publishing, writer
 Requires at least: 5.0
-Tested up to: 6.8.2
+Tested up to: 7.1
 Requires PHP: 8.0
 Stable tag: trunk
 License: GPLv2 or later
