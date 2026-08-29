@@ -228,6 +228,7 @@ function novelist_tools_system_info_display() {
 		<textarea readonly="readonly" onclick="this.focus(); this.select();" id="system-info-textarea" name="novelist-system-info" title="<?php esc_attr_e( 'To copy the system info, click below then press CTRL + C (PC) or CMD + C (Mac).', 'novelist' ); ?>"><?php echo novelist_tools_get_system_info(); ?></textarea>
 		<p class="submit">
 			<input type="hidden" name="novelist_action" value="download-system-info">
+			<?php wp_nonce_field( 'novelist_download_system_info', 'novelist_download_system_info_nonce' ); ?>
 			<?php submit_button( __( 'Download System Info File', 'novelist' ), 'primary', 'novelist-download-system-info', false ); ?>
 		</p>
 	</form>
@@ -449,6 +450,10 @@ function novelist_tools_get_system_info() {
  * @return void
  */
 function novelist_tools_download_system_info() {
+	if ( empty( $_POST['novelist_download_system_info_nonce'] ) || ! wp_verify_nonce( $_POST['novelist_download_system_info_nonce'], 'novelist_download_system_info' ) ) {
+		return;
+	}
+
 	if ( ! current_user_can( 'manage_novelist_settings' ) ) {
 		return;
 	}
@@ -457,7 +462,7 @@ function novelist_tools_download_system_info() {
 	header( 'Content-Type: text/plain' );
 	header( 'Content-Disposition: attachment; filename="novelist-system-info.txt"' );
 
-	echo wp_kses_post( $_POST['novelist-system-info'] );
+	echo wp_kses_post( novelist_tools_get_system_info() );
 	exit;
 }
 

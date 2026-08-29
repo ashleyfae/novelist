@@ -134,6 +134,7 @@ Import books from CSV files
 
 = 1.4.0-beta1 =
 * Requires PHP 8.0+
+* Security: Add nonce check to system info download
 
 = 1.3.0 - 2 August 2025 =
 * Requires PHP 7.4+
