@@ -127,12 +127,12 @@ function agNovelistDisableArchives($args) {
 
 == Upgrade Notice ==
 
-= 1.3.0 =
-Import books from CSV files
+= 1.4.0 =
+Requires PHP 8.0+ and security fixes
 
 == Changelog ==
 
-= 1.4.0-beta1 =
+= 1.4.0 =
 * Requires PHP 8.0+
 * Security: Add nonce check to system info download
 
