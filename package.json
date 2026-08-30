@@ -6,14 +6,16 @@
   "license": "GPL-2.0-or-later",
   "homepage": "https://novelistplugin.com",
   "devDependencies": {
-    "laravel-mix": "^6.0.16",
-    "resolve-url-loader": "^5.0.0",
-    "sass": "^1.71.1",
-    "sass-loader": "^14.1.1"
+    "esbuild": "^0.28.2",
+    "sass": "^1.71.1"
   },
   "scripts": {
-    "build": "npx mix --production && npm run i18n",
-    "dev": "npx mix watch",
+    "build:css": "sass assets/css/novelist-admin.scss:assets/css/novelist-admin.css templates/novelist-front-end.scss:templates/novelist-front-end.css --style=compressed --no-source-map --no-charset",
+    "build:js": "esbuild assets/js/admin-scripts.js assets/js/media-upload.js assets/js/widget-settings.js --minify --legal-comments=none --outdir=assets/js --entry-names=[name].min",
+    "build": "npm run build:css && npm run build:js && npm run i18n",
+    "watch:css": "npm run build:css -- --watch",
+    "watch:js": "npm run build:js -- --watch",
+    "dev": "npm run watch:css & npm run watch:js & wait",
     "i18n": "wp i18n make-pot . languages/novelist.pot --domain=novelist"
   }
 }

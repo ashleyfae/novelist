@@ -8,9 +8,7 @@
 .phpstorm.meta.php
 
 README.md
-mix-manifest.json
 package-lock.json
 package.json
-webpack.mix.js
 composer.json
 composer.lock
