@@ -1,17 +1,17 @@
-# Copyright (C) 2021 Nose Graze
-# This file is distributed under the same license as the Novelist plugin.
+# Copyright (C) 2026 Nose Graze
+# This file is distributed under the GPL2.
 msgid ""
 msgstr ""
-"Project-Id-Version: Novelist 1.1.11\n"
+"Project-Id-Version: Novelist 1.4.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/novelist\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2021-04-06T12:48:44+01:00\n"
+"POT-Creation-Date: 2026-08-30T11:44:48+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"X-Generator: WP-CLI 2.4.0\n"
+"X-Generator: WP-CLI 2.5.0\n"
 "X-Domain: novelist\n"
 
 #. Plugin Name of the plugin
@@ -39,7 +39,7 @@ msgid "Novelist Settings"
 msgstr ""
 
 #: includes/admin/admin-pages.php:24
-#: includes/admin/settings/register-settings.php:774
+#: includes/admin/settings/register-settings.php:789
 msgid "Settings"
 msgstr ""
 
@@ -59,29 +59,29 @@ msgstr ""
 msgid "Extensions"
 msgstr ""
 
-#: includes/admin/admin-pages.php:105
+#: includes/admin/admin-pages.php:101
 msgid "Upload or Select an Image"
 msgstr ""
 
-#: includes/admin/admin-pages.php:106
+#: includes/admin/admin-pages.php:102
 msgid "Insert Image"
 msgstr ""
 
-#: includes/admin/admin-pages.php:124
+#: includes/admin/admin-pages.php:120
 msgid "Move Up"
 msgstr ""
 
-#: includes/admin/admin-pages.php:125
+#: includes/admin/admin-pages.php:121
 msgid "Move Down"
 msgstr ""
 
-#: includes/admin/admin-pages.php:126
-#: includes/admin/settings/register-settings.php:1155
-#: includes/admin/settings/register-settings.php:1181
+#: includes/admin/admin-pages.php:122
+#: includes/admin/settings/register-settings.php:1170
+#: includes/admin/settings/register-settings.php:1196
 msgid "Remove"
 msgstr ""
 
-#: includes/admin/admin-pages.php:127
+#: includes/admin/admin-pages.php:123
 msgid "Are you sure you wish to revert all the settings in this tab to their default values? This cannot be undone."
 msgstr ""
 
@@ -98,61 +98,52 @@ msgstr ""
 msgid "Book ID: %d"
 msgstr ""
 
-#: includes/admin/books/demo-book.php:14
+#: includes/admin/books/demo-book.php:21
 msgid "You don't have permission to add %s"
 msgstr ""
 
-#: includes/admin/books/demo-book.php:21
-#: includes/admin/books/demo-book.php:25
-msgid "Under a Forever Sky"
+#: includes/admin/books/demo-book.php:32
+msgid "Error: There was a problem adding the demo book."
 msgstr ""
 
-#: includes/admin/books/demo-book.php:27
-msgid "Night Sky Publishing"
+#: includes/admin/books/demo-book.php:49
+msgid "View Book"
 msgstr ""
 
-#: includes/admin/books/demo-book.php:28
-msgid "February 18th 2016"
+#: includes/admin/books/demo-book.php:51
+msgid "Edit Book"
 msgstr ""
 
-#: includes/admin/books/demo-book.php:31
+#: includes/admin/books/demo-book.php:63
 msgid ""
 "Lorem ipsum dolor sit amet, consectetur adipiscing elit.\n"
-"\t\t\t\n"
-"\t\t\tAenean sagittis risus vel leo sodales, ut varius felis mattis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus convallis tortor diam, ac ultricies elit sodales id. Nunc vel vulputate neque. Cras sed semper nunc. Duis eleifend auctor feugiat. Suspendisse maximus et sem et semper. Fusce venenatis massa in ultricies maximus. Fusce pulvinar nisl quis tincidunt finibus. Nam euismod ipsum felis, ac vehicula ex condimentum sed. In tincidunt sapien at tellus sagittis, a convallis nibh vulputate. Donec vitae ex nec mauris porttitor imperdiet a in metus. Aliquam erat volutpat. Vestibulum libero risus, fringilla sed nisi eu, pellentesque ullamcorper ex. Mauris vel dapibus arcu.\n"
+"\n"
+"Aenean sagittis risus vel leo sodales, ut varius felis mattis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus convallis tortor diam, ac ultricies elit sodales id. Nunc vel vulputate neque. Cras sed semper nunc. Duis eleifend auctor feugiat. Suspendisse maximus et sem et semper. Fusce venenatis massa in ultricies maximus. Fusce pulvinar nisl quis tincidunt finibus. Nam euismod ipsum felis, ac vehicula ex condimentum sed. In tincidunt sapien at tellus sagittis, a convallis nibh vulputate. Donec vitae ex nec mauris porttitor imperdiet a in metus. Aliquam erat volutpat. Vestibulum libero risus, fringilla sed nisi eu, pellentesque ullamcorper ex. Mauris vel dapibus arcu.\n"
 "\n"
 "Proin nisl enim, cursus ac felis in, tempus sodales velit. Donec et dolor nibh. Donec mauris magna, tincidunt sit amet massa ut, accumsan pulvinar arcu."
 msgstr ""
 
-#: includes/admin/books/demo-book.php:37
+#: includes/admin/books/demo-book.php:69
 msgid ""
 "Phasellus a eros tempus, scelerisque mi a, consectetur velit. Donec arcu augue, finibus nec cursus eu, posuere eu nisl.\n"
-"\t\t\n"
-"\t\tVivamus non dui ac enim aliquet dapibus. Nulla interdum auctor egestas. Duis interdum sapien id ipsum malesuada, eu porttitor felis rutrum. Curabitur laoreet hendrerit tristique. Pellentesque pretium, nulla eu finibus condimentum, nibh elit faucibus diam, nec volutpat arcu nunc eget ligula. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque dictum justo erat, convallis pulvinar ex scelerisque at. Sed sit amet euismod nisl."
+"\n"
+"Vivamus non dui ac enim aliquet dapibus. Nulla interdum auctor egestas. Duis interdum sapien id ipsum malesuada, eu porttitor felis rutrum. Curabitur laoreet hendrerit tristique. Pellentesque pretium, nulla eu finibus condimentum, nibh elit faucibus diam, nec volutpat arcu nunc eget ligula. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque dictum justo erat, convallis pulvinar ex scelerisque at. Sed sit amet euismod nisl."
 msgstr ""
 
-#: includes/admin/books/demo-book.php:50
-msgid "Error: There was a problem adding the demo book."
+#: includes/admin/books/demo-book.php:100
+msgid "Under a Forever Sky"
 msgstr ""
 
-#: includes/admin/books/demo-book.php:80
+#: includes/admin/books/demo-book.php:101
 msgid "Night Sky"
 msgstr ""
 
-#: includes/admin/books/demo-book.php:89
+#: includes/admin/books/demo-book.php:105
+msgid "Night Sky Publishing"
+msgstr ""
+
+#: includes/admin/books/demo-book.php:111
 msgid "Fantasy"
-msgstr ""
-
-#: includes/admin/books/demo-book.php:110
-msgid "Cover for Under a Forever Sky"
-msgstr ""
-
-#: includes/admin/books/demo-book.php:135
-msgid "View Book"
-msgstr ""
-
-#: includes/admin/books/demo-book.php:137
-msgid "Edit Book"
 msgstr ""
 
 #: includes/admin/books/meta-box.php:25
@@ -173,12 +164,12 @@ msgid "Cover Image"
 msgstr ""
 
 #: includes/admin/books/meta-box.php:197
-#: includes/admin/settings/register-settings.php:1298
+#: includes/admin/settings/register-settings.php:1313
 msgid "Upload Image"
 msgstr ""
 
 #: includes/admin/books/meta-box.php:198
-#: includes/admin/settings/register-settings.php:1299
+#: includes/admin/settings/register-settings.php:1314
 msgid "Remove Image"
 msgstr ""
 
@@ -260,6 +251,12 @@ msgstr ""
 #: includes/admin/class-novelist-notices.php:52
 msgid "The settings have been successfully imported."
 msgstr ""
+
+#: includes/admin/class-novelist-notices.php:58
+msgid "Successfully imported 1 book."
+msgid_plural "Successfully imported %d books."
+msgstr[0] ""
+msgstr[1] ""
 
 #: includes/admin/class-welcome.php:50
 #: includes/admin/class-welcome.php:51
@@ -405,13 +402,13 @@ msgstr ""
 msgid "There was an error communicating with the novelistplugin.com server. Please try again later."
 msgstr ""
 
-#: includes/admin/settings/display-settings.php:118
+#: includes/admin/settings/display-settings.php:124
 msgid "Reset Section"
 msgstr ""
 
 #: includes/admin/settings/register-settings.php:229
-#: includes/admin/settings/register-settings.php:721
-#: includes/admin/settings/register-settings.php:772
+#: includes/admin/settings/register-settings.php:736
+#: includes/admin/settings/register-settings.php:787
 msgid "Book Layout"
 msgstr ""
 
@@ -531,159 +528,159 @@ msgstr ""
 msgid "Default settings restored."
 msgstr ""
 
-#: includes/admin/settings/register-settings.php:456
+#: includes/admin/settings/register-settings.php:466
 msgid "Bugger off! You don't have permission to do this."
 msgstr ""
 
-#: includes/admin/settings/register-settings.php:466
+#: includes/admin/settings/register-settings.php:474
 msgid "Error: Tab missing."
 msgstr ""
 
-#: includes/admin/settings/register-settings.php:470
+#: includes/admin/settings/register-settings.php:478
 msgid "Error: Section missing."
 msgstr ""
 
-#: includes/admin/settings/register-settings.php:722
-#: includes/admin/settings/register-settings.php:777
+#: includes/admin/settings/register-settings.php:737
+#: includes/admin/settings/register-settings.php:792
 msgid "Styles"
 msgstr ""
 
-#: includes/admin/settings/register-settings.php:723
-#: includes/admin/settings/register-settings.php:780
+#: includes/admin/settings/register-settings.php:738
+#: includes/admin/settings/register-settings.php:795
 msgid "Misc"
 msgstr ""
 
-#: includes/admin/settings/register-settings.php:726
+#: includes/admin/settings/register-settings.php:741
 msgid "Add-Ons"
 msgstr ""
 
-#: includes/admin/settings/register-settings.php:730
+#: includes/admin/settings/register-settings.php:745
 msgid "Licenses"
 msgstr ""
 
-#: includes/admin/settings/register-settings.php:773
+#: includes/admin/settings/register-settings.php:788
 #: includes/book-functions.php:96
 msgid "Purchase Links"
 msgstr ""
 
-#: includes/admin/settings/register-settings.php:826
+#: includes/admin/settings/register-settings.php:841
 msgid "The callback function used for the %s setting is missing."
 msgstr ""
 
-#: includes/admin/settings/register-settings.php:935
+#: includes/admin/settings/register-settings.php:950
 msgid "Width, in pixels."
 msgstr ""
 
-#: includes/admin/settings/register-settings.php:940
+#: includes/admin/settings/register-settings.php:955
 msgid "Height, in pixels."
 msgstr ""
 
-#: includes/admin/settings/register-settings.php:949
+#: includes/admin/settings/register-settings.php:964
 msgid "If you crop to exact dimensions, some parts of the image may be cut off."
 msgstr ""
 
-#: includes/admin/settings/register-settings.php:1028
+#: includes/admin/settings/register-settings.php:1043
 msgid "Your Layout"
 msgstr ""
 
-#: includes/admin/settings/register-settings.php:1037
+#: includes/admin/settings/register-settings.php:1052
 msgid "Available"
 msgstr ""
 
-#: includes/admin/settings/register-settings.php:1051
+#: includes/admin/settings/register-settings.php:1066
 msgid "Preview Book"
 msgstr ""
 
-#: includes/admin/settings/register-settings.php:1090
+#: includes/admin/settings/register-settings.php:1105
 msgid "Edit"
 msgstr ""
 
-#: includes/admin/settings/register-settings.php:1094
+#: includes/admin/settings/register-settings.php:1109
 msgid "Use <mark>%1$s</mark> as a placeholder for the %2$s"
 msgstr ""
 
-#: includes/admin/settings/register-settings.php:1101
+#: includes/admin/settings/register-settings.php:1116
 msgid "Add new line after this field"
 msgstr ""
 
-#: includes/admin/settings/register-settings.php:1107
+#: includes/admin/settings/register-settings.php:1122
 msgid "Cover Alignment"
 msgstr ""
 
-#: includes/admin/settings/register-settings.php:1149
+#: includes/admin/settings/register-settings.php:1164
 msgid "Retail Store Name"
 msgstr ""
 
-#: includes/admin/settings/register-settings.php:1150
+#: includes/admin/settings/register-settings.php:1165
 msgid "Store ID"
 msgstr ""
 
-#: includes/admin/settings/register-settings.php:1151
+#: includes/admin/settings/register-settings.php:1166
 msgid "Learn about store IDs"
 msgstr ""
 
-#: includes/admin/settings/register-settings.php:1153
+#: includes/admin/settings/register-settings.php:1168
 msgid "Template"
 msgstr ""
 
-#: includes/admin/settings/register-settings.php:1156
+#: includes/admin/settings/register-settings.php:1171
 #: includes/admin/thickbox.php:332
 msgid "Order"
 msgstr ""
 
-#: includes/admin/settings/register-settings.php:1168
+#: includes/admin/settings/register-settings.php:1183
 msgid "Enter the name of the retail outlet"
 msgstr ""
 
-#: includes/admin/settings/register-settings.php:1172
+#: includes/admin/settings/register-settings.php:1187
 msgid "Enter the ID"
 msgstr ""
 
-#: includes/admin/settings/register-settings.php:1176
+#: includes/admin/settings/register-settings.php:1191
 msgid "Template for this site"
 msgstr ""
 
-#: includes/admin/settings/register-settings.php:1197
+#: includes/admin/settings/register-settings.php:1212
 msgid "Add Link"
 msgstr ""
 
-#: includes/admin/settings/register-settings.php:1249
+#: includes/admin/settings/register-settings.php:1264
 msgid "Missing select options argument."
 msgstr ""
 
-#: includes/admin/settings/register-settings.php:1375
+#: includes/admin/settings/register-settings.php:1390
 msgid "Your license key expired on %1$s. Please <a href=\"%2$s\" target=\"_blank\" title=\"Renew your license key\">renew your license key</a>."
 msgstr ""
 
-#: includes/admin/settings/register-settings.php:1388
+#: includes/admin/settings/register-settings.php:1403
 msgid "Invalid license. Please <a href=\"%s\" target=\"_blank\" title=\"Visit account page\">visit your account page</a> and verify it."
 msgstr ""
 
-#: includes/admin/settings/register-settings.php:1401
+#: includes/admin/settings/register-settings.php:1416
 msgid "Your %1$s is not active for this URL. Please <a href=\"%2$s\" target=\"_blank\" title=\"Visit account page\">visit your account page</a> to manage your license key URLs."
 msgstr ""
 
-#: includes/admin/settings/register-settings.php:1414
+#: includes/admin/settings/register-settings.php:1429
 msgid "This is not a %s."
 msgstr ""
 
-#: includes/admin/settings/register-settings.php:1426
+#: includes/admin/settings/register-settings.php:1441
 msgid "Your license key has reached its activation limit. <a href=\"%s\" target=\"_blank\" title=\"View upgrades\">View possible upgrades.</a>"
 msgstr ""
 
-#: includes/admin/settings/register-settings.php:1444
+#: includes/admin/settings/register-settings.php:1459
 msgid "License key never expires."
 msgstr ""
 
-#: includes/admin/settings/register-settings.php:1450
+#: includes/admin/settings/register-settings.php:1465
 msgid "Your license key is about to expire! It expires on %1$s. <a href=\"%2$s\" target=\"_blank\" title=\"Renew license key\">Renew your license key</a> to continue getting updates and support."
 msgstr ""
 
-#: includes/admin/settings/register-settings.php:1460
+#: includes/admin/settings/register-settings.php:1475
 msgid "Your license key expires on %s."
 msgstr ""
 
-#: includes/admin/settings/register-settings.php:1485
+#: includes/admin/settings/register-settings.php:1500
 msgid "Deactivate License"
 msgstr ""
 
@@ -834,6 +831,7 @@ msgid "Import the Novelist settings from a .json file. You can obtain a .json fi
 msgstr ""
 
 #: includes/admin/tools.php:112
+#: src/CsvImport/AdminPage.php:91
 msgid "Import"
 msgstr ""
 
@@ -854,7 +852,7 @@ msgstr ""
 msgid "To copy the system info, click below then press CTRL + C (PC) or CMD + C (Mac)."
 msgstr ""
 
-#: includes/admin/tools.php:231
+#: includes/admin/tools.php:232
 msgid "Download System Info File"
 msgstr ""
 
@@ -940,25 +938,25 @@ msgstr ""
 msgid "Right"
 msgstr ""
 
-#: includes/book-functions.php:396
+#: includes/book-functions.php:426
 msgid "None"
 msgstr ""
 
-#: includes/book-functions.php:397
+#: includes/book-functions.php:427
 msgid "Goodreads"
 msgstr ""
 
-#: includes/book-functions.php:443
+#: includes/book-functions.php:473
 msgctxt "image size"
 msgid "full"
 msgstr ""
 
-#: includes/book-functions.php:446
+#: includes/book-functions.php:476
 msgctxt "image size"
 msgid "custom"
 msgstr ""
 
-#: includes/class-novelist-book.php:271
+#: includes/class-novelist-book.php:265
 msgid "Can't get property %s"
 msgstr ""
 
@@ -1299,9 +1297,48 @@ msgstr ""
 msgid "Text After the Bar:"
 msgstr ""
 
-#: novelist.php:111
-#: novelist.php:123
+#: novelist.php:156
+#: novelist.php:169
 msgid "Cheatin&#8217; huh?"
+msgstr ""
+
+#: src/CsvImport/AdminPage.php:42
+msgid "Import Books"
+msgstr ""
+
+#. translators: %s file URL
+#: src/CsvImport/AdminPage.php:49
+msgid "Import books from a CSV file. The file must be formatted with the appropriate headers, as shown in the <a href=\"%s\">sample CSV file</a>. Title is the only required field; all others are optional."
+msgstr ""
+
+#. translators: %s admin page URL
+#: src/CsvImport/AdminPage.php:66
+msgid "Retailer column headers must be prefixed with \"retail_\", followed by the store ID from <a href=\"%s\">the retailers page</a> (e.g. retail_amazon)."
+msgstr ""
+
+#: src/CsvImport/AdminPage.php:77
+msgid "If you have many books to upload (hundreds) then it may be better to split the file into multiple smaller ones and upload one at a time."
+msgstr ""
+
+#: src/CsvImport/AdminPage.php:102
+msgid "The following errors occurred while importing the CSV file:"
+msgstr ""
+
+#: src/CsvImport/AdminPage.php:126
+msgid "The following books were imported successfully:"
+msgstr ""
+
+#: src/CsvImport/ImportHandler.php:36
+msgid "You do not have permission to perform this action."
+msgstr ""
+
+#: src/CsvImport/ImportHandler.php:45
+msgid "No CSV data found."
+msgstr ""
+
+#: src/CsvImport/ImportHandler.php:83
+#: src/CsvImport/ImportHandler.php:95
+msgid "CSV file not found."
 msgstr ""
 
 #: templates/shortcode-book-content-button.php:13
